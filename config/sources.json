@@ -3345,6 +3345,19 @@
       "declared_urls": [
         "https://raw.githubusercontent.com/acidjesuz/EPGTalk/master/US_local_guide.xml.gz"
       ]
+    },
+    {
+      "id": "3188255b2b80",
+      "url": "https://github.com/BuddyChewChew/multi-epg-light/raw/refs/heads/main/epgs/light-epg.xml.gz",
+      "kind": "epg",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "added 2026-10-04 incremental-yield probe: +3 guarded unique-name joins (Whiplash.us, WhiplashII.us, WhiplashCinema.us) with 55-175 programmes each; per-guide matcher makes it a rank-5 trailing guide, cannot disturb existing joins"
+      ],
+      "declared_urls": [
+        "https://github.com/BuddyChewChew/multi-epg-light/raw/refs/heads/main/epgs/light-epg.xml.gz"
+      ]
     }
   ]
 }
