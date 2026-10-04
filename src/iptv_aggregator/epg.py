@@ -8,6 +8,7 @@ import re
 import xml.etree.ElementTree as ET
 from collections import defaultdict
 from dataclasses import dataclass, field
+from pathlib import Path
 from typing import Any
 
 import aiohttp
@@ -43,43 +44,81 @@ def normalized_epg_id(value: str) -> str:
     return value
 
 
-async def fetch_epg(sources: list[dict[str, Any]], timeout_seconds: int = 45, programme_ids: set[str] | None = None, programme_names: set[str] | None = None) -> tuple[EPGData, dict[str, str]]:
+async def fetch_epg(sources: list[dict[str, Any]], timeout_seconds: int = 45, programme_ids: set[str] | None = None, programme_names: set[str] | None = None, attempts: int = 3, stale_cache_dir: str | Path | None = None) -> tuple[EPGData, dict[str, str]]:
     enabled = [s for s in sources if s.get("enabled", True) and s.get("kind") == "epg"]
     timeout = aiohttp.ClientTimeout(total=timeout_seconds)
     statuses: dict[str, str] = {}
     data = EPGData()
+    cache_dir = Path(stale_cache_dir) if stale_cache_dir else None
+    if cache_dir:
+        cache_dir.mkdir(parents=True, exist_ok=True)
+    async def parse_stream(raw: bytes, source: dict[str, Any]) -> EPGData:
+        stream = gzip.GzipFile(fileobj=io.BytesIO(raw)) if raw[:2] == b"\x1f\x8b" else io.BytesIO(raw)
+        parsed = EPGData()
+        wanted_ids = set(programme_ids or set())
+        wanted_id_keys = {normalized_epg_id(value) for value in wanted_ids}
+        root = None
+        for event, element in ET.iterparse(stream, events=("start", "end")):
+            if event == "start" and root is None:
+                root = element
+            if event != "end":
+                continue
+            if element.tag == "channel" and element.get("id"):
+                epg_id = element.get("id", "")
+                parsed.channels[epg_id] = element
+                if normalized_epg_id(epg_id) in wanted_id_keys:
+                    wanted_ids.add(epg_id)
+                if any(normalized_name(display.text or "") in (programme_names or set()) for display in element.findall("display-name")):
+                    wanted_ids.add(epg_id)
+            elif element.tag == "programme" and element.get("channel") in wanted_ids:
+                parsed.programmes[element.get("channel", "")].append(element)
+            elif element.tag == "programme":
+                element.clear()
+            if root is not None and element.tag in {"channel", "programme"}:
+                root.clear()
+        return parsed
     async with aiohttp.ClientSession(timeout=timeout, headers={"User-Agent": "owl-iptv/1.0"}) as session:
         async def one(source):
-            try:
-                async with session.get(source["url"], allow_redirects=True) as response:
-                    response.raise_for_status()
-                    raw = await response.read()
-                stream = gzip.GzipFile(fileobj=io.BytesIO(raw)) if raw[:2] == b"\x1f\x8b" else io.BytesIO(raw)
-                parsed = EPGData()
-                wanted_ids = set(programme_ids or set())
-                wanted_id_keys = {normalized_epg_id(value) for value in wanted_ids}
-                root = None
-                for event, element in ET.iterparse(stream, events=("start", "end")):
-                    if event == "start" and root is None:
-                        root = element
-                    if event != "end":
-                        continue
-                    if element.tag == "channel" and element.get("id"):
-                        epg_id = element.get("id", "")
-                        parsed.channels[epg_id] = element
-                        if normalized_epg_id(epg_id) in wanted_id_keys:
-                            wanted_ids.add(epg_id)
-                        if any(normalized_name(display.text or "") in (programme_names or set()) for display in element.findall("display-name")):
-                            wanted_ids.add(epg_id)
-                    elif element.tag == "programme" and element.get("channel") in wanted_ids:
-                        parsed.programmes[element.get("channel", "")].append(element)
-                    elif element.tag == "programme":
-                        element.clear()
-                    if root is not None and element.tag in {"channel", "programme"}:
-                        root.clear()
-                return source, parsed, "succeeded"
-            except Exception as exc:
-                return source, None, f"failed: {exc}"
+            if cache_dir:
+                body_path = cache_dir / f"{source['id']}.body"
+            else:
+                body_path = None
+            statuses_seen = []
+            for attempt in range(max(1, attempts)):
+                truncated = False
+                try:
+                    async with session.get(source["url"], allow_redirects=True) as response:
+                        response.raise_for_status()
+                        raw = await response.read()
+                    stream = gzip.GzipFile(fileobj=io.BytesIO(raw)) if raw[:2] == b"\x1f\x8b" else io.BytesIO(raw)
+                    # A gzip member truncated mid-download usually parses "fine"
+                    # as XML (no trailer check) but ends mid-programme. Reject
+                    # truncated streams unless gzip confirms completeness.
+                    if raw[:2] == b"\x1f\x8b":
+                        with gzip.open(io.BytesIO(raw), "rb") as gz:
+                            while gz.read(1 << 20):
+                                pass
+                    parsed = await parse_stream(raw, source)
+                    if body_path is not None:
+                        body_path.write_bytes(raw)
+                    return source, parsed, "succeeded"
+                except (gzip.BadGzipFile, EOFError, aiohttp.ClientPayloadError, asyncio.TimeoutError, Exception) as exc:
+                    truncated = isinstance(exc, (gzip.BadGzipFile, EOFError, aiohttp.ClientPayloadError))
+                    statuses_seen.append(f"attempt {attempt + 1}: {exc}")
+                    if attempt + 1 < max(1, attempts):
+                        await asyncio.sleep(2 * (attempt + 1))
+            # Every attempt failed. A previous run's body is still a whole guide
+            # worth of schedule data; a truncated-fetch failure does not age the
+            # programmes out.
+            if body_path is not None and body_path.exists():
+                try:
+                    cached = body_path.read_bytes()
+                    if not (cached[:2] == b"\x1f\x8b" and not _gzip_complete(cached)):
+                        parsed = await parse_stream(cached, source)
+                        return source, parsed, f"stale-cache: {'; '.join(statuses_seen[-1:])}"
+                except Exception as cache_exc:
+                    statuses_seen.append(f"stale cache unusable: {cache_exc}")
+            return source, None, f"failed: {'; '.join(statuses_seen[-2:])}"
         results = await asyncio.gather(*(one(source) for source in enabled))
     for source, parsed, status in sorted(results, key=lambda r: _epg_source_rank(r[0])):
         statuses[source["id"]] = status
@@ -92,6 +131,17 @@ async def fetch_epg(sources: list[dict[str, Any]], timeout_seconds: int = 45, pr
         for channel_id, programmes in parsed.programmes.items():
             data.programmes[channel_id].extend(programmes)
     return data, statuses
+
+
+def _gzip_complete(raw: bytes) -> bool:
+    """True when the gzip member parses to the end (multi-pass over gzip.open)."""
+    try:
+        with gzip.open(io.BytesIO(raw), "rb") as gz:
+            while gz.read(1 << 20):
+                pass
+        return True
+    except (gzip.BadGzipFile, EOFError, OSError):
+        return False
 
 
 def _url_provider_hex(url: str) -> tuple[str | None, str | None]:

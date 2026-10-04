@@ -29,6 +29,7 @@ dedupe:
 epg:
   timeout_seconds: 240
   fuzzy_threshold: 93
+  attempts: 3
 publish:
   directory: public
   minimum_channels: 500

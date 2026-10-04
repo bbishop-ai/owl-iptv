@@ -11,6 +11,7 @@ After GitHub Pages is enabled for **GitHub Actions**, use:
 - Playlist: `https://bbishop-ai.github.io/owl-iptv/playlist.m3u`
 - XMLTV: `https://bbishop-ai.github.io/owl-iptv/epg.xml`
 - Build stats: `https://bbishop-ai.github.io/owl-iptv/stats.json`
+- Unmatched channels: `https://bbishop-ai.github.io/owl-iptv/unmatched_channels.json`
 
 The M3U includes both `url-tvg` and `x-tvg-url`, but Owl's current public listing only documents adding an XMLTV source separately; it does not promise automatic header discovery. In Owl, add the playlist URL, then add the XMLTV URL as its EPG source. This is the reliable setup.
 
@@ -60,6 +61,14 @@ The workflow runs at minute 17 every six hours and also supports manual dispatch
 Validation borrows the strongest practical ideas from the three bases: concurrent availability/latency checks, resolution probing, bounded download/media inspection, cached results, and normalized-name grouping. A five-second sampled frame hash flags a truly static video sample as frozen. Ranking prefers playable, non-frozen, higher-resolution, higher-frame-rate, HTTPS, lower-latency streams. Exact URL variants are removed first; channel identities use `tvg-id` when present and a conservative normalized name otherwise. One primary plus one backup is published where available.
 
 EPG matching is deterministic: exact `tvg-id`, collision-safe normalization of known provider ID suffixes, unique normalized-name match, then only an unambiguous high-threshold fuzzy match. The EPG inputs include the available IPTV-org guide, the merged US national/local/sports guide, and dedicated public Plex and Pluto US guides. The published XMLTV contains only matched channels and their programmes, keeping it smaller for a TV device.
+
+## EPG resilience
+
+`fetch_epg` retries each guide up to `epg.attempts` times (default 3) and rejects truncated gzip bodies before parsing — a truncated download never silently drops a guide's programmes from the published epg.xml. When every attempt fails, the last complete body from a previous run (cached under `build/epg-cache/`) is used and the source reports `stale-cache:` in `stats.json`, so a source outage degrades gracefully instead of vanishing coverage. A truncated body is never cached over a good one.
+
+## EPG coverage workflow entry point
+
+`unmatched_channels.json` is published next to `stats.json`: every published primary channel with no guide entry, with its tvg-id, all name aliases, group, and stream host — the exact attribution input used when hunting a new EPG source. Measure any candidate guide's *incremental* joins against it (not raw match counts).
 
 ## Troubleshooting
 

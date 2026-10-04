@@ -7,6 +7,7 @@ import shutil
 from collections import Counter
 from datetime import UTC, datetime
 from pathlib import Path
+from urllib.parse import urlsplit
 
 from .config import load_config, load_sources
 from .dedupe import preselect_candidates, select_streams
@@ -87,7 +88,14 @@ async def run(config_path: str) -> dict:
         except json.JSONDecodeError:
             pass
         epg_names.update(normalized_name(value) for value in values if value)
-    epg, epg_sources = await fetch_epg(sources, cfg["epg"]["timeout_seconds"], {c.tvg_id for c in selected if c.tvg_id}, epg_names)
+    epg, epg_sources = await fetch_epg(
+        sources,
+        cfg["epg"]["timeout_seconds"],
+        {c.tvg_id for c in selected if c.tvg_id},
+        epg_names,
+        attempts=int(cfg["epg"].get("attempts", 3)),
+        stale_cache_dir=work / "epg-cache",
+    )
     epg_stats = match_channels(selected, epg, cfg["epg"]["fuzzy_threshold"])
     source_status = {source["id"]: status for source, _, status in fetched}
     validation_counts = Counter("passed" if value.ok else "failed" for value in validations.values())
@@ -127,6 +135,7 @@ async def run(config_path: str) -> dict:
     stage.joinpath("playlist.m3u").write_text(m3u_text(selected, cfg["publish"]["epg_url"], validations), encoding="utf-8")
     stage.joinpath("epg.xml").write_bytes(xmltv_bytes(selected, epg))
     stage.joinpath("stats.json").write_text(json.dumps(stats, indent=2, sort_keys=True), encoding="utf-8")
+    stage.joinpath("unmatched_channels.json").write_text(json.dumps(_unmatched_channels(selected, epg), indent=2), encoding="utf-8")
     stage.joinpath("report.md").write_text(_report(stats), encoding="utf-8")
     stage.joinpath("index.html").write_text(_index(stats), encoding="utf-8")
     stage.joinpath(".nojekyll").write_text("", encoding="utf-8")
@@ -135,8 +144,33 @@ async def run(config_path: str) -> dict:
     return stats
 
 
+def _unmatched_channels(selected: list, epg) -> dict:
+    """Every published primary channel with no guide entry, with the exact
+    strings a future EPG probe would need to measure incremental joins.
+    This is the attribution input for extending coverage; without it each
+    investigation starts by hand-parsing the published playlist."""
+    rows = []
+    for channel in sorted(selected, key=lambda c: (c.group, c.name)):
+        if channel.role != "primary" or channel.tvg_id in epg.channels:
+            continue
+        try:
+            alt_names = json.loads(channel.attrs.get("metadata-alt-names", "[]"))
+        except json.JSONDecodeError:
+            alt_names = []
+        rows.append({
+            "name": channel.name,
+            "tvg_id": channel.tvg_id,
+            "tvg_name": channel.tvg_name or "",
+            "metadata_name": channel.attrs.get("metadata-name", ""),
+            "alt_names": alt_names,
+            "group": channel.group,
+            "url_host": urlsplit(channel.url).hostname or "",
+        })
+    return {"unmatched": len(rows), "channels": rows}
+
+
 def _index(stats: dict) -> str:
-    return "<!doctype html><meta charset=utf-8><title>Owl IPTV</title><h1>Owl IPTV</h1><ul><li><a href=playlist.m3u>Playlist</a></li><li><a href=epg.xml>EPG</a></li><li><a href=stats.json>Build stats</a></li><li><a href=report.md>Build report</a></li></ul><pre>" + json.dumps(stats, indent=2) + "</pre>"
+    return "<!doctype html><meta charset=utf-8><title>Owl IPTV</title><h1>Owl IPTV</h1><ul><li><a href=playlist.m3u>Playlist</a></li><li><a href=epg.xml>EPG</a></li><li><a href=stats.json>Build stats</a></li><li><a href=unmatched_channels.json>Unmatched channels</a></li><li><a href=report.md>Build report</a></li></ul><pre>" + json.dumps(stats, indent=2) + "</pre>"
 
 
 def _report(stats: dict) -> str:
