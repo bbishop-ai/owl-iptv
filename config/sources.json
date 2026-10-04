@@ -1,0 +1,3350 @@
+{
+  "sources": [
+    {
+      "id": "1cffe0661680",
+      "url": "http://175.178.251.183:6689/live.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "http://175.178.251.183:6689/live.m3u"
+      ]
+    },
+    {
+      "id": "a1f279d942f5",
+      "url": "http://epg.51zmt.top:8000/cc.xml",
+      "kind": "epg",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "HerbertHe/iptv-sources"
+      ],
+      "declared_urls": [
+        "http://epg.51zmt.top:8000/cc.xml"
+      ]
+    },
+    {
+      "id": "4d5881ba0cda",
+      "url": "http://epg.51zmt.top:8000/difang.xml",
+      "kind": "epg",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "HerbertHe/iptv-sources"
+      ],
+      "declared_urls": [
+        "http://epg.51zmt.top:8000/difang.xml"
+      ]
+    },
+    {
+      "id": "2a6dd24d0b5b",
+      "url": "http://epg.51zmt.top:8000/e.xml",
+      "kind": "epg",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "HerbertHe/iptv-sources"
+      ],
+      "declared_urls": [
+        "http://epg.51zmt.top:8000/e.xml"
+      ]
+    },
+    {
+      "id": "027904be8584",
+      "url": "http://fan.xxooo.cf/tv",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "http://fan.xxooo.cf/tv"
+      ]
+    },
+    {
+      "id": "6cf028497f0d",
+      "url": "http://rihou.cc:88/荷城茶秀",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "http://rihou.cc:88/荷城茶秀"
+      ]
+    },
+    {
+      "id": "35e6447b895a",
+      "url": "http://tv.rihou.cc/天天开心",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "http://tv.rihou.cc/天天开心"
+      ]
+    },
+    {
+      "id": "fa59ef427847",
+      "url": "http://www.foodieguide.com/iptvsearch/",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "http://www.foodieguide.com/iptvsearch/"
+      ]
+    },
+    {
+      "id": "8a896fe66045",
+      "url": "http://www.foodieguide.com/iptvsearch/hoteliptv.php",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "http://www.foodieguide.com/iptvsearch/hoteliptv.php"
+      ]
+    },
+    {
+      "id": "79f8924bf0a9",
+      "url": "http://www.ipv6proxy.net/go.php?u=",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "http://www.ipv6proxy.net/go.php?u="
+      ]
+    },
+    {
+      "id": "a522cbf6826e",
+      "url": "http://www.饭太硬.com/tv",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "http://www.饭太硬.com/tv"
+      ]
+    },
+    {
+      "id": "a0338194ae48",
+      "url": "http://xhww.fun/小米/DEMO.json",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "http://xhww.fun/小米/DEMO.json"
+      ]
+    },
+    {
+      "id": "54020d487294",
+      "url": "http://肥猫.live",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "http://肥猫.live"
+      ]
+    },
+    {
+      "id": "d96e01392c32",
+      "url": "https://100km.top/0",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://100km.top/0"
+      ]
+    },
+    {
+      "id": "00bad72ece14",
+      "url": "https://agit.ai/Yoursmile7/TVBox/raw/branch/master/XC.json",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://agit.ai/Yoursmile7/TVBox/raw/branch/master/XC.json"
+      ]
+    },
+    {
+      "id": "7a67c34de581",
+      "url": "https://agit.ai/hu/hcr/raw/branch/master/短剧.json",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://agit.ai/hu/hcr/raw/branch/master/短剧.json"
+      ]
+    },
+    {
+      "id": "dc16402e24b9",
+      "url": "https://chinaiptv.pages.dev/anhui/mobile.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/anhui/mobile.txt"
+      ]
+    },
+    {
+      "id": "1f8f545ccfe8",
+      "url": "https://chinaiptv.pages.dev/anhui/telecom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/anhui/telecom.txt"
+      ]
+    },
+    {
+      "id": "97d1f5157255",
+      "url": "https://chinaiptv.pages.dev/anhui/unicom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/anhui/unicom.txt"
+      ]
+    },
+    {
+      "id": "0455bd42948d",
+      "url": "https://chinaiptv.pages.dev/beijing/mobile.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/beijing/mobile.txt"
+      ]
+    },
+    {
+      "id": "6eeff60d4ad0",
+      "url": "https://chinaiptv.pages.dev/beijing/telecom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/beijing/telecom.txt"
+      ]
+    },
+    {
+      "id": "dc264176552b",
+      "url": "https://chinaiptv.pages.dev/beijing/unicom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/beijing/unicom.txt"
+      ]
+    },
+    {
+      "id": "387b66d04795",
+      "url": "https://chinaiptv.pages.dev/chongqing/mobile.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/chongqing/mobile.txt"
+      ]
+    },
+    {
+      "id": "1bc08619f6ca",
+      "url": "https://chinaiptv.pages.dev/chongqing/telecom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/chongqing/telecom.txt"
+      ]
+    },
+    {
+      "id": "4ed2754b0a2c",
+      "url": "https://chinaiptv.pages.dev/chongqing/unicom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/chongqing/unicom.txt"
+      ]
+    },
+    {
+      "id": "3c2513f50a68",
+      "url": "https://chinaiptv.pages.dev/fujian/mobile.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/fujian/mobile.txt"
+      ]
+    },
+    {
+      "id": "3787951dcbdd",
+      "url": "https://chinaiptv.pages.dev/fujian/telecom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/fujian/telecom.txt"
+      ]
+    },
+    {
+      "id": "6f9ecdd93570",
+      "url": "https://chinaiptv.pages.dev/fujian/unicom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/fujian/unicom.txt"
+      ]
+    },
+    {
+      "id": "b6ca887e9af5",
+      "url": "https://chinaiptv.pages.dev/gansu/mobile.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/gansu/mobile.txt"
+      ]
+    },
+    {
+      "id": "4d69893c76f3",
+      "url": "https://chinaiptv.pages.dev/gansu/telecom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/gansu/telecom.txt"
+      ]
+    },
+    {
+      "id": "35eaa0511841",
+      "url": "https://chinaiptv.pages.dev/gansu/unicom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/gansu/unicom.txt"
+      ]
+    },
+    {
+      "id": "3f1d318174f8",
+      "url": "https://chinaiptv.pages.dev/guangdong/mobile.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/guangdong/mobile.txt"
+      ]
+    },
+    {
+      "id": "56e95e7592ff",
+      "url": "https://chinaiptv.pages.dev/guangdong/telecom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/guangdong/telecom.txt"
+      ]
+    },
+    {
+      "id": "b6061c01d63b",
+      "url": "https://chinaiptv.pages.dev/guangdong/unicom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/guangdong/unicom.txt"
+      ]
+    },
+    {
+      "id": "7f7d6d23d0e0",
+      "url": "https://chinaiptv.pages.dev/guangxi/mobile.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/guangxi/mobile.txt"
+      ]
+    },
+    {
+      "id": "d5b8d312fb1f",
+      "url": "https://chinaiptv.pages.dev/guangxi/telecom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/guangxi/telecom.txt"
+      ]
+    },
+    {
+      "id": "89e801c1426d",
+      "url": "https://chinaiptv.pages.dev/guangxi/unicom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/guangxi/unicom.txt"
+      ]
+    },
+    {
+      "id": "76371a29372e",
+      "url": "https://chinaiptv.pages.dev/guizhou/mobile.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/guizhou/mobile.txt"
+      ]
+    },
+    {
+      "id": "ec02f639b931",
+      "url": "https://chinaiptv.pages.dev/guizhou/telecom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/guizhou/telecom.txt"
+      ]
+    },
+    {
+      "id": "c33a33338182",
+      "url": "https://chinaiptv.pages.dev/guizhou/unicom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/guizhou/unicom.txt"
+      ]
+    },
+    {
+      "id": "3ad8cdbbeef4",
+      "url": "https://chinaiptv.pages.dev/hainan/mobile.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/hainan/mobile.txt"
+      ]
+    },
+    {
+      "id": "df946d722e68",
+      "url": "https://chinaiptv.pages.dev/hainan/telecom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/hainan/telecom.txt"
+      ]
+    },
+    {
+      "id": "efceb9e3b7d6",
+      "url": "https://chinaiptv.pages.dev/hainan/unicom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/hainan/unicom.txt"
+      ]
+    },
+    {
+      "id": "2f6d2391ca89",
+      "url": "https://chinaiptv.pages.dev/hebei/mobile.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/hebei/mobile.txt"
+      ]
+    },
+    {
+      "id": "07a9ade26dae",
+      "url": "https://chinaiptv.pages.dev/hebei/telecom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/hebei/telecom.txt"
+      ]
+    },
+    {
+      "id": "c9c75a3bda99",
+      "url": "https://chinaiptv.pages.dev/hebei/unicom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/hebei/unicom.txt"
+      ]
+    },
+    {
+      "id": "cc5688afccca",
+      "url": "https://chinaiptv.pages.dev/heilongjiang/mobile.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/heilongjiang/mobile.txt"
+      ]
+    },
+    {
+      "id": "2aa47283d6c7",
+      "url": "https://chinaiptv.pages.dev/heilongjiang/telecom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/heilongjiang/telecom.txt"
+      ]
+    },
+    {
+      "id": "c62f2ae3e09d",
+      "url": "https://chinaiptv.pages.dev/heilongjiang/unicom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/heilongjiang/unicom.txt"
+      ]
+    },
+    {
+      "id": "cef76d642f50",
+      "url": "https://chinaiptv.pages.dev/henan/mobile.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/henan/mobile.txt"
+      ]
+    },
+    {
+      "id": "944e53f454ff",
+      "url": "https://chinaiptv.pages.dev/henan/telecom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/henan/telecom.txt"
+      ]
+    },
+    {
+      "id": "357d832533bf",
+      "url": "https://chinaiptv.pages.dev/henan/unicom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/henan/unicom.txt"
+      ]
+    },
+    {
+      "id": "feb92fb73865",
+      "url": "https://chinaiptv.pages.dev/hubei/mobile.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/hubei/mobile.txt"
+      ]
+    },
+    {
+      "id": "f97c69fc2ba7",
+      "url": "https://chinaiptv.pages.dev/hubei/telecom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/hubei/telecom.txt"
+      ]
+    },
+    {
+      "id": "e0060fb6efda",
+      "url": "https://chinaiptv.pages.dev/hubei/unicom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/hubei/unicom.txt"
+      ]
+    },
+    {
+      "id": "ceabfe070cad",
+      "url": "https://chinaiptv.pages.dev/hunan/mobile.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/hunan/mobile.txt"
+      ]
+    },
+    {
+      "id": "6a5f23851437",
+      "url": "https://chinaiptv.pages.dev/hunan/telecom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/hunan/telecom.txt"
+      ]
+    },
+    {
+      "id": "1c0c2fa7c150",
+      "url": "https://chinaiptv.pages.dev/hunan/unicom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/hunan/unicom.txt"
+      ]
+    },
+    {
+      "id": "9553abdb11e0",
+      "url": "https://chinaiptv.pages.dev/jiangsu/mobile.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/jiangsu/mobile.txt"
+      ]
+    },
+    {
+      "id": "733f579e28c2",
+      "url": "https://chinaiptv.pages.dev/jiangsu/telecom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/jiangsu/telecom.txt"
+      ]
+    },
+    {
+      "id": "6b98a82456f8",
+      "url": "https://chinaiptv.pages.dev/jiangsu/unicom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/jiangsu/unicom.txt"
+      ]
+    },
+    {
+      "id": "f8871bad4dba",
+      "url": "https://chinaiptv.pages.dev/jiangxi/mobile.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/jiangxi/mobile.txt"
+      ]
+    },
+    {
+      "id": "eeeee81e966a",
+      "url": "https://chinaiptv.pages.dev/jiangxi/telecom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/jiangxi/telecom.txt"
+      ]
+    },
+    {
+      "id": "b6fbb843091a",
+      "url": "https://chinaiptv.pages.dev/jiangxi/unicom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/jiangxi/unicom.txt"
+      ]
+    },
+    {
+      "id": "c3ce4f41ecd7",
+      "url": "https://chinaiptv.pages.dev/jilin/mobile.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/jilin/mobile.txt"
+      ]
+    },
+    {
+      "id": "3ad230bde06e",
+      "url": "https://chinaiptv.pages.dev/jilin/telecom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/jilin/telecom.txt"
+      ]
+    },
+    {
+      "id": "c74eb397e33c",
+      "url": "https://chinaiptv.pages.dev/jilin/unicom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/jilin/unicom.txt"
+      ]
+    },
+    {
+      "id": "767c4cef6707",
+      "url": "https://chinaiptv.pages.dev/liaoning/mobile.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/liaoning/mobile.txt"
+      ]
+    },
+    {
+      "id": "5d3ee4a380cf",
+      "url": "https://chinaiptv.pages.dev/liaoning/telecom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/liaoning/telecom.txt"
+      ]
+    },
+    {
+      "id": "f6a39c2e95ef",
+      "url": "https://chinaiptv.pages.dev/liaoning/unicom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/liaoning/unicom.txt"
+      ]
+    },
+    {
+      "id": "55409ecc4c43",
+      "url": "https://chinaiptv.pages.dev/neimenggu/mobile.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/neimenggu/mobile.txt"
+      ]
+    },
+    {
+      "id": "bf4df737575c",
+      "url": "https://chinaiptv.pages.dev/neimenggu/telecom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/neimenggu/telecom.txt"
+      ]
+    },
+    {
+      "id": "29ec6106c110",
+      "url": "https://chinaiptv.pages.dev/neimenggu/unicom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/neimenggu/unicom.txt"
+      ]
+    },
+    {
+      "id": "7e357c061371",
+      "url": "https://chinaiptv.pages.dev/ningxia/mobile.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/ningxia/mobile.txt"
+      ]
+    },
+    {
+      "id": "cfb1186b5ab9",
+      "url": "https://chinaiptv.pages.dev/ningxia/telecom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/ningxia/telecom.txt"
+      ]
+    },
+    {
+      "id": "b8f4619f7c9b",
+      "url": "https://chinaiptv.pages.dev/ningxia/unicom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/ningxia/unicom.txt"
+      ]
+    },
+    {
+      "id": "0c475f26f827",
+      "url": "https://chinaiptv.pages.dev/qinghai/mobile.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/qinghai/mobile.txt"
+      ]
+    },
+    {
+      "id": "bacd34255909",
+      "url": "https://chinaiptv.pages.dev/qinghai/telecom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/qinghai/telecom.txt"
+      ]
+    },
+    {
+      "id": "3746bf147ff9",
+      "url": "https://chinaiptv.pages.dev/qinghai/unicom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/qinghai/unicom.txt"
+      ]
+    },
+    {
+      "id": "49793e985709",
+      "url": "https://chinaiptv.pages.dev/shan3xi/mobile.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/shan3xi/mobile.txt"
+      ]
+    },
+    {
+      "id": "fe462733bc0f",
+      "url": "https://chinaiptv.pages.dev/shan3xi/telecom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/shan3xi/telecom.txt"
+      ]
+    },
+    {
+      "id": "35185fe996ea",
+      "url": "https://chinaiptv.pages.dev/shan3xi/unicom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/shan3xi/unicom.txt"
+      ]
+    },
+    {
+      "id": "f3f29ae735dc",
+      "url": "https://chinaiptv.pages.dev/shandong/mobile.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/shandong/mobile.txt"
+      ]
+    },
+    {
+      "id": "71b5e6656e9c",
+      "url": "https://chinaiptv.pages.dev/shandong/telecom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/shandong/telecom.txt"
+      ]
+    },
+    {
+      "id": "5f79ea06931f",
+      "url": "https://chinaiptv.pages.dev/shandong/unicom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/shandong/unicom.txt"
+      ]
+    },
+    {
+      "id": "2a5c5d73baaf",
+      "url": "https://chinaiptv.pages.dev/shanghai/mobile.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/shanghai/mobile.txt"
+      ]
+    },
+    {
+      "id": "7322ef089404",
+      "url": "https://chinaiptv.pages.dev/shanghai/telecom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/shanghai/telecom.txt"
+      ]
+    },
+    {
+      "id": "a659c3f34178",
+      "url": "https://chinaiptv.pages.dev/shanghai/unicom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/shanghai/unicom.txt"
+      ]
+    },
+    {
+      "id": "87036720359b",
+      "url": "https://chinaiptv.pages.dev/shanxi/mobile.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/shanxi/mobile.txt"
+      ]
+    },
+    {
+      "id": "9d29d5dbae17",
+      "url": "https://chinaiptv.pages.dev/shanxi/telecom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/shanxi/telecom.txt"
+      ]
+    },
+    {
+      "id": "87e9279750fc",
+      "url": "https://chinaiptv.pages.dev/shanxi/unicom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/shanxi/unicom.txt"
+      ]
+    },
+    {
+      "id": "577f49973815",
+      "url": "https://chinaiptv.pages.dev/sichuan/mobile.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/sichuan/mobile.txt"
+      ]
+    },
+    {
+      "id": "4bf42696f282",
+      "url": "https://chinaiptv.pages.dev/sichuan/telecom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/sichuan/telecom.txt"
+      ]
+    },
+    {
+      "id": "42a81440ba50",
+      "url": "https://chinaiptv.pages.dev/sichuan/unicom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/sichuan/unicom.txt"
+      ]
+    },
+    {
+      "id": "a474783a32f1",
+      "url": "https://chinaiptv.pages.dev/tianjin/mobile.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/tianjin/mobile.txt"
+      ]
+    },
+    {
+      "id": "1a4630201a5e",
+      "url": "https://chinaiptv.pages.dev/tianjin/telecom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/tianjin/telecom.txt"
+      ]
+    },
+    {
+      "id": "bd6f5dee647e",
+      "url": "https://chinaiptv.pages.dev/tianjin/unicom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/tianjin/unicom.txt"
+      ]
+    },
+    {
+      "id": "9e8b6732b060",
+      "url": "https://chinaiptv.pages.dev/xinjiang/mobile.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/xinjiang/mobile.txt"
+      ]
+    },
+    {
+      "id": "c22e2f3cfe3d",
+      "url": "https://chinaiptv.pages.dev/xinjiang/telecom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/xinjiang/telecom.txt"
+      ]
+    },
+    {
+      "id": "4a28a7feaf68",
+      "url": "https://chinaiptv.pages.dev/xinjiang/unicom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/xinjiang/unicom.txt"
+      ]
+    },
+    {
+      "id": "9f806a6e3849",
+      "url": "https://chinaiptv.pages.dev/xizang/mobile.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/xizang/mobile.txt"
+      ]
+    },
+    {
+      "id": "cec5a3c08c27",
+      "url": "https://chinaiptv.pages.dev/xizang/telecom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/xizang/telecom.txt"
+      ]
+    },
+    {
+      "id": "de062425c2f3",
+      "url": "https://chinaiptv.pages.dev/xizang/unicom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/xizang/unicom.txt"
+      ]
+    },
+    {
+      "id": "f6450f529424",
+      "url": "https://chinaiptv.pages.dev/yunnan/mobile.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/yunnan/mobile.txt"
+      ]
+    },
+    {
+      "id": "7c73444ca43e",
+      "url": "https://chinaiptv.pages.dev/yunnan/telecom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/yunnan/telecom.txt"
+      ]
+    },
+    {
+      "id": "b9bae8834718",
+      "url": "https://chinaiptv.pages.dev/yunnan/unicom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/yunnan/unicom.txt"
+      ]
+    },
+    {
+      "id": "3d3de4bb0887",
+      "url": "https://chinaiptv.pages.dev/zhejiang/mobile.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/zhejiang/mobile.txt"
+      ]
+    },
+    {
+      "id": "7867342ad3e9",
+      "url": "https://chinaiptv.pages.dev/zhejiang/telecom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/zhejiang/telecom.txt"
+      ]
+    },
+    {
+      "id": "2ebb119f250f",
+      "url": "https://chinaiptv.pages.dev/zhejiang/unicom.txt",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://chinaiptv.pages.dev/zhejiang/unicom.txt"
+      ]
+    },
+    {
+      "id": "fbc6a5645472",
+      "url": "https://epg.112114.xyz/pp.xml",
+      "kind": "epg",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "HerbertHe/iptv-sources"
+      ],
+      "declared_urls": [
+        "https://epg.112114.xyz/pp.xml"
+      ]
+    },
+    {
+      "id": "88c7ab100bb6",
+      "url": "https://epg.pw/test_channels_all.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "HerbertHe/iptv-sources"
+      ],
+      "declared_urls": [
+        "https://epg.pw/test_channels_all.m3u"
+      ]
+    },
+    {
+      "id": "723808225964",
+      "url": "https://epg.pw/test_channels_china.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "HerbertHe/iptv-sources"
+      ],
+      "declared_urls": [
+        "https://epg.pw/test_channels_china.m3u"
+      ]
+    },
+    {
+      "id": "64b1973f3038",
+      "url": "https://epg.pw/test_channels_china_country.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "HerbertHe/iptv-sources"
+      ],
+      "declared_urls": [
+        "https://epg.pw/test_channels_china_country.m3u"
+      ]
+    },
+    {
+      "id": "50d37adc5237",
+      "url": "https://epg.pw/test_channels_china_national.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "HerbertHe/iptv-sources"
+      ],
+      "declared_urls": [
+        "https://epg.pw/test_channels_china_national.m3u"
+      ]
+    },
+    {
+      "id": "838994401702",
+      "url": "https://epg.pw/test_channels_china_province.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "HerbertHe/iptv-sources"
+      ],
+      "declared_urls": [
+        "https://epg.pw/test_channels_china_province.m3u"
+      ]
+    },
+    {
+      "id": "08adca0b0b36",
+      "url": "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0i55SY6IKDIg==",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0i55SY6IKDIg%3D%3D"
+      ]
+    },
+    {
+      "id": "85b4213b8170",
+      "url": "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0i5LqR5Y2XIg==",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0i5LqR5Y2XIg%3D%3D"
+      ]
+    },
+    {
+      "id": "40ac3053dff3",
+      "url": "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0i5YaF6JKZ5Y+kIg==",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0i5YaF6JKZ5Y%2BkIg%3D%3D"
+      ]
+    },
+    {
+      "id": "fb6973c756cc",
+      "url": "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0i5ZCJ5p6XIg==",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0i5ZCJ5p6XIg%3D%3D"
+      ]
+    },
+    {
+      "id": "459437cfe1ae",
+      "url": "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0i5rW35Y2XIg==",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0i5rW35Y2XIg%3D%3D"
+      ]
+    },
+    {
+      "id": "5273c360fd7b",
+      "url": "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iQ2hvbmdxaW5nIg==",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iQ2hvbmdxaW5nIg%3D%3D"
+      ]
+    },
+    {
+      "id": "e50b3d4a648c",
+      "url": "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iQW5odWki",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iQW5odWki"
+      ]
+    },
+    {
+      "id": "29c210307862",
+      "url": "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iQmVpamluZyI=",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iQmVpamluZyI%3D"
+      ]
+    },
+    {
+      "id": "5c4c4f8f2bf9",
+      "url": "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iR3Vhbmdkb25nIg==",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iR3Vhbmdkb25nIg%3D%3D"
+      ]
+    },
+    {
+      "id": "acb7dee84f36",
+      "url": "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iRnVqaWFuIg==",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iRnVqaWFuIg%3D%3D"
+      ]
+    },
+    {
+      "id": "0207b0272c09",
+      "url": "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iSEsi",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iSEsi"
+      ]
+    },
+    {
+      "id": "2c55b8c5e23d",
+      "url": "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iSGViZWki",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iSGViZWki"
+      ]
+    },
+    {
+      "id": "9be1724f144b",
+      "url": "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iSGVpbG9uZ2ppYW5nIg==",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iSGVpbG9uZ2ppYW5nIg%3D%3D"
+      ]
+    },
+    {
+      "id": "a94536d276c3",
+      "url": "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iSGVuYW4i",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iSGVuYW4i"
+      ]
+    },
+    {
+      "id": "d5a4e0b9c790",
+      "url": "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iSHViZWki",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iSHViZWki"
+      ]
+    },
+    {
+      "id": "0df4d7344d71",
+      "url": "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iSHVuYW4i",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iSHVuYW4i"
+      ]
+    },
+    {
+      "id": "77afa21dafc7",
+      "url": "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iSmlhbmd4aSI=",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iSmlhbmd4aSI%3D"
+      ]
+    },
+    {
+      "id": "cc0030084a04",
+      "url": "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iSmlhbmdzdSI=",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iSmlhbmdzdSI%3D"
+      ]
+    },
+    {
+      "id": "2f7603a1efda",
+      "url": "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iTGlhb25pbmci",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iTGlhb25pbmci"
+      ]
+    },
+    {
+      "id": "7e9df9bc1b75",
+      "url": "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iU2hhYW54aSI=",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iU2hhYW54aSI%3D"
+      ]
+    },
+    {
+      "id": "b6ba79ad53f0",
+      "url": "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iU2hhbmRvbmci",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iU2hhbmRvbmci"
+      ]
+    },
+    {
+      "id": "821afc3f5587",
+      "url": "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iU2hhbmdoYWki",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iU2hhbmdoYWki"
+      ]
+    },
+    {
+      "id": "e42701d781d4",
+      "url": "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iU2hhbnhpIg==",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iU2hhbnhpIg%3D%3D"
+      ]
+    },
+    {
+      "id": "92ada9423ddc",
+      "url": "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iU2ljaHVhbiI=",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iU2ljaHVhbiI%3D"
+      ]
+    },
+    {
+      "id": "238c8eb66767",
+      "url": "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iVGlhbmppbiI=",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iVGlhbmppbiI%3D"
+      ]
+    },
+    {
+      "id": "3f731ed42b9d",
+      "url": "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iWXVubmFuIg==",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iWXVubmFuIg%3D%3D"
+      ]
+    },
+    {
+      "id": "bffa73a78170",
+      "url": "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iWmhlamlhbmci",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://fofa.info/result?qbase64=ImlwdHYvbGl2ZS96aF9jbi5qcyIgJiYgY291bnRyeT0iQ04iICYmIHJlZ2lvbj0iWmhlamlhbmci"
+      ]
+    },
+    {
+      "id": "458d584bd927",
+      "url": "https://gist.githubusercontent.com/inkss/0cf33e9f52fbb1f91bc5eb0144e504cf/raw/ipv4.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://gist.githubusercontent.com/inkss/0cf33e9f52fbb1f91bc5eb0144e504cf/raw/ipv4.m3u"
+      ]
+    },
+    {
+      "id": "4963d1f5313f",
+      "url": "https://gitee.com/taksssss/tv/raw/main/epg/112114.xml.gz",
+      "kind": "epg",
+      "enabled": false,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://gitee.com/taksssss/tv/raw/main/epg/112114.xml.gz"
+      ]
+    },
+    {
+      "id": "7d6e019e5b6b",
+      "url": "https://gitee.com/taksssss/tv/raw/main/epg/51zmt.xml.gz",
+      "kind": "epg",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://gitee.com/taksssss/tv/raw/main/epg/51zmt.xml.gz"
+      ]
+    },
+    {
+      "id": "ef54d905e093",
+      "url": "https://gitee.com/taksssss/tv/raw/main/epg/epgpw_cn.xml.gz",
+      "kind": "epg",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://gitee.com/taksssss/tv/raw/main/epg/epgpw_cn.xml.gz"
+      ]
+    },
+    {
+      "id": "31d3fa32a2fb",
+      "url": "https://gitee.com/taksssss/tv/raw/main/epg/epgpw_hk.xml.gz",
+      "kind": "epg",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://gitee.com/taksssss/tv/raw/main/epg/epgpw_hk.xml.gz"
+      ]
+    },
+    {
+      "id": "d6c2fdb5ddda",
+      "url": "https://gitee.com/taksssss/tv/raw/main/epg/epgpw_tw.xml.gz",
+      "kind": "epg",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://gitee.com/taksssss/tv/raw/main/epg/epgpw_tw.xml.gz"
+      ]
+    },
+    {
+      "id": "b011207e7a24",
+      "url": "https://github.com/xisohi/IPTV-Multicast-source/blob/main/README.md",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://github.com/xisohi/IPTV-Multicast-source/blob/main/README.md"
+      ]
+    },
+    {
+      "id": "8b4da8b50a8d",
+      "url": "https://iptv-org.github.io/iptv/index.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/index.m3u"
+      ]
+    },
+    {
+      "id": "e60c768e8bc7",
+      "url": "https://jazzforlove.github.io/IPTV/IPTV_CN.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://jazzforlove.github.io/IPTV/IPTV_CN.m3u"
+      ]
+    },
+    {
+      "id": "ffbecae77f39",
+      "url": "https://jihulab.com/ymz1231/xymz/-/raw/main/ymshaoer",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://jihulab.com/ymz1231/xymz/-/raw/main/ymshaoer"
+      ]
+    },
+    {
+      "id": "49a79840abc5",
+      "url": "https://live.freetv.top/douyuyqk.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://live.freetv.top/douyuyqk.m3u"
+      ]
+    },
+    {
+      "id": "ccf1abf97e13",
+      "url": "https://live.freetv.top/huyayqk.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://live.freetv.top/huyayqk.m3u"
+      ]
+    },
+    {
+      "id": "261780e38112",
+      "url": "https://live.iptv365.org/live.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://live.iptv365.org/live.m3u"
+      ]
+    },
+    {
+      "id": "915904df3dcb",
+      "url": "https://live.kakaxi-1.ink/iptv.txt",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://live.kakaxi-1.ink/iptv.txt"
+      ]
+    },
+    {
+      "id": "bee4af6fca98",
+      "url": "https://live.zbds.top/tv/iptv4.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://live.zbds.top/tv/iptv4.m3u"
+      ]
+    },
+    {
+      "id": "4335eb1993da",
+      "url": "https://myernestlu.github.io/zby.txt",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://myernestlu.github.io/zby.txt"
+      ]
+    },
+    {
+      "id": "fa86e6cf866c",
+      "url": "https://raw.githubusercontent.com/BigBigGrandG/IPTV-URL/release/Gather.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/BigBigGrandG/IPTV-URL/release/Gather.m3u"
+      ]
+    },
+    {
+      "id": "aa9ad5e614aa",
+      "url": "https://raw.githubusercontent.com/Ftindy/IPTV-URL/main/IPTV.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Ftindy/IPTV-URL/main/IPTV.m3u"
+      ]
+    },
+    {
+      "id": "44d1fd5b1a0d",
+      "url": "https://raw.githubusercontent.com/Guovin/TV/gd/output/result.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/Guovin/TV/gd/output/result.m3u"
+      ]
+    },
+    {
+      "id": "50c14df9d1de",
+      "url": "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u"
+      ]
+    },
+    {
+      "id": "69a4be4eb7f4",
+      "url": "https://raw.githubusercontent.com/MercuryZz/IPTVN/refs/heads/Files/IPTV.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/MercuryZz/IPTVN/refs/heads/Files/IPTV.m3u"
+      ]
+    },
+    {
+      "id": "097b7363194c",
+      "url": "https://raw.githubusercontent.com/Rivens7/Livelist/main/IPTV.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/Rivens7/Livelist/main/IPTV.m3u"
+      ]
+    },
+    {
+      "id": "6f947156e1eb",
+      "url": "https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "HerbertHe/iptv-sources",
+        "cs3306/IPTV-sources",
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://ghproxy.cc/https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u",
+        "https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u"
+      ]
+    },
+    {
+      "id": "547c059c2f11",
+      "url": "https://raw.githubusercontent.com/YueChan/Live/main/APTV.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://ghproxy.cc/https://raw.githubusercontent.com/YueChan/Live/main/APTV.m3u"
+      ]
+    },
+    {
+      "id": "5bd4f57156ce",
+      "url": "https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "HerbertHe/iptv-sources"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/YueChan/Live/main/IPTV.m3u"
+      ]
+    },
+    {
+      "id": "cd75d727ec48",
+      "url": "https://raw.githubusercontent.com/alienlu/iptv/master/iptv.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/alienlu/iptv/master/iptv.m3u"
+      ]
+    },
+    {
+      "id": "34010cb6af51",
+      "url": "https://raw.githubusercontent.com/asdjkl6/tv/tv/.m3u/整套直播源/测试/整套直播源/kk.txt",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://ghproxy.cc/https://raw.githubusercontent.com/asdjkl6/tv/tv/.m3u/整套直播源/测试/整套直播源/kk.txt"
+      ]
+    },
+    {
+      "id": "e3078ae62a6b",
+      "url": "https://raw.githubusercontent.com/asdjkl6/tv/tv/.m3u/整套直播源/测试/整套直播源/l.txt",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://ghproxy.cc/https://raw.githubusercontent.com/asdjkl6/tv/tv/.m3u/整套直播源/测试/整套直播源/l.txt"
+      ]
+    },
+    {
+      "id": "04a4715bfe9f",
+      "url": "https://raw.githubusercontent.com/balala2oo8/iptv/main/o.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://gh.con.sh/https://raw.githubusercontent.com/balala2oo8/iptv/main/o.m3u"
+      ]
+    },
+    {
+      "id": "26e09f14952f",
+      "url": "https://raw.githubusercontent.com/cai23511/yex/master/TVlist/20210808384.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/cai23511/yex/master/TVlist/20210808384.m3u"
+      ]
+    },
+    {
+      "id": "7595a6c487b1",
+      "url": "https://raw.githubusercontent.com/cairong/iptv-yuan/main/jsyd.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/cairong/iptv-yuan/main/jsyd.m3u"
+      ]
+    },
+    {
+      "id": "c98049ce060e",
+      "url": "https://raw.githubusercontent.com/cymz6/AutoIPTV-Hotel/main/lives.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "HerbertHe/iptv-sources"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/cymz6/AutoIPTV-Hotel/main/lives.m3u"
+      ]
+    },
+    {
+      "id": "8a260c3c41f1",
+      "url": "https://raw.githubusercontent.com/drangjchen/IPTV/refs/heads/main/M3U/Global.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/drangjchen/IPTV/refs/heads/main/M3U/Global.m3u"
+      ]
+    },
+    {
+      "id": "b3fbaff0ed79",
+      "url": "https://raw.githubusercontent.com/fanmingming/live/main/e.xml",
+      "kind": "epg",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "HerbertHe/iptv-sources"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/fanmingming/live/main/e.xml"
+      ]
+    },
+    {
+      "id": "1361ee1506d8",
+      "url": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/index.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "HerbertHe/iptv-sources"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/index.m3u"
+      ]
+    },
+    {
+      "id": "173a064a183b",
+      "url": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "HerbertHe/iptv-sources",
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://ghproxy.cc/https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",
+        "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u"
+      ]
+    },
+    {
+      "id": "000a256a0bae",
+      "url": "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/itv.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "HerbertHe/iptv-sources"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/itv.m3u"
+      ]
+    },
+    {
+      "id": "72f605118e4e",
+      "url": "https://raw.githubusercontent.com/fenxp/iptv/refs/heads/main/live/tvlive.txt",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/fenxp/iptv/refs/heads/main/live/tvlive.txt"
+      ]
+    },
+    {
+      "id": "6f0246ffcde0",
+      "url": "https://raw.githubusercontent.com/iceyheart/IPTV/main/iptv.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/iceyheart/IPTV/main/iptv.m3u"
+      ]
+    },
+    {
+      "id": "75f892226ebd",
+      "url": "https://raw.githubusercontent.com/iptv-org/iptv/gh-pages/countries/cn.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "HerbertHe/iptv-sources",
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://ghproxy.cc/https://raw.githubusercontent.com/iptv-org/iptv/gh-pages/countries/cn.m3u",
+        "https://raw.githubusercontent.com/iptv-org/iptv/gh-pages/countries/cn.m3u"
+      ]
+    },
+    {
+      "id": "5067a78da5ad",
+      "url": "https://raw.githubusercontent.com/iptv-org/iptv/gh-pages/index.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "HerbertHe/iptv-sources"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/iptv-org/iptv/gh-pages/index.m3u"
+      ]
+    },
+    {
+      "id": "8ce3f585c8f8",
+      "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "HerbertHe/iptv-sources",
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://ghproxy.cc/https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u",
+        "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn.m3u"
+      ]
+    },
+    {
+      "id": "9ef2859f19a7",
+      "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn_112114.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "HerbertHe/iptv-sources"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn_112114.m3u"
+      ]
+    },
+    {
+      "id": "46041298fa55",
+      "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn_cctv.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "HerbertHe/iptv-sources"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn_cctv.m3u"
+      ]
+    },
+    {
+      "id": "ca798d04c3b7",
+      "url": "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn_cgtn.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "HerbertHe/iptv-sources"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/iptv-org/iptv/master/streams/cn_cgtn.m3u"
+      ]
+    },
+    {
+      "id": "cb763a1178a5",
+      "url": "https://raw.githubusercontent.com/jisoypub/iptv/master/cn_all.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/jisoypub/iptv/master/cn_all.m3u"
+      ]
+    },
+    {
+      "id": "a295b0ec2981",
+      "url": "https://raw.githubusercontent.com/joevess/IPTV/main/home.m3u8",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "HerbertHe/iptv-sources"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/joevess/IPTV/main/home.m3u8"
+      ]
+    },
+    {
+      "id": "41e488716855",
+      "url": "https://raw.githubusercontent.com/joevess/IPTV/main/iptv.m3u8",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "HerbertHe/iptv-sources",
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/joevess/IPTV/main/iptv.m3u8"
+      ]
+    },
+    {
+      "id": "51a3853ee31d",
+      "url": "https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/merged_output.txt",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://ghproxy.cc/https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/merged_output.txt"
+      ]
+    },
+    {
+      "id": "e9e512620583",
+      "url": "https://raw.githubusercontent.com/lalifeier/IPTV/main/m3u/IPTV.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://ghp.ci/https://raw.githubusercontent.com/lalifeier/IPTV/main/m3u/IPTV.m3u"
+      ]
+    },
+    {
+      "id": "4832dad575b2",
+      "url": "https://raw.githubusercontent.com/mlzlzj/hnyuan/refs/heads/main/iptv_list.txt",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/mlzlzj/hnyuan/refs/heads/main/iptv_list.txt"
+      ]
+    },
+    {
+      "id": "008c83f46118",
+      "url": "https://raw.githubusercontent.com/qwerttvv/Beijing-IPTV/master/IPTV-Mobile-Multicast.m3u",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "HerbertHe/iptv-sources"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/qwerttvv/Beijing-IPTV/master/IPTV-Mobile-Multicast.m3u"
+      ]
+    },
+    {
+      "id": "834c064568d0",
+      "url": "https://raw.githubusercontent.com/qwerttvv/Beijing-IPTV/master/IPTV-Mobile.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "HerbertHe/iptv-sources"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/qwerttvv/Beijing-IPTV/master/IPTV-Mobile.m3u"
+      ]
+    },
+    {
+      "id": "4008bd4c67b5",
+      "url": "https://raw.githubusercontent.com/qwerttvv/Beijing-IPTV/master/IPTV-Unicom-Multicast.m3u",
+      "kind": "playlist",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "HerbertHe/iptv-sources"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/qwerttvv/Beijing-IPTV/master/IPTV-Unicom-Multicast.m3u"
+      ]
+    },
+    {
+      "id": "a7bc63654a0a",
+      "url": "https://raw.githubusercontent.com/qwerttvv/Beijing-IPTV/master/IPTV-Unicom.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "HerbertHe/iptv-sources",
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/qwerttvv/Beijing-IPTV/master/IPTV-Unicom.m3u"
+      ]
+    },
+    {
+      "id": "9bb1172ae376",
+      "url": "https://raw.githubusercontent.com/skddyj/iptv/main/IPTV.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://ghp.ci/https://raw.githubusercontent.com/skddyj/iptv/main/IPTV.m3u"
+      ]
+    },
+    {
+      "id": "6ae97a86fc07",
+      "url": "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://ghproxy.cc/https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u"
+      ]
+    },
+    {
+      "id": "06ca8ca8885b",
+      "url": "https://raw.githubusercontent.com/vamoschuck/TV/main/M3U",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://mirror.ghproxy.com/https://raw.githubusercontent.com/vamoschuck/TV/main/M3U"
+      ]
+    },
+    {
+      "id": "504e470eee55",
+      "url": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.txt",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://ghproxy.cc/https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.txt"
+      ]
+    },
+    {
+      "id": "1773255d8946",
+      "url": "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv6.txt",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://ghproxy.cc/https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv6.txt"
+      ]
+    },
+    {
+      "id": "e9cd6abc6d7c",
+      "url": "https://raw.githubusercontent.com/wwb521/live/refs/heads/main/tv.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/wwb521/live/refs/heads/main/tv.m3u"
+      ]
+    },
+    {
+      "id": "abb1b0c8078a",
+      "url": "https://raw.githubusercontent.com/xzw832/cmys/main/S_CCTV.txt",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://ghproxy.cc/https://raw.githubusercontent.com/xzw832/cmys/main/S_CCTV.txt"
+      ]
+    },
+    {
+      "id": "81626d0e4cb9",
+      "url": "https://raw.githubusercontent.com/xzw832/cmys/main/S_weishi.txt",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://ghproxy.cc/https://raw.githubusercontent.com/xzw832/cmys/main/S_weishi.txt"
+      ]
+    },
+    {
+      "id": "ded15ce8b478",
+      "url": "https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://gh.con.sh/https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u"
+      ]
+    },
+    {
+      "id": "3b3b08efd376",
+      "url": "https://raw.githubusercontent.com/yuanzl77/IPTV/master/live.txt",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://ghproxy.cc/https://raw.githubusercontent.com/yuanzl77/IPTV/master/live.txt"
+      ]
+    },
+    {
+      "id": "bea8ee9f1c1e",
+      "url": "https://raw.githubusercontent.com/zbefine/iptv/main/iptv.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/zbefine/iptv/main/iptv.m3u"
+      ]
+    },
+    {
+      "id": "3e13e7cd9986",
+      "url": "https://raw.githubusercontent.com/zwc456baby/iptv_alive/master/live.txt",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/zwc456baby/iptv_alive/master/live.txt"
+      ]
+    },
+    {
+      "id": "a3452ad0b208",
+      "url": "https://tv.iill.top/m3u/Gather",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://tv.iill.top/m3u/Gather"
+      ]
+    },
+    {
+      "id": "7e06331cc6aa",
+      "url": "https://tv.iill.top/m3u/Live",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://tv.iill.top/m3u/Live"
+      ]
+    },
+    {
+      "id": "15f17106d01a",
+      "url": "https://tv.iill.top/m3u/MyTV",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://tv.iill.top/m3u/MyTV"
+      ]
+    },
+    {
+      "id": "7966a4208ba6",
+      "url": "https://tv.iill.top/m3u/Sport",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://tv.iill.top/m3u/Sport"
+      ]
+    },
+    {
+      "id": "8a2760143401",
+      "url": "https://tvbox.cainisi.cf",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://tvbox.cainisi.cf"
+      ]
+    },
+    {
+      "id": "15349a732057",
+      "url": "https://www.goodiptv.club/bililive.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "cs3306/IPTV-sources"
+      ],
+      "declared_urls": [
+        "https://www.goodiptv.club/bililive.m3u"
+      ]
+    },
+    {
+      "id": "75ca9b1604be",
+      "url": "https://www.zoomeye.org/searchResult?q=/iptv/live/zh_cn.js +country:\"CN\" +subdivisions:\"anhui\"",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://www.zoomeye.org/searchResult?q=%2Fiptv%2Flive%2Fzh_cn.js%20%2Bcountry%3A%22CN%22%20%2Bsubdivisions%3A%22anhui%22"
+      ]
+    },
+    {
+      "id": "21998ba79c8e",
+      "url": "https://www.zoomeye.org/searchResult?q=/iptv/live/zh_cn.js +country:\"CN\" +subdivisions:\"beijing\"",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://www.zoomeye.org/searchResult?q=%2Fiptv%2Flive%2Fzh_cn.js%20%2Bcountry%3A%22CN%22%20%2Bsubdivisions%3A%22beijing%22"
+      ]
+    },
+    {
+      "id": "894d806830cc",
+      "url": "https://www.zoomeye.org/searchResult?q=/iptv/live/zh_cn.js +country:\"CN\" +subdivisions:\"chongqing\"",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://www.zoomeye.org/searchResult?q=%2Fiptv%2Flive%2Fzh_cn.js%20%2Bcountry%3A%22CN%22%20%2Bsubdivisions%3A%22chongqing%22"
+      ]
+    },
+    {
+      "id": "2284c5ce3c30",
+      "url": "https://www.zoomeye.org/searchResult?q=/iptv/live/zh_cn.js +country:\"CN\" +subdivisions:\"fujian\"",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://www.zoomeye.org/searchResult?q=%2Fiptv%2Flive%2Fzh_cn.js%20%2Bcountry%3A%22CN%22%20%2Bsubdivisions%3A%22fujian%22"
+      ]
+    },
+    {
+      "id": "c910638f620c",
+      "url": "https://www.zoomeye.org/searchResult?q=/iptv/live/zh_cn.js +country:\"CN\" +subdivisions:\"guangdong\"",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://www.zoomeye.org/searchResult?q=%2Fiptv%2Flive%2Fzh_cn.js%20%2Bcountry%3A%22CN%22%20%2Bsubdivisions%3A%22guangdong%22"
+      ]
+    },
+    {
+      "id": "f05bc36c469d",
+      "url": "https://www.zoomeye.org/searchResult?q=/iptv/live/zh_cn.js +country:\"CN\" +subdivisions:\"hebei\"",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://www.zoomeye.org/searchResult?q=%2Fiptv%2Flive%2Fzh_cn.js%20%2Bcountry%3A%22CN%22%20%2Bsubdivisions%3A%22hebei%22"
+      ]
+    },
+    {
+      "id": "727c405975d3",
+      "url": "https://www.zoomeye.org/searchResult?q=/iptv/live/zh_cn.js +country:\"CN\" +subdivisions:\"henan\"",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://www.zoomeye.org/searchResult?q=%2Fiptv%2Flive%2Fzh_cn.js%20%2Bcountry%3A%22CN%22%20%2Bsubdivisions%3A%22henan%22"
+      ]
+    },
+    {
+      "id": "a6213f670639",
+      "url": "https://www.zoomeye.org/searchResult?q=/iptv/live/zh_cn.js +country:\"CN\" +subdivisions:\"hubei\"",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://www.zoomeye.org/searchResult?q=%2Fiptv%2Flive%2Fzh_cn.js%20%2Bcountry%3A%22CN%22%20%2Bsubdivisions%3A%22hubei%22"
+      ]
+    },
+    {
+      "id": "a7bc206c361d",
+      "url": "https://www.zoomeye.org/searchResult?q=/iptv/live/zh_cn.js +country:\"CN\" +subdivisions:\"hunan\"",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://www.zoomeye.org/searchResult?q=%2Fiptv%2Flive%2Fzh_cn.js%20%2Bcountry%3A%22CN%22%20%2Bsubdivisions%3A%22hunan%22"
+      ]
+    },
+    {
+      "id": "75ee1f92bcfb",
+      "url": "https://www.zoomeye.org/searchResult?q=/iptv/live/zh_cn.js +country:\"CN\" +subdivisions:\"jiangsu\"",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://www.zoomeye.org/searchResult?q=%2Fiptv%2Flive%2Fzh_cn.js%20%2Bcountry%3A%22CN%22%20%2Bsubdivisions%3A%22jiangsu%22"
+      ]
+    },
+    {
+      "id": "b765dc7012a5",
+      "url": "https://www.zoomeye.org/searchResult?q=/iptv/live/zh_cn.js +country:\"CN\" +subdivisions:\"jiangxi\"",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://www.zoomeye.org/searchResult?q=%2Fiptv%2Flive%2Fzh_cn.js%20%2Bcountry%3A%22CN%22%20%2Bsubdivisions%3A%22jiangxi%22"
+      ]
+    },
+    {
+      "id": "df7392701404",
+      "url": "https://www.zoomeye.org/searchResult?q=/iptv/live/zh_cn.js +country:\"CN\" +subdivisions:\"liaoning\"",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://www.zoomeye.org/searchResult?q=%2Fiptv%2Flive%2Fzh_cn.js%20%2Bcountry%3A%22CN%22%20%2Bsubdivisions%3A%22liaoning%22"
+      ]
+    },
+    {
+      "id": "72de1b6a3672",
+      "url": "https://www.zoomeye.org/searchResult?q=/iptv/live/zh_cn.js +country:\"CN\" +subdivisions:\"shaanxi\"",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://www.zoomeye.org/searchResult?q=%2Fiptv%2Flive%2Fzh_cn.js%20%2Bcountry%3A%22CN%22%20%2Bsubdivisions%3A%22shaanxi%22"
+      ]
+    },
+    {
+      "id": "a2ae167bf99f",
+      "url": "https://www.zoomeye.org/searchResult?q=/iptv/live/zh_cn.js +country:\"CN\" +subdivisions:\"shandong\"",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://www.zoomeye.org/searchResult?q=%2Fiptv%2Flive%2Fzh_cn.js%20%2Bcountry%3A%22CN%22%20%2Bsubdivisions%3A%22shandong%22"
+      ]
+    },
+    {
+      "id": "b758eaca1c09",
+      "url": "https://www.zoomeye.org/searchResult?q=/iptv/live/zh_cn.js +country:\"CN\" +subdivisions:\"shanghai\"",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://www.zoomeye.org/searchResult?q=%2Fiptv%2Flive%2Fzh_cn.js%20%2Bcountry%3A%22CN%22%20%2Bsubdivisions%3A%22shanghai%22"
+      ]
+    },
+    {
+      "id": "88036185c6fb",
+      "url": "https://www.zoomeye.org/searchResult?q=/iptv/live/zh_cn.js +country:\"CN\" +subdivisions:\"shanxi\"",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://www.zoomeye.org/searchResult?q=%2Fiptv%2Flive%2Fzh_cn.js%20%2Bcountry%3A%22CN%22%20%2Bsubdivisions%3A%22shanxi%22"
+      ]
+    },
+    {
+      "id": "dda0c8e44802",
+      "url": "https://www.zoomeye.org/searchResult?q=/iptv/live/zh_cn.js +country:\"CN\" +subdivisions:\"sichuan\"",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://www.zoomeye.org/searchResult?q=%2Fiptv%2Flive%2Fzh_cn.js%20%2Bcountry%3A%22CN%22%20%2Bsubdivisions%3A%22sichuan%22"
+      ]
+    },
+    {
+      "id": "36e7e3917177",
+      "url": "https://www.zoomeye.org/searchResult?q=/iptv/live/zh_cn.js +country:\"CN\" +subdivisions:\"tianjin\"",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://www.zoomeye.org/searchResult?q=%2Fiptv%2Flive%2Fzh_cn.js%20%2Bcountry%3A%22CN%22%20%2Bsubdivisions%3A%22tianjin%22"
+      ]
+    },
+    {
+      "id": "5a99e5ed406c",
+      "url": "https://www.zoomeye.org/searchResult?q=/iptv/live/zh_cn.js +country:\"CN\" +subdivisions:\"yunnan\"",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://www.zoomeye.org/searchResult?q=%2Fiptv%2Flive%2Fzh_cn.js%20%2Bcountry%3A%22CN%22%20%2Bsubdivisions%3A%22yunnan%22"
+      ]
+    },
+    {
+      "id": "7cd1c5f92b49",
+      "url": "https://www.zoomeye.org/searchResult?q=/iptv/live/zh_cn.js +country:\"CN\" +subdivisions:\"zhejiang\"",
+      "kind": "discovery",
+      "enabled": false,
+      "cloud_compatible": false,
+      "provenance": [
+        "walke2019/iptv-api-two"
+      ],
+      "declared_urls": [
+        "https://www.zoomeye.org/searchResult?q=%2Fiptv%2Flive%2Fzh_cn.js%20%2Bcountry%3A%22CN%22%20%2Bsubdivisions%3A%22zhejiang%22"
+      ]
+    },
+    {
+      "id": "9785cbf18059",
+      "url": "https://worker-9dd4.onrender.com/guide.xml.gz",
+      "kind": "epg",
+      "enabled": false,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/epg GUIDES.md"
+      ],
+      "declared_urls": [
+        "https://worker-9dd4.onrender.com/guide.xml.gz"
+      ]
+    },
+    {
+      "id": "cb966f20c3a1",
+      "url": "https://vcicio.github.io/US-EPG/merged_epg.xml.gz",
+      "kind": "epg",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "US-EPG (built from iptv-org/epg-listed EPGshare inputs)"
+      ],
+      "declared_urls": [
+        "https://vcicio.github.io/US-EPG/merged_epg.xml.gz"
+      ]
+    },
+    {
+      "id": "808cdd193b16",
+      "url": "https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz",
+      "kind": "epg",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "EPGshare01 Plex guide"
+      ],
+      "declared_urls": [
+        "https://epgshare01.online/epgshare01/epg_ripper_PLEX1.xml.gz"
+      ]
+    },
+    {
+      "id": "083f624cde11",
+      "url": "https://i.mjh.nz/PlutoTV/us.xml.gz",
+      "kind": "epg",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "Matt Huisman Pluto TV US guide"
+      ],
+      "declared_urls": [
+        "https://i.mjh.nz/PlutoTV/us.xml.gz"
+      ]
+    },
+    {
+      "id": "user-cleaned-20260913",
+      "url": "bundled://user/cleaned-merged-playlist-2-with-epg",
+      "path": "config/playlists/user-cleaned-merged-playlist-2-with-epg.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "User-provided cleaned_merged_playlist 2.with-epg.m3u"
+      ],
+      "declared_urls": [
+        "bundled://user/cleaned-merged-playlist-2-with-epg"
+      ]
+    },
+    {
+      "id": "e26ebce68286",
+      "url": "https://i.mjh.nz/Plex/us.xml.gz",
+      "kind": "epg",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "Matt Huisman Plex US guide"
+      ],
+      "declared_urls": [
+        "https://i.mjh.nz/Plex/us.xml.gz"
+      ]
+    },
+    {
+      "id": "3e664563ee5c",
+      "url": "https://i.mjh.nz/SamsungTVPlus/us.xml.gz",
+      "kind": "epg",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "Matt Huisman Samsung TV Plus US guide"
+      ],
+      "declared_urls": [
+        "https://i.mjh.nz/SamsungTVPlus/us.xml.gz"
+      ]
+    },
+    {
+      "id": "ee32c8f2b2ec",
+      "url": "https://i.mjh.nz/Roku/all.xml.gz",
+      "kind": "epg",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "Matt Huisman Roku guide"
+      ],
+      "declared_urls": [
+        "https://i.mjh.nz/Roku/all.xml.gz"
+      ]
+    },
+    {
+      "id": "ed40b4d53422",
+      "url": "https://i.mjh.nz/PBS/all.xml.gz",
+      "kind": "epg",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "Matt Huisman PBS guide"
+      ],
+      "declared_urls": [
+        "https://i.mjh.nz/PBS/all.xml.gz"
+      ]
+    },
+    {
+      "id": "6dff8a142750",
+      "url": "https://raw.githubusercontent.com/BuddyChewChew/tubi-scraper/refs/heads/main/tubi_epg.xml",
+      "kind": "epg",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "BuddyChewChew Tubi guide",
+        "BuddyChewChew/tubi-scraper replacement"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/BuddyChewChew/tubi-scraper/refs/heads/main/tubi_epg.xml",
+        "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/tubi_epg.xml"
+      ]
+    },
+    {
+      "id": "c624d6a954e9",
+      "url": "https://raw.githubusercontent.com/BuddyChewChew/xumo-playlist-generator/main/playlists/xumo_epg.xml.gz",
+      "kind": "epg",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "BuddyChewChew Xumo guide"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/BuddyChewChew/xumo-playlist-generator/main/playlists/xumo_epg.xml.gz"
+      ]
+    },
+    {
+      "id": "b591002085a9",
+      "url": "https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz",
+      "kind": "epg",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "EPGshare01 US guide 2"
+      ],
+      "declared_urls": [
+        "https://epgshare01.online/epgshare01/epg_ripper_US2.xml.gz"
+      ]
+    },
+    {
+      "id": "6faf2b0f2604",
+      "url": "https://epgshare01.online/epgshare01/epg_ripper_US_LOCALS1.xml.gz",
+      "kind": "epg",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "EPGshare01 US locals guide"
+      ],
+      "declared_urls": [
+        "https://epgshare01.online/epgshare01/epg_ripper_US_LOCALS1.xml.gz"
+      ]
+    },
+    {
+      "id": "74f4bd8a4dda",
+      "url": "https://epgshare01.online/epgshare01/epg_ripper_US_SPORTS1.xml.gz",
+      "kind": "epg",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "EPGshare01 US sports guide"
+      ],
+      "declared_urls": [
+        "https://epgshare01.online/epgshare01/epg_ripper_US_SPORTS1.xml.gz"
+      ]
+    },
+    {
+      "id": "2d970ef03f49",
+      "url": "https://i.mjh.nz/PlutoTV/all.xml.gz",
+      "kind": "epg",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "Matt Huisman Pluto TV all-regions guide"
+      ],
+      "declared_urls": [
+        "https://i.mjh.nz/PlutoTV/all.xml.gz"
+      ]
+    },
+    {
+      "id": "51afb6d197bd",
+      "url": "https://epgshare01.online/epgshare01/epg_ripper_ALL_SOURCES1.xml.gz",
+      "kind": "epg",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "EPGshare01 all-sources combined guide"
+      ],
+      "declared_urls": [
+        "https://epgshare01.online/epgshare01/epg_ripper_ALL_SOURCES1.xml.gz"
+      ]
+    },
+    {
+      "id": "c0ec8ac71939",
+      "url": "https://iptv-epg.org/files/epg-us.xml.gz",
+      "kind": "epg",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-epg.org US aggregate guide"
+      ],
+      "declared_urls": [
+        "https://iptv-epg.org/files/epg-us.xml.gz"
+      ]
+    },
+    {
+      "id": "5dab59855cb7",
+      "url": "bundled://aria-plus-united-states",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "aria-tv/aria Aria+ US playlist, checked in as config/playlists/aria-plus-united-states.m3u",
+        "Original source: https://raw.githubusercontent.com/aria-tv/aria/main/aria%2B/united_states.m3u",
+        "Community-curated broadcast/Turner/AFN channels; soft_validation=true removes only provably dead links (user-directed)"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/aria-tv/aria/main/aria%2B/united_states.m3u"
+      ],
+      "soft_validation": true,
+      "path": "config/playlists/aria-plus-united-states.m3u"
+    },
+    {
+      "id": "ba3f493d253b",
+      "url": "https://epg.pw/xmltv/epg_US.xml",
+      "kind": "epg",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "epg.pw US XMLTV guide"
+      ],
+      "declared_urls": [
+        "https://epg.pw/xmltv/epg_US.xml"
+      ]
+    },
+    {
+      "id": "22d474d6076d",
+      "url": "https://raw.githubusercontent.com/acidjesuz/EPGTalk/master/US_guide.xml.gz",
+      "kind": "epg",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "EPGTalk US guide"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/acidjesuz/EPGTalk/master/US_guide.xml.gz"
+      ]
+    },
+    {
+      "id": "ad56524531d6",
+      "url": "https://raw.githubusercontent.com/acidjesuz/EPGTalk/master/US_local_guide.xml.gz",
+      "kind": "epg",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "EPGTalk US local guide"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/acidjesuz/EPGTalk/master/US_local_guide.xml.gz"
+      ]
+    }
+  ]
+}

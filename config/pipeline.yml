@@ -1,0 +1,35 @@
+sources_file: config/sources.json
+filter:
+  languages: [en]
+  countries:
+    prefer: [US]
+  allow_non_us_english: false
+  allow_unknown: false
+metadata:
+  url: https://iptv-org.github.io/api/channels.json
+  timeout_seconds: 30
+fetch:
+  timeout_seconds: 25
+  concurrency: 8
+validation:
+  timeout_seconds: 7
+  concurrency: 40
+  cache_ttl_hours: 24
+  deep_probe_limit: 250
+  candidates_per_identity: 4
+  candidates_per_identity_by_source:
+    5dab59855cb7: 39
+  total_candidate_limit: 5000
+  responsive_fixture: config/fixtures/aria-missing-responsive.json
+  responsive_fixture_source_id: 5dab59855cb7
+dedupe:
+  backups_per_channel: 1
+  backups_per_source:
+    5dab59855cb7: 39
+epg:
+  timeout_seconds: 240
+  fuzzy_threshold: 93
+publish:
+  directory: public
+  minimum_channels: 500
+  epg_url: https://bbishop-ai.github.io/owl-iptv/epg.xml

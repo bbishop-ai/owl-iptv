@@ -1,0 +1,9 @@
+.cache/
+.pytest_cache/
+__pycache__/
+*.pyc
+build/
+stage/
+public/
+!public/.gitkeep
+
