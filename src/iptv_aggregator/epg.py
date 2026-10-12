@@ -145,8 +145,10 @@ def _gzip_complete(raw: bytes) -> bool:
 
 
 def _url_provider_hex(url: str) -> tuple[str | None, str | None]:
-    """(provider, provider-native id) from jmp2.uk short links, else (None, None)."""
-    m = re.search(r"jmp2\.uk/([a-z]{3})-([0-9a-f]{16,32})", url or "")
+    """(provider, provider-native id) from jmp2.uk short links or owl relay /plu/<id> URLs, else (None, None)."""
+    m = re.search(r"jmp2\.uk/([a-z]{3})-([0-9a-f]{16,32})", url or "") or re.search(
+        r"/(plu)/([0-9a-f]{24})\.m3u8", url or ""
+    )
     if not m:
         return None, None
     return {"plu": "pluto", "plx": "plex", "sam": "samsung", "rok": "roku", "tub": "tubi", "xum": "xumo"}.get(m.group(1)), m.group(2)
