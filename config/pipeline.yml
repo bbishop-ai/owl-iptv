@@ -1,4 +1,7 @@
 sources_file: config/sources.json
+rewrite:
+  # Pluto relay (Cloudflare Worker owl-pluto-relay): replaces dead jmp2.uk Pluto links
+  pluto_relay: https://owl-pluto-relay.bradsai818.workers.dev
 filter:
   languages: [en]
   countries:

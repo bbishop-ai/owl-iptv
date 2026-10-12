@@ -86,6 +86,24 @@ def simple_category(channel: Channel) -> str:
     return "Other"
 
 
+_JMP2_PLUTO = re.compile(r"^https?://jmp2\.uk/plu-([0-9a-f]{24})(?:\.m3u8)?(?:[?#].*)?$")
+
+
+def rewrite_pluto_url(url: str, relay_base: str | None) -> str:
+    """jmp2.uk Pluto short link -> owl Pluto relay (Pluto v1 shutdown, Oct 2026).
+
+    jmp2.uk now redirects to a v2 stitcher URL carrying a JWT Pluto rejects (403);
+    the relay mints a fresh Pluto guest session per play. Non-Pluto URLs, and every
+    URL when no relay is configured, pass through unchanged.
+    """
+    if not relay_base:
+        return url
+    m = _JMP2_PLUTO.match(url or "")
+    if not m:
+        return url
+    return f"{relay_base.rstrip('/')}/plu/{m.group(1)}.m3u8"
+
+
 def normalize_channel(channel: Channel) -> Channel:
     channel.name = re.sub(r"\s+", " ", channel.name).strip()
     channel.language = classify_language(channel)

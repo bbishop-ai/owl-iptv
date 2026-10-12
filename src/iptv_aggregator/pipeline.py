@@ -14,7 +14,7 @@ from .dedupe import preselect_candidates, select_streams
 from .epg import fetch_epg, match_channels, xmltv_bytes
 from .metadata import load_metadata
 from .models import Validation
-from .normalize import language_allowed, normalize_channel, normalized_name
+from .normalize import language_allowed, normalize_channel, normalized_name, rewrite_pluto_url
 from .publish import atomic_publish, m3u_text, sanity_check
 from .sources import SourceFetcher
 from .validator import Validator
@@ -36,6 +36,9 @@ async def run(config_path: str) -> dict:
     catalog, metadata_status = await load_metadata(cfg["metadata"]["url"], work / "iptv-org-channels.json", cfg["metadata"]["timeout_seconds"])
     metadata_methods = Counter(catalog.enrich(channel) for channel in channels)
     channels = [normalize_channel(channel) for channel in channels]
+    pluto_relay = (cfg.get("rewrite") or {}).get("pluto_relay")
+    for channel in channels:
+        channel.url = rewrite_pluto_url(channel.url, pluto_relay)
     fixture_path = Path(cfg["_root"]) / cfg["validation"].get("responsive_fixture", "")
     fixture = json.loads(fixture_path.read_text(encoding="utf-8")) if fixture_path.is_file() else {}
     fixture_urls = set(fixture.get("statuses", {})) | set(fixture.get("preserve_urls", []))

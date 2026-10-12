@@ -4,14 +4,15 @@
       "id": "1cffe0661680",
       "url": "http://175.178.251.183:6689/live.m3u",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "cs3306/IPTV-sources"
       ],
       "declared_urls": [
         "http://175.178.251.183:6689/live.m3u"
-      ]
+      ],
+      "disabled_reason": "failed every build 2026-09-15..2026-10-12 (37/37 runs: 404 / DNS / TLS / no channels parsed)"
     },
     {
       "id": "a1f279d942f5",
@@ -2006,27 +2007,29 @@
       "id": "261780e38112",
       "url": "https://live.iptv365.org/live.m3u",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "cs3306/IPTV-sources"
       ],
       "declared_urls": [
         "https://live.iptv365.org/live.m3u"
-      ]
+      ],
+      "disabled_reason": "failed every build 2026-09-15..2026-10-12 (37/37 runs: 404 / DNS / TLS / no channels parsed)"
     },
     {
       "id": "915904df3dcb",
       "url": "https://live.kakaxi-1.ink/iptv.txt",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "cs3306/IPTV-sources"
       ],
       "declared_urls": [
         "https://live.kakaxi-1.ink/iptv.txt"
-      ]
+      ],
+      "disabled_reason": "failed every build 2026-09-15..2026-10-12 (37/37 runs: 404 / DNS / TLS / no channels parsed)"
     },
     {
       "id": "bee4af6fca98",
@@ -2071,14 +2074,15 @@
       "id": "aa9ad5e614aa",
       "url": "https://raw.githubusercontent.com/Ftindy/IPTV-URL/main/IPTV.m3u",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "cs3306/IPTV-sources"
       ],
       "declared_urls": [
         "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Ftindy/IPTV-URL/main/IPTV.m3u"
-      ]
+      ],
+      "disabled_reason": "failed every build 2026-09-15..2026-10-12 (37/37 runs: 404 / DNS / TLS / no channels parsed)"
     },
     {
       "id": "44d1fd5b1a0d",
@@ -2152,14 +2156,15 @@
       "id": "547c059c2f11",
       "url": "https://raw.githubusercontent.com/YueChan/Live/main/APTV.m3u",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "walke2019/iptv-api-two"
       ],
       "declared_urls": [
         "https://ghproxy.cc/https://raw.githubusercontent.com/YueChan/Live/main/APTV.m3u"
-      ]
+      ],
+      "disabled_reason": "failed every build 2026-09-15..2026-10-12 (37/37 runs: 404 / DNS / TLS / no channels parsed)"
     },
     {
       "id": "5bd4f57156ce",
@@ -2217,14 +2222,15 @@
       "id": "04a4715bfe9f",
       "url": "https://raw.githubusercontent.com/balala2oo8/iptv/main/o.m3u",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "cs3306/IPTV-sources"
       ],
       "declared_urls": [
         "https://gh.con.sh/https://raw.githubusercontent.com/balala2oo8/iptv/main/o.m3u"
-      ]
+      ],
+      "disabled_reason": "failed every build 2026-09-15..2026-10-12 (37/37 runs: 404 / DNS / TLS / no channels parsed)"
     },
     {
       "id": "26e09f14952f",
@@ -2243,27 +2249,29 @@
       "id": "7595a6c487b1",
       "url": "https://raw.githubusercontent.com/cairong/iptv-yuan/main/jsyd.m3u",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "cs3306/IPTV-sources"
       ],
       "declared_urls": [
         "https://raw.githubusercontent.com/cairong/iptv-yuan/main/jsyd.m3u"
-      ]
+      ],
+      "disabled_reason": "failed every build 2026-09-15..2026-10-12 (37/37 runs: 404 / DNS / TLS / no channels parsed)"
     },
     {
       "id": "c98049ce060e",
       "url": "https://raw.githubusercontent.com/cymz6/AutoIPTV-Hotel/main/lives.m3u",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "HerbertHe/iptv-sources"
       ],
       "declared_urls": [
         "https://raw.githubusercontent.com/cymz6/AutoIPTV-Hotel/main/lives.m3u"
-      ]
+      ],
+      "disabled_reason": "failed every build 2026-09-15..2026-10-12 (37/37 runs: 404 / DNS / TLS / no channels parsed)"
     },
     {
       "id": "8a260c3c41f1",
@@ -2336,27 +2344,29 @@
       "id": "72f605118e4e",
       "url": "https://raw.githubusercontent.com/fenxp/iptv/refs/heads/main/live/tvlive.txt",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "cs3306/IPTV-sources"
       ],
       "declared_urls": [
         "https://raw.githubusercontent.com/fenxp/iptv/refs/heads/main/live/tvlive.txt"
-      ]
+      ],
+      "disabled_reason": "failed every build 2026-09-15..2026-10-12 (37/37 runs: 404 / DNS / TLS / no channels parsed)"
     },
     {
       "id": "6f0246ffcde0",
       "url": "https://raw.githubusercontent.com/iceyheart/IPTV/main/iptv.m3u",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "cs3306/IPTV-sources"
       ],
       "declared_urls": [
         "https://raw.githubusercontent.com/iceyheart/IPTV/main/iptv.m3u"
-      ]
+      ],
+      "disabled_reason": "failed every build 2026-09-15..2026-10-12 (37/37 runs: 404 / DNS / TLS / no channels parsed)"
     },
     {
       "id": "75f892226ebd",
@@ -2444,33 +2454,35 @@
       "id": "cb763a1178a5",
       "url": "https://raw.githubusercontent.com/jisoypub/iptv/master/cn_all.m3u",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "cs3306/IPTV-sources"
       ],
       "declared_urls": [
         "https://raw.githubusercontent.com/jisoypub/iptv/master/cn_all.m3u"
-      ]
+      ],
+      "disabled_reason": "failed every build 2026-09-15..2026-10-12 (37/37 runs: 404 / DNS / TLS / no channels parsed)"
     },
     {
       "id": "a295b0ec2981",
       "url": "https://raw.githubusercontent.com/joevess/IPTV/main/home.m3u8",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "HerbertHe/iptv-sources"
       ],
       "declared_urls": [
         "https://raw.githubusercontent.com/joevess/IPTV/main/home.m3u8"
-      ]
+      ],
+      "disabled_reason": "failed every build 2026-09-15..2026-10-12 (37/37 runs: 404 / DNS / TLS / no channels parsed)"
     },
     {
       "id": "41e488716855",
       "url": "https://raw.githubusercontent.com/joevess/IPTV/main/iptv.m3u8",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "HerbertHe/iptv-sources",
@@ -2478,7 +2490,8 @@
       ],
       "declared_urls": [
         "https://raw.githubusercontent.com/joevess/IPTV/main/iptv.m3u8"
-      ]
+      ],
+      "disabled_reason": "failed every build 2026-09-15..2026-10-12 (37/37 runs: 404 / DNS / TLS / no channels parsed)"
     },
     {
       "id": "51a3853ee31d",
@@ -2497,14 +2510,15 @@
       "id": "e9e512620583",
       "url": "https://raw.githubusercontent.com/lalifeier/IPTV/main/m3u/IPTV.m3u",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "cs3306/IPTV-sources"
       ],
       "declared_urls": [
         "https://ghp.ci/https://raw.githubusercontent.com/lalifeier/IPTV/main/m3u/IPTV.m3u"
-      ]
+      ],
+      "disabled_reason": "failed every build 2026-09-15..2026-10-12 (37/37 runs: 404 / DNS / TLS / no channels parsed)"
     },
     {
       "id": "4832dad575b2",
@@ -2654,53 +2668,57 @@
       "id": "abb1b0c8078a",
       "url": "https://raw.githubusercontent.com/xzw832/cmys/main/S_CCTV.txt",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "walke2019/iptv-api-two"
       ],
       "declared_urls": [
         "https://ghproxy.cc/https://raw.githubusercontent.com/xzw832/cmys/main/S_CCTV.txt"
-      ]
+      ],
+      "disabled_reason": "failed every build 2026-09-15..2026-10-12 (37/37 runs: 404 / DNS / TLS / no channels parsed)"
     },
     {
       "id": "81626d0e4cb9",
       "url": "https://raw.githubusercontent.com/xzw832/cmys/main/S_weishi.txt",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "walke2019/iptv-api-two"
       ],
       "declared_urls": [
         "https://ghproxy.cc/https://raw.githubusercontent.com/xzw832/cmys/main/S_weishi.txt"
-      ]
+      ],
+      "disabled_reason": "failed every build 2026-09-15..2026-10-12 (37/37 runs: 404 / DNS / TLS / no channels parsed)"
     },
     {
       "id": "ded15ce8b478",
       "url": "https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "cs3306/IPTV-sources"
       ],
       "declared_urls": [
         "https://gh.con.sh/https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u"
-      ]
+      ],
+      "disabled_reason": "failed every build 2026-09-15..2026-10-12 (37/37 runs: 404 / DNS / TLS / no channels parsed)"
     },
     {
       "id": "3b3b08efd376",
       "url": "https://raw.githubusercontent.com/yuanzl77/IPTV/master/live.txt",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "walke2019/iptv-api-two"
       ],
       "declared_urls": [
         "https://ghproxy.cc/https://raw.githubusercontent.com/yuanzl77/IPTV/master/live.txt"
-      ]
+      ],
+      "disabled_reason": "failed every build 2026-09-15..2026-10-12 (37/37 runs: 404 / DNS / TLS / no channels parsed)"
     },
     {
       "id": "bea8ee9f1c1e",
@@ -2732,53 +2750,57 @@
       "id": "a3452ad0b208",
       "url": "https://tv.iill.top/m3u/Gather",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "cs3306/IPTV-sources"
       ],
       "declared_urls": [
         "https://tv.iill.top/m3u/Gather"
-      ]
+      ],
+      "disabled_reason": "failed every build 2026-09-15..2026-10-12 (37/37 runs: 404 / DNS / TLS / no channels parsed)"
     },
     {
       "id": "7e06331cc6aa",
       "url": "https://tv.iill.top/m3u/Live",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "cs3306/IPTV-sources"
       ],
       "declared_urls": [
         "https://tv.iill.top/m3u/Live"
-      ]
+      ],
+      "disabled_reason": "failed every build 2026-09-15..2026-10-12 (37/37 runs: 404 / DNS / TLS / no channels parsed)"
     },
     {
       "id": "15f17106d01a",
       "url": "https://tv.iill.top/m3u/MyTV",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "cs3306/IPTV-sources"
       ],
       "declared_urls": [
         "https://tv.iill.top/m3u/MyTV"
-      ]
+      ],
+      "disabled_reason": "failed every build 2026-09-15..2026-10-12 (37/37 runs: 404 / DNS / TLS / no channels parsed)"
     },
     {
       "id": "7966a4208ba6",
       "url": "https://tv.iill.top/m3u/Sport",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "cs3306/IPTV-sources"
       ],
       "declared_urls": [
         "https://tv.iill.top/m3u/Sport"
-      ]
+      ],
+      "disabled_reason": "failed every build 2026-09-15..2026-10-12 (37/37 runs: 404 / DNS / TLS / no channels parsed)"
     },
     {
       "id": "8a2760143401",
@@ -2797,14 +2819,15 @@
       "id": "15349a732057",
       "url": "https://www.goodiptv.club/bililive.m3u",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "cs3306/IPTV-sources"
       ],
       "declared_urls": [
         "https://www.goodiptv.club/bililive.m3u"
-      ]
+      ],
+      "disabled_reason": "failed every build 2026-09-15..2026-10-12 (37/37 runs: 404 / DNS / TLS / no channels parsed)"
     },
     {
       "id": "75ca9b1604be",
