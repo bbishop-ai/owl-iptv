@@ -53,6 +53,10 @@ epg:
   timeout_seconds: 240
   fuzzy_threshold: 93
   attempts: 3
+  # Programme window trimming (hours around "now" to keep in XMLTV)
+  # Reduces EPG file size for faster loading in Owl
+  window_hours_back: 6
+  window_hours_forward: 72
 publish:
   directory: public
   minimum_channels: 500

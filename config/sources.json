@@ -6956,6 +6956,266 @@
       "declared_urls": [
         "https://www.apsattv.com/ssungusa.m3u"
       ]
+    },
+    {
+      "id": "epg-plutotv-ca",
+      "url": "https://i.mjh.nz/PlutoTV/ca.xml.gz",
+      "kind": "epg",
+      "provenance": [
+        "i.mjh.nz"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://i.mjh.nz/PlutoTV/ca.xml.gz"
+      ]
+    },
+    {
+      "id": "epg-plutotv-gb",
+      "url": "https://i.mjh.nz/PlutoTV/gb.xml.gz",
+      "kind": "epg",
+      "provenance": [
+        "i.mjh.nz"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://i.mjh.nz/PlutoTV/gb.xml.gz"
+      ]
+    },
+    {
+      "id": "epg-plutotv-fr",
+      "url": "https://i.mjh.nz/PlutoTV/fr.xml.gz",
+      "kind": "epg",
+      "provenance": [
+        "i.mjh.nz"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://i.mjh.nz/PlutoTV/fr.xml.gz"
+      ]
+    },
+    {
+      "id": "epg-plutotv-de",
+      "url": "https://i.mjh.nz/PlutoTV/de.xml.gz",
+      "kind": "epg",
+      "provenance": [
+        "i.mjh.nz"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://i.mjh.nz/PlutoTV/de.xml.gz"
+      ]
+    },
+    {
+      "id": "epg-plutotv-es",
+      "url": "https://i.mjh.nz/PlutoTV/es.xml.gz",
+      "kind": "epg",
+      "provenance": [
+        "i.mjh.nz"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://i.mjh.nz/PlutoTV/es.xml.gz"
+      ]
+    },
+    {
+      "id": "epg-plutotv-it",
+      "url": "https://i.mjh.nz/PlutoTV/it.xml.gz",
+      "kind": "epg",
+      "provenance": [
+        "i.mjh.nz"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://i.mjh.nz/PlutoTV/it.xml.gz"
+      ]
+    },
+    {
+      "id": "epg-plutotv-br",
+      "url": "https://i.mjh.nz/PlutoTV/br.xml.gz",
+      "kind": "epg",
+      "provenance": [
+        "i.mjh.nz"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://i.mjh.nz/PlutoTV/br.xml.gz"
+      ]
+    },
+    {
+      "id": "epg-plutotv-mx",
+      "url": "https://i.mjh.nz/PlutoTV/mx.xml.gz",
+      "kind": "epg",
+      "provenance": [
+        "i.mjh.nz"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://i.mjh.nz/PlutoTV/mx.xml.gz"
+      ]
+    },
+    {
+      "id": "epg-plutotv-no",
+      "url": "https://i.mjh.nz/PlutoTV/no.xml.gz",
+      "kind": "epg",
+      "provenance": [
+        "i.mjh.nz"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://i.mjh.nz/PlutoTV/no.xml.gz"
+      ]
+    },
+    {
+      "id": "epg-plutotv-se",
+      "url": "https://i.mjh.nz/PlutoTV/se.xml.gz",
+      "kind": "epg",
+      "provenance": [
+        "i.mjh.nz"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://i.mjh.nz/PlutoTV/se.xml.gz"
+      ]
+    },
+    {
+      "id": "epg-plutotv-dk",
+      "url": "https://i.mjh.nz/PlutoTV/dk.xml.gz",
+      "kind": "epg",
+      "provenance": [
+        "i.mjh.nz"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://i.mjh.nz/PlutoTV/dk.xml.gz"
+      ]
+    },
+    {
+      "id": "epg-plex-ca",
+      "url": "https://i.mjh.nz/Plex/ca.xml.gz",
+      "kind": "epg",
+      "provenance": [
+        "i.mjh.nz"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://i.mjh.nz/Plex/ca.xml.gz"
+      ]
+    },
+    {
+      "id": "epg-plex-gb",
+      "url": "https://i.mjh.nz/Plex/gb.xml.gz",
+      "kind": "epg",
+      "provenance": [
+        "i.mjh.nz"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://i.mjh.nz/Plex/gb.xml.gz"
+      ]
+    },
+    {
+      "id": "epg-plex-au",
+      "url": "https://i.mjh.nz/Plex/au.xml.gz",
+      "kind": "epg",
+      "provenance": [
+        "i.mjh.nz"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://i.mjh.nz/Plex/au.xml.gz"
+      ]
+    },
+    {
+      "id": "epg-samsung-ca",
+      "url": "https://i.mjh.nz/SamsungTVPlus/ca.xml.gz",
+      "kind": "epg",
+      "provenance": [
+        "i.mjh.nz"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://i.mjh.nz/SamsungTVPlus/ca.xml.gz"
+      ]
+    },
+    {
+      "id": "epg-samsung-gb",
+      "url": "https://i.mjh.nz/SamsungTVPlus/gb.xml.gz",
+      "kind": "epg",
+      "provenance": [
+        "i.mjh.nz"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://i.mjh.nz/SamsungTVPlus/gb.xml.gz"
+      ]
+    },
+    {
+      "id": "epg-samsung-fr",
+      "url": "https://i.mjh.nz/SamsungTVPlus/fr.xml.gz",
+      "kind": "epg",
+      "provenance": [
+        "i.mjh.nz"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://i.mjh.nz/SamsungTVPlus/fr.xml.gz"
+      ]
+    },
+    {
+      "id": "epg-samsung-de",
+      "url": "https://i.mjh.nz/SamsungTVPlus/de.xml.gz",
+      "kind": "epg",
+      "provenance": [
+        "i.mjh.nz"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://i.mjh.nz/SamsungTVPlus/de.xml.gz"
+      ]
+    },
+    {
+      "id": "epg-samsung-es",
+      "url": "https://i.mjh.nz/SamsungTVPlus/es.xml.gz",
+      "kind": "epg",
+      "provenance": [
+        "i.mjh.nz"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://i.mjh.nz/SamsungTVPlus/es.xml.gz"
+      ]
+    },
+    {
+      "id": "epg-samsung-it",
+      "url": "https://i.mjh.nz/SamsungTVPlus/it.xml.gz",
+      "kind": "epg",
+      "provenance": [
+        "i.mjh.nz"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://i.mjh.nz/SamsungTVPlus/it.xml.gz"
+      ]
     }
   ]
 }

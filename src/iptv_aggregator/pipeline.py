@@ -109,6 +109,9 @@ async def run(config_path: str) -> dict:
         if val:
             val.epg_confidence = channel.attrs.get("epg_confidence", "none")
             val.epg_match_method = channel.attrs.get("epg_match_method", "")
+    # EPG programme window trimming (reduce XMLTV size)
+    epg_window_back = cfg["epg"].get("window_hours_back", 6)
+    epg_window_forward = cfg["epg"].get("window_hours_forward", 72)
     source_status = {source["id"]: status for source, _, status in fetched}
     validation_counts = Counter("passed" if value.ok else "failed" for value in validations.values())
     stats = {
@@ -153,7 +156,7 @@ async def run(config_path: str) -> dict:
     stats["epg_confidence_fuzzy"] = stats.get("epg_fuzzy", 0)
     stats["epg_confidence_none"] = stats.get("epg_unmatched", 0)
     stage.joinpath("playlist.m3u").write_text(m3u_text(selected, cfg["publish"]["epg_url"], validations), encoding="utf-8")
-    stage.joinpath("epg.xml").write_bytes(xmltv_bytes(selected, epg))
+    stage.joinpath("epg.xml").write_bytes(xmltv_bytes(selected, epg, epg_window_back, epg_window_forward))
     stage.joinpath("stats.json").write_text(json.dumps(stats, indent=2, sort_keys=True), encoding="utf-8")
     stage.joinpath("unmatched_channels.json").write_text(json.dumps(_unmatched_channels(selected, epg), indent=2), encoding="utf-8")
     stage.joinpath("report.md").write_text(_report(stats), encoding="utf-8")

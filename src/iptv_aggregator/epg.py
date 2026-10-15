@@ -329,13 +329,41 @@ def match_channels(channels: list[Channel], epg: EPGData, fuzzy_threshold: int =
     return stats
 
 
-def xmltv_bytes(channels: list[Channel], epg: EPGData) -> bytes:
+def xmltv_bytes(channels: list[Channel], epg: EPGData, window_hours_back: int = 0, window_hours_forward: int = 0) -> bytes:
     root = ET.Element("tv", {"generator-info-name": "owl-iptv"})
     ids = {channel.tvg_id for channel in channels if channel.tvg_id}
+
+    # Optional time window filtering
+    if window_hours_back > 0 or window_hours_forward > 0:
+        import time
+        now = time.time()
+        cutoff_start = now - (window_hours_back * 3600)
+        cutoff_end = now + (window_hours_forward * 3600)
+
+        def in_window(prog: ET.Element) -> bool:
+            start = prog.get("start", "")
+            stop = prog.get("stop", "")
+            # Parse XMLTV time format: YYYYMMDDHHMMSS +ZZZZ
+            def parse_xtime(t: str) -> float | None:
+                try:
+                    return time.mktime(time.strptime(t[:14], "%Y%m%d%H%M%S"))
+                except Exception:
+                    return None
+            prog_start = parse_xtime(start)
+            prog_stop = parse_xtime(stop)
+            if prog_start is None and prog_stop is None:
+                return False
+            # Keep if programme overlaps the window
+            return (prog_stop is None or prog_stop > cutoff_start) and (prog_start is None or prog_start < cutoff_end)
+    else:
+        def in_window(_: ET.Element) -> bool:
+            return True
+
     for epg_id in sorted(ids):
         if epg_id in epg.channels:
             root.append(epg.channels[epg_id])
-        for programme in epg.programmes.get(epg_id, []):
+        filtered = [p for p in epg.programmes.get(epg_id, []) if in_window(p)]
+        for programme in filtered:
             root.append(programme)
     buffer = io.BytesIO()
     ET.ElementTree(root).write(buffer, encoding="utf-8", xml_declaration=True)
