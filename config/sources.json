@@ -3615,6 +3615,3347 @@
       "declared_urls": [
         "https://github.com/BuddyChewChew/multi-epg-light/raw/refs/heads/main/epgs/light-guide.xml.gz"
       ]
+    },
+    {
+      "id": "iptv-org-af",
+      "url": "https://iptv-org.github.io/iptv/countries/af.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/af.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-al",
+      "url": "https://iptv-org.github.io/iptv/countries/al.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/al.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-dz",
+      "url": "https://iptv-org.github.io/iptv/countries/dz.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/dz.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ad",
+      "url": "https://iptv-org.github.io/iptv/countries/ad.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ad.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ao",
+      "url": "https://iptv-org.github.io/iptv/countries/ao.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ao.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ag",
+      "url": "https://iptv-org.github.io/iptv/countries/ag.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ag.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ar",
+      "url": "https://iptv-org.github.io/iptv/countries/ar.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ar.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-am",
+      "url": "https://iptv-org.github.io/iptv/countries/am.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/am.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-aw",
+      "url": "https://iptv-org.github.io/iptv/countries/aw.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/aw.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-at",
+      "url": "https://iptv-org.github.io/iptv/countries/at.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/at.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-az",
+      "url": "https://iptv-org.github.io/iptv/countries/az.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/az.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-bs",
+      "url": "https://iptv-org.github.io/iptv/countries/bs.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/bs.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-bh",
+      "url": "https://iptv-org.github.io/iptv/countries/bh.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/bh.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-bd",
+      "url": "https://iptv-org.github.io/iptv/countries/bd.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/bd.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-bb",
+      "url": "https://iptv-org.github.io/iptv/countries/bb.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/bb.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-by",
+      "url": "https://iptv-org.github.io/iptv/countries/by.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/by.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-be",
+      "url": "https://iptv-org.github.io/iptv/countries/be.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/be.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-bz",
+      "url": "https://iptv-org.github.io/iptv/countries/bz.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/bz.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-bj",
+      "url": "https://iptv-org.github.io/iptv/countries/bj.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/bj.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-bt",
+      "url": "https://iptv-org.github.io/iptv/countries/bt.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/bt.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-bo",
+      "url": "https://iptv-org.github.io/iptv/countries/bo.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/bo.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-bq",
+      "url": "https://iptv-org.github.io/iptv/countries/bq.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/bq.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ba",
+      "url": "https://iptv-org.github.io/iptv/countries/ba.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ba.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-br",
+      "url": "https://iptv-org.github.io/iptv/countries/br.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/br.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-vg",
+      "url": "https://iptv-org.github.io/iptv/countries/vg.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/vg.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-bn",
+      "url": "https://iptv-org.github.io/iptv/countries/bn.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/bn.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-bg",
+      "url": "https://iptv-org.github.io/iptv/countries/bg.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/bg.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-bf",
+      "url": "https://iptv-org.github.io/iptv/countries/bf.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/bf.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-bi",
+      "url": "https://iptv-org.github.io/iptv/countries/bi.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/bi.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-cv",
+      "url": "https://iptv-org.github.io/iptv/countries/cv.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/cv.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-kh",
+      "url": "https://iptv-org.github.io/iptv/countries/kh.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/kh.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-cm",
+      "url": "https://iptv-org.github.io/iptv/countries/cm.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/cm.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ic",
+      "url": "https://iptv-org.github.io/iptv/countries/ic.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ic.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-cl",
+      "url": "https://iptv-org.github.io/iptv/countries/cl.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/cl.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-cn",
+      "url": "https://iptv-org.github.io/iptv/countries/cn.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/cn.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-co",
+      "url": "https://iptv-org.github.io/iptv/countries/co.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/co.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-km",
+      "url": "https://iptv-org.github.io/iptv/countries/km.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/km.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-cg",
+      "url": "https://iptv-org.github.io/iptv/countries/cg.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/cg.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-cr",
+      "url": "https://iptv-org.github.io/iptv/countries/cr.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/cr.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ci",
+      "url": "https://iptv-org.github.io/iptv/countries/ci.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ci.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-hr",
+      "url": "https://iptv-org.github.io/iptv/countries/hr.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/hr.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-cu",
+      "url": "https://iptv-org.github.io/iptv/countries/cu.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/cu.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-cy",
+      "url": "https://iptv-org.github.io/iptv/countries/cy.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/cy.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-cz",
+      "url": "https://iptv-org.github.io/iptv/countries/cz.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/cz.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-dk",
+      "url": "https://iptv-org.github.io/iptv/countries/dk.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/dk.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-dj",
+      "url": "https://iptv-org.github.io/iptv/countries/dj.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/dj.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-dm",
+      "url": "https://iptv-org.github.io/iptv/countries/dm.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/dm.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-do",
+      "url": "https://iptv-org.github.io/iptv/countries/do.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/do.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ec",
+      "url": "https://iptv-org.github.io/iptv/countries/ec.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ec.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-eg",
+      "url": "https://iptv-org.github.io/iptv/countries/eg.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/eg.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-sv",
+      "url": "https://iptv-org.github.io/iptv/countries/sv.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/sv.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-gq",
+      "url": "https://iptv-org.github.io/iptv/countries/gq.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/gq.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ee",
+      "url": "https://iptv-org.github.io/iptv/countries/ee.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ee.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-sz",
+      "url": "https://iptv-org.github.io/iptv/countries/sz.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/sz.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-fj",
+      "url": "https://iptv-org.github.io/iptv/countries/fj.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/fj.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-fi",
+      "url": "https://iptv-org.github.io/iptv/countries/fi.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/fi.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-fr",
+      "url": "https://iptv-org.github.io/iptv/countries/fr.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/fr.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ga",
+      "url": "https://iptv-org.github.io/iptv/countries/ga.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ga.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-gm",
+      "url": "https://iptv-org.github.io/iptv/countries/gm.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/gm.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ge",
+      "url": "https://iptv-org.github.io/iptv/countries/ge.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ge.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-de",
+      "url": "https://iptv-org.github.io/iptv/countries/de.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/de.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-gh",
+      "url": "https://iptv-org.github.io/iptv/countries/gh.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/gh.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-gr",
+      "url": "https://iptv-org.github.io/iptv/countries/gr.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/gr.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-gd",
+      "url": "https://iptv-org.github.io/iptv/countries/gd.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/gd.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-gt",
+      "url": "https://iptv-org.github.io/iptv/countries/gt.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/gt.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-gn",
+      "url": "https://iptv-org.github.io/iptv/countries/gn.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/gn.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-gy",
+      "url": "https://iptv-org.github.io/iptv/countries/gy.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/gy.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ht",
+      "url": "https://iptv-org.github.io/iptv/countries/ht.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ht.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-hn",
+      "url": "https://iptv-org.github.io/iptv/countries/hn.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/hn.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-hk",
+      "url": "https://iptv-org.github.io/iptv/countries/hk.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/hk.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-hu",
+      "url": "https://iptv-org.github.io/iptv/countries/hu.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/hu.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-is",
+      "url": "https://iptv-org.github.io/iptv/countries/is.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/is.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-in",
+      "url": "https://iptv-org.github.io/iptv/countries/in.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/in.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-id",
+      "url": "https://iptv-org.github.io/iptv/countries/id.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/id.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ir",
+      "url": "https://iptv-org.github.io/iptv/countries/ir.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ir.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-iq",
+      "url": "https://iptv-org.github.io/iptv/countries/iq.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/iq.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ie",
+      "url": "https://iptv-org.github.io/iptv/countries/ie.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ie.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-il",
+      "url": "https://iptv-org.github.io/iptv/countries/il.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/il.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-it",
+      "url": "https://iptv-org.github.io/iptv/countries/it.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/it.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-jm",
+      "url": "https://iptv-org.github.io/iptv/countries/jm.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/jm.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-jp",
+      "url": "https://iptv-org.github.io/iptv/countries/jp.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/jp.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-jo",
+      "url": "https://iptv-org.github.io/iptv/countries/jo.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/jo.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-kz",
+      "url": "https://iptv-org.github.io/iptv/countries/kz.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/kz.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ke",
+      "url": "https://iptv-org.github.io/iptv/countries/ke.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ke.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ki",
+      "url": "https://iptv-org.github.io/iptv/countries/ki.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ki.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-kp",
+      "url": "https://iptv-org.github.io/iptv/countries/kp.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/kp.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-kr",
+      "url": "https://iptv-org.github.io/iptv/countries/kr.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/kr.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-kw",
+      "url": "https://iptv-org.github.io/iptv/countries/kw.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/kw.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-kg",
+      "url": "https://iptv-org.github.io/iptv/countries/kg.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/kg.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lv",
+      "url": "https://iptv-org.github.io/iptv/countries/lv.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/lv.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lb",
+      "url": "https://iptv-org.github.io/iptv/countries/lb.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/lb.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ls",
+      "url": "https://iptv-org.github.io/iptv/countries/ls.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ls.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lr",
+      "url": "https://iptv-org.github.io/iptv/countries/lr.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/lr.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lt",
+      "url": "https://iptv-org.github.io/iptv/countries/lt.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/lt.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lu",
+      "url": "https://iptv-org.github.io/iptv/countries/lu.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/lu.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-mg",
+      "url": "https://iptv-org.github.io/iptv/countries/mg.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/mg.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-mw",
+      "url": "https://iptv-org.github.io/iptv/countries/mw.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/mw.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-my",
+      "url": "https://iptv-org.github.io/iptv/countries/my.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/my.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-mv",
+      "url": "https://iptv-org.github.io/iptv/countries/mv.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/mv.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ml",
+      "url": "https://iptv-org.github.io/iptv/countries/ml.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ml.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-mt",
+      "url": "https://iptv-org.github.io/iptv/countries/mt.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/mt.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-mr",
+      "url": "https://iptv-org.github.io/iptv/countries/mr.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/mr.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-mu",
+      "url": "https://iptv-org.github.io/iptv/countries/mu.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/mu.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-mx",
+      "url": "https://iptv-org.github.io/iptv/countries/mx.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/mx.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-md",
+      "url": "https://iptv-org.github.io/iptv/countries/md.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/md.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-mc",
+      "url": "https://iptv-org.github.io/iptv/countries/mc.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/mc.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-mn",
+      "url": "https://iptv-org.github.io/iptv/countries/mn.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/mn.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-me",
+      "url": "https://iptv-org.github.io/iptv/countries/me.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/me.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ma",
+      "url": "https://iptv-org.github.io/iptv/countries/ma.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ma.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-mz",
+      "url": "https://iptv-org.github.io/iptv/countries/mz.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/mz.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-mm",
+      "url": "https://iptv-org.github.io/iptv/countries/mm.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/mm.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-na",
+      "url": "https://iptv-org.github.io/iptv/countries/na.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/na.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-np",
+      "url": "https://iptv-org.github.io/iptv/countries/np.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/np.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-nl",
+      "url": "https://iptv-org.github.io/iptv/countries/nl.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/nl.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-nz",
+      "url": "https://iptv-org.github.io/iptv/countries/nz.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/nz.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ni",
+      "url": "https://iptv-org.github.io/iptv/countries/ni.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ni.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ne",
+      "url": "https://iptv-org.github.io/iptv/countries/ne.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ne.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ng",
+      "url": "https://iptv-org.github.io/iptv/countries/ng.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ng.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-mk",
+      "url": "https://iptv-org.github.io/iptv/countries/mk.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/mk.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-no",
+      "url": "https://iptv-org.github.io/iptv/countries/no.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/no.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-om",
+      "url": "https://iptv-org.github.io/iptv/countries/om.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/om.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-pk",
+      "url": "https://iptv-org.github.io/iptv/countries/pk.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/pk.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ps",
+      "url": "https://iptv-org.github.io/iptv/countries/ps.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ps.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-pa",
+      "url": "https://iptv-org.github.io/iptv/countries/pa.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/pa.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-pg",
+      "url": "https://iptv-org.github.io/iptv/countries/pg.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/pg.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-py",
+      "url": "https://iptv-org.github.io/iptv/countries/py.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/py.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-pe",
+      "url": "https://iptv-org.github.io/iptv/countries/pe.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/pe.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ph",
+      "url": "https://iptv-org.github.io/iptv/countries/ph.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ph.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-pl",
+      "url": "https://iptv-org.github.io/iptv/countries/pl.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/pl.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-pt",
+      "url": "https://iptv-org.github.io/iptv/countries/pt.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/pt.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-pr",
+      "url": "https://iptv-org.github.io/iptv/countries/pr.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/pr.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-qa",
+      "url": "https://iptv-org.github.io/iptv/countries/qa.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/qa.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ro",
+      "url": "https://iptv-org.github.io/iptv/countries/ro.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ro.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ru",
+      "url": "https://iptv-org.github.io/iptv/countries/ru.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ru.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-rw",
+      "url": "https://iptv-org.github.io/iptv/countries/rw.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/rw.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ws",
+      "url": "https://iptv-org.github.io/iptv/countries/ws.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ws.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-sm",
+      "url": "https://iptv-org.github.io/iptv/countries/sm.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/sm.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-st",
+      "url": "https://iptv-org.github.io/iptv/countries/st.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/st.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-sa",
+      "url": "https://iptv-org.github.io/iptv/countries/sa.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/sa.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-sn",
+      "url": "https://iptv-org.github.io/iptv/countries/sn.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/sn.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-rs",
+      "url": "https://iptv-org.github.io/iptv/countries/rs.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/rs.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-sc",
+      "url": "https://iptv-org.github.io/iptv/countries/sc.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/sc.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-sl",
+      "url": "https://iptv-org.github.io/iptv/countries/sl.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/sl.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-sk",
+      "url": "https://iptv-org.github.io/iptv/countries/sk.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/sk.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-si",
+      "url": "https://iptv-org.github.io/iptv/countries/si.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/si.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-so",
+      "url": "https://iptv-org.github.io/iptv/countries/so.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/so.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-za",
+      "url": "https://iptv-org.github.io/iptv/countries/za.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/za.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ss",
+      "url": "https://iptv-org.github.io/iptv/countries/ss.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ss.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-es",
+      "url": "https://iptv-org.github.io/iptv/countries/es.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/es.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lk",
+      "url": "https://iptv-org.github.io/iptv/countries/lk.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/lk.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-sd",
+      "url": "https://iptv-org.github.io/iptv/countries/sd.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/sd.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-sr",
+      "url": "https://iptv-org.github.io/iptv/countries/sr.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/sr.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-se",
+      "url": "https://iptv-org.github.io/iptv/countries/se.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/se.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ch",
+      "url": "https://iptv-org.github.io/iptv/countries/ch.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ch.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-sy",
+      "url": "https://iptv-org.github.io/iptv/countries/sy.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/sy.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-tw",
+      "url": "https://iptv-org.github.io/iptv/countries/tw.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/tw.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-tj",
+      "url": "https://iptv-org.github.io/iptv/countries/tj.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/tj.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-tz",
+      "url": "https://iptv-org.github.io/iptv/countries/tz.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/tz.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-th",
+      "url": "https://iptv-org.github.io/iptv/countries/th.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/th.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-tl",
+      "url": "https://iptv-org.github.io/iptv/countries/tl.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/tl.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-tg",
+      "url": "https://iptv-org.github.io/iptv/countries/tg.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/tg.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-to",
+      "url": "https://iptv-org.github.io/iptv/countries/to.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/to.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-tn",
+      "url": "https://iptv-org.github.io/iptv/countries/tn.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/tn.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-tr",
+      "url": "https://iptv-org.github.io/iptv/countries/tr.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/tr.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-tm",
+      "url": "https://iptv-org.github.io/iptv/countries/tm.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/tm.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ug",
+      "url": "https://iptv-org.github.io/iptv/countries/ug.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ug.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ua",
+      "url": "https://iptv-org.github.io/iptv/countries/ua.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ua.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ae",
+      "url": "https://iptv-org.github.io/iptv/countries/ae.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ae.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-uy",
+      "url": "https://iptv-org.github.io/iptv/countries/uy.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/uy.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-uz",
+      "url": "https://iptv-org.github.io/iptv/countries/uz.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/uz.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-vu",
+      "url": "https://iptv-org.github.io/iptv/countries/vu.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/vu.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ve",
+      "url": "https://iptv-org.github.io/iptv/countries/ve.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ve.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-vn",
+      "url": "https://iptv-org.github.io/iptv/countries/vn.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/vn.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ye",
+      "url": "https://iptv-org.github.io/iptv/countries/ye.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ye.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-zm",
+      "url": "https://iptv-org.github.io/iptv/countries/zm.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/zm.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-zw",
+      "url": "https://iptv-org.github.io/iptv/countries/zw.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/zw.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-cat-animation",
+      "url": "https://iptv-org.github.io/iptv/categories/animation.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/categories/animation.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-cat-auto",
+      "url": "https://iptv-org.github.io/iptv/categories/auto.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/categories/auto.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-cat-business",
+      "url": "https://iptv-org.github.io/iptv/categories/business.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/categories/business.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-cat-classic",
+      "url": "https://iptv-org.github.io/iptv/categories/classic.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/categories/classic.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-cat-comedy",
+      "url": "https://iptv-org.github.io/iptv/categories/comedy.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/categories/comedy.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-cat-cooking",
+      "url": "https://iptv-org.github.io/iptv/categories/cooking.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/categories/cooking.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-cat-culture",
+      "url": "https://iptv-org.github.io/iptv/categories/culture.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/categories/culture.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-cat-education",
+      "url": "https://iptv-org.github.io/iptv/categories/education.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/categories/education.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-cat-family",
+      "url": "https://iptv-org.github.io/iptv/categories/family.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/categories/family.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-cat-general",
+      "url": "https://iptv-org.github.io/iptv/categories/general.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/categories/general.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-cat-interactive",
+      "url": "https://iptv-org.github.io/iptv/categories/interactive.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/categories/interactive.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-cat-legislative",
+      "url": "https://iptv-org.github.io/iptv/categories/legislative.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/categories/legislative.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-cat-lifestyle",
+      "url": "https://iptv-org.github.io/iptv/categories/lifestyle.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/categories/lifestyle.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-cat-outdoor",
+      "url": "https://iptv-org.github.io/iptv/categories/outdoor.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/categories/outdoor.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-cat-public",
+      "url": "https://iptv-org.github.io/iptv/categories/public.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/categories/public.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-cat-relax",
+      "url": "https://iptv-org.github.io/iptv/categories/relax.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/categories/relax.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-cat-science",
+      "url": "https://iptv-org.github.io/iptv/categories/science.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/categories/science.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-cat-series",
+      "url": "https://iptv-org.github.io/iptv/categories/series.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/categories/series.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-cat-shop",
+      "url": "https://iptv-org.github.io/iptv/categories/shop.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/categories/shop.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-cat-travel",
+      "url": "https://iptv-org.github.io/iptv/categories/travel.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/categories/travel.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-cat-weather",
+      "url": "https://iptv-org.github.io/iptv/categories/weather.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/categories/weather.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-deu",
+      "url": "https://iptv-org.github.io/iptv/languages/deu.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/deu.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-fra",
+      "url": "https://iptv-org.github.io/iptv/languages/fra.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/fra.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-spa",
+      "url": "https://iptv-org.github.io/iptv/languages/spa.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/spa.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-ita",
+      "url": "https://iptv-org.github.io/iptv/languages/ita.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/ita.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-nld",
+      "url": "https://iptv-org.github.io/iptv/languages/nld.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/nld.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-por",
+      "url": "https://iptv-org.github.io/iptv/languages/por.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/por.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-rus",
+      "url": "https://iptv-org.github.io/iptv/languages/rus.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/rus.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-ara",
+      "url": "https://iptv-org.github.io/iptv/languages/ara.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/ara.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-hin",
+      "url": "https://iptv-org.github.io/iptv/languages/hin.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/hin.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-jpn",
+      "url": "https://iptv-org.github.io/iptv/languages/jpn.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/jpn.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-kor",
+      "url": "https://iptv-org.github.io/iptv/languages/kor.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/kor.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-vie",
+      "url": "https://iptv-org.github.io/iptv/languages/vie.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/vie.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-tha",
+      "url": "https://iptv-org.github.io/iptv/languages/tha.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/tha.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-fas",
+      "url": "https://iptv-org.github.io/iptv/languages/fas.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/fas.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-pol",
+      "url": "https://iptv-org.github.io/iptv/languages/pol.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/pol.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-ukr",
+      "url": "https://iptv-org.github.io/iptv/languages/ukr.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/ukr.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-ces",
+      "url": "https://iptv-org.github.io/iptv/languages/ces.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/ces.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-hun",
+      "url": "https://iptv-org.github.io/iptv/languages/hun.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/hun.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-slv",
+      "url": "https://iptv-org.github.io/iptv/languages/slv.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/slv.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-swe",
+      "url": "https://iptv-org.github.io/iptv/languages/swe.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/swe.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-nor",
+      "url": "https://iptv-org.github.io/iptv/languages/nor.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/nor.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-dan",
+      "url": "https://iptv-org.github.io/iptv/languages/dan.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/dan.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-fin",
+      "url": "https://iptv-org.github.io/iptv/languages/fin.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/fin.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-ell",
+      "url": "https://iptv-org.github.io/iptv/languages/ell.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/ell.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-heb",
+      "url": "https://iptv-org.github.io/iptv/languages/heb.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/heb.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-kat",
+      "url": "https://iptv-org.github.io/iptv/languages/kat.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/kat.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-ron",
+      "url": "https://iptv-org.github.io/iptv/languages/ron.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/ron.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-bul",
+      "url": "https://iptv-org.github.io/iptv/languages/bul.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/bul.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-hrv",
+      "url": "https://iptv-org.github.io/iptv/languages/hrv.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/hrv.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-tur",
+      "url": "https://iptv-org.github.io/iptv/languages/tur.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/tur.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-aze",
+      "url": "https://iptv-org.github.io/iptv/languages/aze.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/aze.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-uzb",
+      "url": "https://iptv-org.github.io/iptv/languages/uzb.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/uzb.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-kaz",
+      "url": "https://iptv-org.github.io/iptv/languages/kaz.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/kaz.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-lang-slk",
+      "url": "https://iptv-org.github.io/iptv/languages/slk.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/languages/slk.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-sources-pluto",
+      "url": "https://iptv-org.github.io/iptv/sources/PlutoTV.m3u",
+      "kind": "playlist",
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/sources/PlutoTV.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-sources-tubi",
+      "url": "https://iptv-org.github.io/iptv/sources/Tubi.m3u",
+      "kind": "playlist",
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/sources/Tubi.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-sources-plex",
+      "url": "https://iptv-org.github.io/iptv/sources/Plex.m3u",
+      "kind": "playlist",
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/sources/Plex.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-sources-samsung",
+      "url": "https://iptv-org.github.io/iptv/sources/SamsungTVPlus.m3u",
+      "kind": "playlist",
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/sources/SamsungTVPlus.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-sources-roku",
+      "url": "https://iptv-org.github.io/iptv/sources/Roku.m3u",
+      "kind": "playlist",
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/sources/Roku.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-index-cat",
+      "url": "https://iptv-org.github.io/iptv/index.category.m3u",
+      "kind": "playlist",
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/index.category.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-index-lang",
+      "url": "https://iptv-org.github.io/iptv/index.language.m3u",
+      "kind": "playlist",
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/index.language.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-index-country",
+      "url": "https://iptv-org.github.io/iptv/index.country.m3u",
+      "kind": "playlist",
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/index.country.m3u"
+      ]
+    },
+    {
+      "id": "buddy-pluto-de",
+      "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plutotv_de.m3u",
+      "kind": "playlist",
+      "provenance": [
+        "BuddyChewChew/app-m3u-generator"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plutotv_de.m3u"
+      ]
+    },
+    {
+      "id": "buddy-pluto-es",
+      "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plutotv_es.m3u",
+      "kind": "playlist",
+      "provenance": [
+        "BuddyChewChew/app-m3u-generator"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plutotv_es.m3u"
+      ]
+    },
+    {
+      "id": "buddy-pluto-fr",
+      "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plutotv_fr.m3u",
+      "kind": "playlist",
+      "provenance": [
+        "BuddyChewChew/app-m3u-generator"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plutotv_fr.m3u"
+      ]
+    },
+    {
+      "id": "buddy-pluto-it",
+      "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plutotv_it.m3u",
+      "kind": "playlist",
+      "provenance": [
+        "BuddyChewChew/app-m3u-generator"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plutotv_it.m3u"
+      ]
+    },
+    {
+      "id": "buddy-pluto-br",
+      "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plutotv_br.m3u",
+      "kind": "playlist",
+      "provenance": [
+        "BuddyChewChew/app-m3u-generator"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plutotv_br.m3u"
+      ]
+    },
+    {
+      "id": "buddy-pluto-mx",
+      "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plutotv_mx.m3u",
+      "kind": "playlist",
+      "provenance": [
+        "BuddyChewChew/app-m3u-generator"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plutotv_mx.m3u"
+      ]
+    },
+    {
+      "id": "buddy-pluto-ar",
+      "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plutotv_ar.m3u",
+      "kind": "playlist",
+      "provenance": [
+        "BuddyChewChew/app-m3u-generator"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plutotv_ar.m3u"
+      ]
+    },
+    {
+      "id": "buddy-pluto-cl",
+      "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plutotv_cl.m3u",
+      "kind": "playlist",
+      "provenance": [
+        "BuddyChewChew/app-m3u-generator"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plutotv_cl.m3u"
+      ]
+    },
+    {
+      "id": "buddy-pluto-no",
+      "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plutotv_no.m3u",
+      "kind": "playlist",
+      "provenance": [
+        "BuddyChewChew/app-m3u-generator"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plutotv_no.m3u"
+      ]
+    },
+    {
+      "id": "buddy-pluto-se",
+      "url": "https://raw.githubusercontent.com/BuddyChewChew/pluto/main/pluto_se.m3u",
+      "kind": "playlist",
+      "provenance": [
+        "BuddyChewChew/pluto"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://raw.githubusercontent.com/BuddyChewChew/pluto/main/pluto_se.m3u"
+      ]
+    },
+    {
+      "id": "buddy-samsung-kr",
+      "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/samsungtvplus_kr.m3u",
+      "kind": "playlist",
+      "provenance": [
+        "BuddyChewChew/app-m3u-generator"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/samsungtvplus_kr.m3u"
+      ]
+    },
+    {
+      "id": "buddy-samsung-in",
+      "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/samsungtvplus_in.m3u",
+      "kind": "playlist",
+      "provenance": [
+        "BuddyChewChew/app-m3u-generator"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/samsungtvplus_in.m3u"
+      ]
+    },
+    {
+      "id": "buddy-plex-au",
+      "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plex_au.m3u",
+      "kind": "playlist",
+      "provenance": [
+        "BuddyChewChew/app-m3u-generator"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plex_au.m3u"
+      ]
+    },
+    {
+      "id": "buddy-plex-es",
+      "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plex_es.m3u",
+      "kind": "playlist",
+      "provenance": [
+        "BuddyChewChew/app-m3u-generator"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plex_es.m3u"
+      ]
+    },
+    {
+      "id": "buddy-plex-fr",
+      "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plex_fr.m3u",
+      "kind": "playlist",
+      "provenance": [
+        "BuddyChewChew/app-m3u-generator"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plex_fr.m3u"
+      ]
+    },
+    {
+      "id": "buddy-pluto-all-hd",
+      "url": "https://raw.githubusercontent.com/BuddyChewChew/pluto/main/pluto_all.m3u",
+      "kind": "playlist",
+      "provenance": [
+        "BuddyChewChew/pluto"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://raw.githubusercontent.com/BuddyChewChew/pluto/main/pluto_all.m3u"
+      ]
+    },
+    {
+      "id": "buddy-pluto-us-hd",
+      "url": "https://raw.githubusercontent.com/BuddyChewChew/pluto/main/pluto_us.m3u",
+      "kind": "playlist",
+      "provenance": [
+        "BuddyChewChew/pluto"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://raw.githubusercontent.com/BuddyChewChew/pluto/main/pluto_us.m3u"
+      ]
+    },
+    {
+      "id": "apsattv-samsung",
+      "url": "https://www.apsattv.com/ssungusa.m3u",
+      "kind": "playlist",
+      "provenance": [
+        "apsattv"
+      ],
+      "enabled": true,
+      "cloud_compatible": true,
+      "declared_urls": [
+        "https://www.apsattv.com/ssungusa.m3u"
+      ]
     }
   ]
 }
