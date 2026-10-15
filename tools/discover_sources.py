@@ -5,21 +5,16 @@ from __future__ import annotations
 
 import argparse
 import asyncio
-import hashlib
 import json
-import sys
 from pathlib import Path
 from typing import Any
 
 import aiohttp
 
 from iptv_aggregator.config import load_config, load_sources
-from iptv_aggregator.models import Channel
 from iptv_aggregator.normalize import normalize_channel
 from iptv_aggregator.parse import parse_playlist
-from iptv_aggregator.sources import SourceFetcher
 from iptv_aggregator.validator import Validator
-
 
 # Known upstream repositories to scan
 UPSTREAM_REPOS = [
@@ -71,7 +66,6 @@ async def discover_sources(
     existing_sources = load_sources(root / cfg["sources_file"])
     existing_urls = {s.get("url", "") for s in existing_sources}
 
-    work = root / "build"
     output_path = Path(output_dir)
     output_path.mkdir(parents=True, exist_ok=True)
 
@@ -168,11 +162,11 @@ async def validate_candidates(
         try:
             # Quick fetch and parse
             timeout = aiohttp.ClientTimeout(total=cfg["fetch"]["timeout_seconds"])
-            async with aiohttp.ClientSession(timeout=timeout, headers={"User-Agent": "owl-iptv/1.0"}) as session:
-                async with session.get(candidate["url"], allow_redirects=True) as response:
-                    if response.status != 200:
-                        continue
-                    raw = await response.read()
+            async with aiohttp.ClientSession(timeout=timeout, headers={"User-Agent": "owl-iptv/1.0"}) as session, \
+                    session.get(candidate["url"], allow_redirects=True) as response:
+                if response.status != 200:
+                    continue
+                raw = await response.read()
 
             channels = parse_playlist(raw.decode("utf-8", errors="replace"), candidate["id"])
             if not channels:

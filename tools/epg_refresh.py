@@ -5,17 +5,12 @@ from __future__ import annotations
 
 import argparse
 import json
-import sys
 from pathlib import Path
 from typing import Any
 
-import aiohttp
-
 from iptv_aggregator.config import load_config, load_sources
 from iptv_aggregator.epg import fetch_epg, xmltv_bytes
-from iptv_aggregator.models import Channel
 from iptv_aggregator.normalize import normalize_channel
-from iptv_aggregator.parse import parse_playlist
 from iptv_aggregator.sources import SourceFetcher
 
 

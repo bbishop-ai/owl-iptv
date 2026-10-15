@@ -6,15 +6,12 @@ from __future__ import annotations
 import argparse
 import asyncio
 import json
-import sys
-from datetime import UTC, datetime, timedelta
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
-import aiohttp
-
 from iptv_aggregator.config import load_config, load_sources
-from iptv_aggregator.models import Channel, Validation
+from iptv_aggregator.models import Validation
 from iptv_aggregator.sources import SourceFetcher
 from iptv_aggregator.validator import Validator
 

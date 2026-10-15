@@ -5,7 +5,7 @@ import unicodedata
 
 from .models import Channel
 
-QUALITY_WORDS = re.compile(r"\b(?:uhd|fhd|hd|sd|4k|8k|1080p?|720p?|backup|mirror)\b", re.I)
+QUALITY_WORDS = re.compile(r"\b(?:uhd|fhd|hd|sd|4k|8k|1080p?|720p?|backup|mirror)\b", re.IGNORECASE)
 PUNCT = re.compile(r"[^a-z0-9]+")
 ENGLISH_COUNTRIES = {"au", "ca", "gb", "ie", "nz", "us"}
 COUNTRY_LANGUAGES = {

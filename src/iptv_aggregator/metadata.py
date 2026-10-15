@@ -51,10 +51,10 @@ class MetadataCatalog:
 async def load_metadata(url: str, cache_path: Path, timeout_seconds: int = 30) -> tuple[MetadataCatalog, str]:
     try:
         timeout = aiohttp.ClientTimeout(total=timeout_seconds)
-        async with aiohttp.ClientSession(timeout=timeout, headers={"User-Agent": "owl-iptv/1.0"}) as session:
-            async with session.get(url, allow_redirects=True) as response:
-                response.raise_for_status()
-                raw = await response.read()
+        async with aiohttp.ClientSession(timeout=timeout, headers={"User-Agent": "owl-iptv/1.0"}) as session, \
+                session.get(url, allow_redirects=True) as response:
+            response.raise_for_status()
+            raw = await response.read()
         records = json.loads(raw)
         cache_path.parent.mkdir(parents=True, exist_ok=True)
         cache_path.write_bytes(raw)

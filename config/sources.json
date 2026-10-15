@@ -3399,14 +3399,15 @@
       "id": "iptv-org-gb",
       "url": "https://iptv-org.github.io/iptv/countries/gb.m3u",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "iptv-org/iptv"
       ],
       "declared_urls": [
         "https://iptv-org.github.io/iptv/countries/gb.m3u"
-      ]
+      ],
+      "disabled_reason": "dead at probe 2026-10-14 (404 html-not-m3u)"
     },
     {
       "id": "iptv-org-ca",
@@ -3581,40 +3582,43 @@
       "id": "epg-tubi",
       "url": "https://raw.githubusercontent.com/BuddyChewChew/tubi-scraper/main/tubi_epg.xml",
       "kind": "epg",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "BuddyChewChew/tubi-scraper"
       ],
       "declared_urls": [
         "https://raw.githubusercontent.com/BuddyChewChew/tubi-scraper/main/tubi_epg.xml"
-      ]
+      ],
+      "disabled_reason": "duplicate of the existing refs/heads/main tubi_epg entry - same guide, zero incremental joins; probe verified both forms serve identical XMLTV 2026-10-14"
     },
     {
       "id": "epg-xumo",
       "url": "https://raw.githubusercontent.com/BuddyChewChew/xumo-playlist-generator/main/playlist.xml",
       "kind": "epg",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "BuddyChewChew/xumo-playlist-generator"
       ],
       "declared_urls": [
         "https://raw.githubusercontent.com/BuddyChewChew/xumo-playlist-generator/main/playlist.xml"
-      ]
+      ],
+      "disabled_reason": "dead/non-XMLTV at probe 2026-10-14 (404 other-body)"
     },
     {
       "id": "epg-buddy-multi-light",
       "url": "https://github.com/BuddyChewChew/multi-epg-light/raw/refs/heads/main/epgs/light-guide.xml.gz",
       "kind": "epg",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "BuddyChewChew/multi-epg-light"
       ],
       "declared_urls": [
         "https://github.com/BuddyChewChew/multi-epg-light/raw/refs/heads/main/epgs/light-guide.xml.gz"
-      ]
+      ],
+      "disabled_reason": "dead/non-XMLTV at probe 2026-10-14 (404 html-not-m3u)"
     },
     {
       "id": "iptv-org-af",
@@ -3984,14 +3988,15 @@
       "id": "iptv-org-bi",
       "url": "https://iptv-org.github.io/iptv/countries/bi.m3u",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "iptv-org/iptv"
       ],
       "declared_urls": [
         "https://iptv-org.github.io/iptv/countries/bi.m3u"
-      ]
+      ],
+      "disabled_reason": "dead at probe 2026-10-14 (404 html-not-m3u)"
     },
     {
       "id": "iptv-org-cv",
@@ -4036,14 +4041,15 @@
       "id": "iptv-org-ic",
       "url": "https://iptv-org.github.io/iptv/countries/ic.m3u",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "iptv-org/iptv"
       ],
       "declared_urls": [
         "https://iptv-org.github.io/iptv/countries/ic.m3u"
-      ]
+      ],
+      "disabled_reason": "dead at probe 2026-10-14 (404 html-not-m3u)"
     },
     {
       "id": "iptv-org-cl",
@@ -4205,27 +4211,29 @@
       "id": "iptv-org-dj",
       "url": "https://iptv-org.github.io/iptv/countries/dj.m3u",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "iptv-org/iptv"
       ],
       "declared_urls": [
         "https://iptv-org.github.io/iptv/countries/dj.m3u"
-      ]
+      ],
+      "disabled_reason": "dead at probe 2026-10-14 (404 html-not-m3u)"
     },
     {
       "id": "iptv-org-dm",
       "url": "https://iptv-org.github.io/iptv/countries/dm.m3u",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "iptv-org/iptv"
       ],
       "declared_urls": [
         "https://iptv-org.github.io/iptv/countries/dm.m3u"
-      ]
+      ],
+      "disabled_reason": "dead at probe 2026-10-14 (404 html-not-m3u)"
     },
     {
       "id": "iptv-org-do",
@@ -4309,27 +4317,29 @@
       "id": "iptv-org-sz",
       "url": "https://iptv-org.github.io/iptv/countries/sz.m3u",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "iptv-org/iptv"
       ],
       "declared_urls": [
         "https://iptv-org.github.io/iptv/countries/sz.m3u"
-      ]
+      ],
+      "disabled_reason": "dead at probe 2026-10-14 (404 html-not-m3u)"
     },
     {
       "id": "iptv-org-fj",
       "url": "https://iptv-org.github.io/iptv/countries/fj.m3u",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "iptv-org/iptv"
       ],
       "declared_urls": [
         "https://iptv-org.github.io/iptv/countries/fj.m3u"
-      ]
+      ],
+      "disabled_reason": "dead at probe 2026-10-14 (404 html-not-m3u)"
     },
     {
       "id": "iptv-org-fi",
@@ -4361,14 +4371,15 @@
       "id": "iptv-org-ga",
       "url": "https://iptv-org.github.io/iptv/countries/ga.m3u",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "iptv-org/iptv"
       ],
       "declared_urls": [
         "https://iptv-org.github.io/iptv/countries/ga.m3u"
-      ]
+      ],
+      "disabled_reason": "dead at probe 2026-10-14 (404 html-not-m3u)"
     },
     {
       "id": "iptv-org-gm",
@@ -4439,14 +4450,15 @@
       "id": "iptv-org-gd",
       "url": "https://iptv-org.github.io/iptv/countries/gd.m3u",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "iptv-org/iptv"
       ],
       "declared_urls": [
         "https://iptv-org.github.io/iptv/countries/gd.m3u"
-      ]
+      ],
+      "disabled_reason": "dead at probe 2026-10-14 (404 html-not-m3u)"
     },
     {
       "id": "iptv-org-gt",
@@ -4712,14 +4724,15 @@
       "id": "iptv-org-ki",
       "url": "https://iptv-org.github.io/iptv/countries/ki.m3u",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "iptv-org/iptv"
       ],
       "declared_urls": [
         "https://iptv-org.github.io/iptv/countries/ki.m3u"
-      ]
+      ],
+      "disabled_reason": "dead at probe 2026-10-14 (404 html-not-m3u)"
     },
     {
       "id": "iptv-org-kp",
@@ -4803,27 +4816,29 @@
       "id": "iptv-org-ls",
       "url": "https://iptv-org.github.io/iptv/countries/ls.m3u",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "iptv-org/iptv"
       ],
       "declared_urls": [
         "https://iptv-org.github.io/iptv/countries/ls.m3u"
-      ]
+      ],
+      "disabled_reason": "dead at probe 2026-10-14 (404 html-not-m3u)"
     },
     {
       "id": "iptv-org-lr",
       "url": "https://iptv-org.github.io/iptv/countries/lr.m3u",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "iptv-org/iptv"
       ],
       "declared_urls": [
         "https://iptv-org.github.io/iptv/countries/lr.m3u"
-      ]
+      ],
+      "disabled_reason": "dead at probe 2026-10-14 (404 html-not-m3u)"
     },
     {
       "id": "iptv-org-lt",
@@ -4868,14 +4883,15 @@
       "id": "iptv-org-mw",
       "url": "https://iptv-org.github.io/iptv/countries/mw.m3u",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "iptv-org/iptv"
       ],
       "declared_urls": [
         "https://iptv-org.github.io/iptv/countries/mw.m3u"
-      ]
+      ],
+      "disabled_reason": "dead at probe 2026-10-14 (404 html-not-m3u)"
     },
     {
       "id": "iptv-org-my",
@@ -5401,14 +5417,15 @@
       "id": "iptv-org-st",
       "url": "https://iptv-org.github.io/iptv/countries/st.m3u",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "iptv-org/iptv"
       ],
       "declared_urls": [
         "https://iptv-org.github.io/iptv/countries/st.m3u"
-      ]
+      ],
+      "disabled_reason": "dead at probe 2026-10-14 (404 html-not-m3u)"
     },
     {
       "id": "iptv-org-sa",
@@ -5453,14 +5470,15 @@
       "id": "iptv-org-sc",
       "url": "https://iptv-org.github.io/iptv/countries/sc.m3u",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "iptv-org/iptv"
       ],
       "declared_urls": [
         "https://iptv-org.github.io/iptv/countries/sc.m3u"
-      ]
+      ],
+      "disabled_reason": "dead at probe 2026-10-14 (404 html-not-m3u)"
     },
     {
       "id": "iptv-org-sl",
@@ -5531,14 +5549,15 @@
       "id": "iptv-org-ss",
       "url": "https://iptv-org.github.io/iptv/countries/ss.m3u",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "iptv-org/iptv"
       ],
       "declared_urls": [
         "https://iptv-org.github.io/iptv/countries/ss.m3u"
-      ]
+      ],
+      "disabled_reason": "dead at probe 2026-10-14 (404 html-not-m3u)"
     },
     {
       "id": "iptv-org-es",
@@ -5687,14 +5706,15 @@
       "id": "iptv-org-tl",
       "url": "https://iptv-org.github.io/iptv/countries/tl.m3u",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "iptv-org/iptv"
       ],
       "declared_urls": [
         "https://iptv-org.github.io/iptv/countries/tl.m3u"
-      ]
+      ],
+      "disabled_reason": "dead at probe 2026-10-14 (404 html-not-m3u)"
     },
     {
       "id": "iptv-org-tg",
@@ -5713,14 +5733,15 @@
       "id": "iptv-org-to",
       "url": "https://iptv-org.github.io/iptv/countries/to.m3u",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "iptv-org/iptv"
       ],
       "declared_urls": [
         "https://iptv-org.github.io/iptv/countries/to.m3u"
-      ]
+      ],
+      "disabled_reason": "dead at probe 2026-10-14 (404 html-not-m3u)"
     },
     {
       "id": "iptv-org-tn",
@@ -5830,14 +5851,15 @@
       "id": "iptv-org-vu",
       "url": "https://iptv-org.github.io/iptv/countries/vu.m3u",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "iptv-org/iptv"
       ],
       "declared_urls": [
         "https://iptv-org.github.io/iptv/countries/vu.m3u"
-      ]
+      ],
+      "disabled_reason": "dead at probe 2026-10-14 (404 html-not-m3u)"
     },
     {
       "id": "iptv-org-ve",
@@ -5882,14 +5904,15 @@
       "id": "iptv-org-zm",
       "url": "https://iptv-org.github.io/iptv/countries/zm.m3u",
       "kind": "playlist",
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "provenance": [
         "iptv-org/iptv"
       ],
       "declared_urls": [
         "https://iptv-org.github.io/iptv/countries/zm.m3u"
-      ]
+      ],
+      "disabled_reason": "dead at probe 2026-10-14 (404 html-not-m3u)"
     },
     {
       "id": "iptv-org-zw",
@@ -6626,11 +6649,12 @@
       "provenance": [
         "iptv-org/iptv"
       ],
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "declared_urls": [
         "https://iptv-org.github.io/iptv/sources/PlutoTV.m3u"
-      ]
+      ],
+      "disabled_reason": "dead at probe 2026-10-14 (404 html-not-m3u)"
     },
     {
       "id": "iptv-org-sources-tubi",
@@ -6639,11 +6663,12 @@
       "provenance": [
         "iptv-org/iptv"
       ],
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "declared_urls": [
         "https://iptv-org.github.io/iptv/sources/Tubi.m3u"
-      ]
+      ],
+      "disabled_reason": "dead at probe 2026-10-14 (404 html-not-m3u)"
     },
     {
       "id": "iptv-org-sources-plex",
@@ -6652,11 +6677,12 @@
       "provenance": [
         "iptv-org/iptv"
       ],
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "declared_urls": [
         "https://iptv-org.github.io/iptv/sources/Plex.m3u"
-      ]
+      ],
+      "disabled_reason": "dead at probe 2026-10-14 (404 html-not-m3u)"
     },
     {
       "id": "iptv-org-sources-samsung",
@@ -6665,11 +6691,12 @@
       "provenance": [
         "iptv-org/iptv"
       ],
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "declared_urls": [
         "https://iptv-org.github.io/iptv/sources/SamsungTVPlus.m3u"
-      ]
+      ],
+      "disabled_reason": "dead at probe 2026-10-14 (404 html-not-m3u)"
     },
     {
       "id": "iptv-org-sources-roku",
@@ -6678,11 +6705,12 @@
       "provenance": [
         "iptv-org/iptv"
       ],
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "declared_urls": [
         "https://iptv-org.github.io/iptv/sources/Roku.m3u"
-      ]
+      ],
+      "disabled_reason": "dead at probe 2026-10-14 (404 html-not-m3u)"
     },
     {
       "id": "iptv-org-index-cat",
@@ -6964,11 +6992,12 @@
       "provenance": [
         "i.mjh.nz"
       ],
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "declared_urls": [
         "https://i.mjh.nz/PlutoTV/ca.xml.gz"
-      ]
+      ],
+      "disabled_reason": "dead/non-XMLTV at probe 2026-10-14 (200 gzip-broken)"
     },
     {
       "id": "epg-plutotv-gb",
@@ -6977,11 +7006,12 @@
       "provenance": [
         "i.mjh.nz"
       ],
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "declared_urls": [
         "https://i.mjh.nz/PlutoTV/gb.xml.gz"
-      ]
+      ],
+      "disabled_reason": "dead/non-XMLTV at probe 2026-10-14 (200 gzip-broken)"
     },
     {
       "id": "epg-plutotv-fr",
@@ -6990,11 +7020,12 @@
       "provenance": [
         "i.mjh.nz"
       ],
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "declared_urls": [
         "https://i.mjh.nz/PlutoTV/fr.xml.gz"
-      ]
+      ],
+      "disabled_reason": "dead/non-XMLTV at probe 2026-10-14 (200 gzip-broken)"
     },
     {
       "id": "epg-plutotv-de",
@@ -7003,11 +7034,12 @@
       "provenance": [
         "i.mjh.nz"
       ],
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "declared_urls": [
         "https://i.mjh.nz/PlutoTV/de.xml.gz"
-      ]
+      ],
+      "disabled_reason": "dead/non-XMLTV at probe 2026-10-14 (200 gzip-broken)"
     },
     {
       "id": "epg-plutotv-es",
@@ -7016,11 +7048,12 @@
       "provenance": [
         "i.mjh.nz"
       ],
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "declared_urls": [
         "https://i.mjh.nz/PlutoTV/es.xml.gz"
-      ]
+      ],
+      "disabled_reason": "dead/non-XMLTV at probe 2026-10-14 (200 gzip-broken)"
     },
     {
       "id": "epg-plutotv-it",
@@ -7029,11 +7062,12 @@
       "provenance": [
         "i.mjh.nz"
       ],
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "declared_urls": [
         "https://i.mjh.nz/PlutoTV/it.xml.gz"
-      ]
+      ],
+      "disabled_reason": "dead/non-XMLTV at probe 2026-10-14 (200 gzip-broken)"
     },
     {
       "id": "epg-plutotv-br",
@@ -7042,11 +7076,12 @@
       "provenance": [
         "i.mjh.nz"
       ],
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "declared_urls": [
         "https://i.mjh.nz/PlutoTV/br.xml.gz"
-      ]
+      ],
+      "disabled_reason": "dead/non-XMLTV at probe 2026-10-14 (200 gzip-broken)"
     },
     {
       "id": "epg-plutotv-mx",
@@ -7055,11 +7090,12 @@
       "provenance": [
         "i.mjh.nz"
       ],
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "declared_urls": [
         "https://i.mjh.nz/PlutoTV/mx.xml.gz"
-      ]
+      ],
+      "disabled_reason": "dead/non-XMLTV at probe 2026-10-14 (200 gzip-broken)"
     },
     {
       "id": "epg-plutotv-no",
@@ -7068,11 +7104,12 @@
       "provenance": [
         "i.mjh.nz"
       ],
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "declared_urls": [
         "https://i.mjh.nz/PlutoTV/no.xml.gz"
-      ]
+      ],
+      "disabled_reason": "dead/non-XMLTV at probe 2026-10-14 (200 gzip-broken)"
     },
     {
       "id": "epg-plutotv-se",
@@ -7081,11 +7118,12 @@
       "provenance": [
         "i.mjh.nz"
       ],
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "declared_urls": [
         "https://i.mjh.nz/PlutoTV/se.xml.gz"
-      ]
+      ],
+      "disabled_reason": "dead/non-XMLTV at probe 2026-10-14 (200 gzip-broken)"
     },
     {
       "id": "epg-plutotv-dk",
@@ -7094,11 +7132,12 @@
       "provenance": [
         "i.mjh.nz"
       ],
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "declared_urls": [
         "https://i.mjh.nz/PlutoTV/dk.xml.gz"
-      ]
+      ],
+      "disabled_reason": "dead/non-XMLTV at probe 2026-10-14 (200 gzip-broken)"
     },
     {
       "id": "epg-plex-ca",
@@ -7107,11 +7146,12 @@
       "provenance": [
         "i.mjh.nz"
       ],
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "declared_urls": [
         "https://i.mjh.nz/Plex/ca.xml.gz"
-      ]
+      ],
+      "disabled_reason": "dead/non-XMLTV at probe 2026-10-14 (200 gzip-broken)"
     },
     {
       "id": "epg-plex-gb",
@@ -7120,11 +7160,12 @@
       "provenance": [
         "i.mjh.nz"
       ],
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "declared_urls": [
         "https://i.mjh.nz/Plex/gb.xml.gz"
-      ]
+      ],
+      "disabled_reason": "dead/non-XMLTV at probe 2026-10-14 (200 gzip-broken)"
     },
     {
       "id": "epg-plex-au",
@@ -7133,11 +7174,12 @@
       "provenance": [
         "i.mjh.nz"
       ],
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "declared_urls": [
         "https://i.mjh.nz/Plex/au.xml.gz"
-      ]
+      ],
+      "disabled_reason": "dead/non-XMLTV at probe 2026-10-14 (200 gzip-broken)"
     },
     {
       "id": "epg-samsung-ca",
@@ -7146,11 +7188,12 @@
       "provenance": [
         "i.mjh.nz"
       ],
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "declared_urls": [
         "https://i.mjh.nz/SamsungTVPlus/ca.xml.gz"
-      ]
+      ],
+      "disabled_reason": "dead/non-XMLTV at probe 2026-10-14 (200 gzip-broken)"
     },
     {
       "id": "epg-samsung-gb",
@@ -7159,11 +7202,12 @@
       "provenance": [
         "i.mjh.nz"
       ],
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "declared_urls": [
         "https://i.mjh.nz/SamsungTVPlus/gb.xml.gz"
-      ]
+      ],
+      "disabled_reason": "dead/non-XMLTV at probe 2026-10-14 (200 gzip-broken)"
     },
     {
       "id": "epg-samsung-fr",
@@ -7172,11 +7216,12 @@
       "provenance": [
         "i.mjh.nz"
       ],
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "declared_urls": [
         "https://i.mjh.nz/SamsungTVPlus/fr.xml.gz"
-      ]
+      ],
+      "disabled_reason": "dead/non-XMLTV at probe 2026-10-14 (200 gzip-broken)"
     },
     {
       "id": "epg-samsung-de",
@@ -7185,11 +7230,12 @@
       "provenance": [
         "i.mjh.nz"
       ],
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "declared_urls": [
         "https://i.mjh.nz/SamsungTVPlus/de.xml.gz"
-      ]
+      ],
+      "disabled_reason": "dead/non-XMLTV at probe 2026-10-14 (200 gzip-broken)"
     },
     {
       "id": "epg-samsung-es",
@@ -7198,11 +7244,12 @@
       "provenance": [
         "i.mjh.nz"
       ],
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "declared_urls": [
         "https://i.mjh.nz/SamsungTVPlus/es.xml.gz"
-      ]
+      ],
+      "disabled_reason": "dead/non-XMLTV at probe 2026-10-14 (200 gzip-broken)"
     },
     {
       "id": "epg-samsung-it",
@@ -7211,11 +7258,12 @@
       "provenance": [
         "i.mjh.nz"
       ],
-      "enabled": true,
+      "enabled": false,
       "cloud_compatible": true,
       "declared_urls": [
         "https://i.mjh.nz/SamsungTVPlus/it.xml.gz"
-      ]
+      ],
+      "disabled_reason": "dead/non-XMLTV at probe 2026-10-14 (200 gzip-broken)"
     }
   ]
 }
