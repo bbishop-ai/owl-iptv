@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: owl-iptv
+Version: 1.0.0
+Summary: Automated, validated IPTV and XMLTV publishing pipeline
+Requires-Python: >=3.11
+Requires-Dist: aiohttp<4,>=3.10
+Requires-Dist: PyYAML<7,>=6.0
+Requires-Dist: rapidfuzz<4,>=3.9
+Provides-Extra: test
+Requires-Dist: pytest<9,>=8; extra == "test"
+Requires-Dist: pytest-asyncio<1,>=0.24; extra == "test"

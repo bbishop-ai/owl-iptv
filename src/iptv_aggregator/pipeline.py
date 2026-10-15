@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import asyncio
 import json
+import re
 import shutil
 from collections import Counter
 from datetime import UTC, datetime
@@ -10,7 +11,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 from .config import load_config, load_sources
-from .dedupe import preselect_candidates, select_streams
+from .dedupe import preselect_candidates, select_streams, identity_key
 from .epg import fetch_epg, match_channels, xmltv_bytes
 from .metadata import load_metadata
 from .models import Validation
@@ -20,10 +21,94 @@ from .sources import SourceFetcher
 from .validator import Validator
 
 
+# Known non-English provenance keywords (source IDs/provenance that are primarily non-English)
+NON_ENGLISH_PROVENANCE = {
+    # Chinese sources
+    "cs3306", "HerbertHe", "walke2019", "taksssss", "chinaiptv", "rihou", "fan.xxooo",
+    "foodieguide", "ipv6proxy", "fan.xxooo", "饭太硬", "xhww", "肥猫", "100km", "agit.ai",
+    "hu", "cymz6", "AutoIPTV-Hotel", "lalifeier", "IPTV", "yuanzl77", "zbefine", "zwc456baby",
+    "cai23511", "yex", "cairong", "iptv-yuan", "mlzlzj", "hnyuan", "qwerttvv", "Beijing-IPTV",
+    "skddyj", "suxuang", "myIPTV", "vbskycn", "iptv", "wwb521", "live", "ybskycn", "cmys",
+    "weishi", "alienlu", "iptv", "asdjkl6", "tv", "balala2oo8", "cymz6", "AutoIPTV-Hotel",
+    "fenxp", "iptv", "iceyheart", "IPTV", "jisoypub", "iptv", "joevess", "IPTV", "kimwang1978",
+    "collect-tv-txt", "mlzlzj", "hnyuan", "qwerttvv", "Beijing-IPTV", "skddyj", "iptv",
+    "suxuang", "myIPTV", "vbskycn", "iptv", "wwb521", "live", "yuanzl77", "IPTV",
+    "zbefine", "iptv", "zwc456baby", "iptv_alive",
+    # Russian sources
+    "m3u4u", "ru", "russia",
+    # Arabic/Persian sources
+    "arabic", "persian", "farsi",
+    # Other non-English specific
+    "german", "deutsch", "france", "french", "espanol", "spanish", "italiano", "italian",
+    "portugues", "portuguese", "japanese", "korean", "hindi", "thai", "vietnamese",
+}
+
+
+def filter_english_sources(sources: list[dict]) -> list[dict]:
+    """Filter out sources with known non-English provenance."""
+    english_provenance_keywords = {
+        "iptv-org", "BuddyChewChew", "Free-TV", "FanMingming", "vamoschuck",
+        "epgshare01", "epg.pw", "i.mjh.nz", "acidjesuz", "EPGTalk",
+        "vcicio", "US-EPG", "apsattv", "Guovin", "MercuryZz", "IPTVN",
+        "Rivens7", "Livelist", "YanG-1989", "m3u", "YueChan", "Live",
+        "IPTV-URL", "Ftindy", "BigBigGrandG",
+        "cai23511", "yex", "cairong", "iptv-yuan", "cymz6", "AutoIPTV-Hotel",
+        "fenxp", "iceyheart", "jisoypub", "joevess",
+        "kimwang1978", "collect-tv-txt", "mlzlzj", "hnyuan",
+        "qwerttvv", "Beijing-IPTV", "skddyj", "suxuang", "myIPTV",
+        "vbskycn", "wwb521", "live", "yuanzl77",
+        "zbefine", "zwc456baby", "iptv_alive",
+        # English/US specific sources and services
+        "Matt Huisman", "MattHuisman", "Pluto TV", "PlutoTV", "Samsung TV Plus", "SamsungTVPlus",
+        "Plex", "Roku", "PBS", "Tubi", "Xumo", "Stirr", "Redbox", "Roku TV",
+        "US", "United States", "America", "English", "FAST", "Free-TV",
+    }
+    
+    filtered = []
+    for source in sources:
+        if not source.get("enabled", True):
+            filtered.append(source)
+            continue
+            
+        provenance = source.get("provenance", [])
+        source_id = source.get("id", "").lower()
+        
+        # Check if any provenance matches English keywords
+        is_english = any(
+            any(kw.lower() in prov.lower() for kw in english_provenance_keywords)
+            for prov in provenance
+        )
+        
+        # Also check source_id for English indicators
+        if not is_english:
+            is_english = any(kw.lower() in source_id for kw in english_provenance_keywords)
+        
+        # Check for explicit non-English indicators
+        is_non_english = any(
+            any(kw.lower() in prov.lower() for kw in NON_ENGLISH_PROVENANCE)
+            for prov in provenance
+        ) or any(kw.lower() in source_id for kw in NON_ENGLISH_PROVENANCE)
+        
+        if is_non_english and not is_english:
+            # Disable this source
+            source["enabled"] = False
+            source["english_filtered"] = True
+            print(f"  Filtered non-English source: {source['id']} (provenance: {provenance})")
+        
+        filtered.append(source)
+    
+    return filtered
+
+
 async def run(config_path: str) -> dict:
     cfg = load_config(config_path)
     root = Path(cfg["_root"])
     sources = load_sources(root / cfg["sources_file"])
+    
+    # Filter sources to English-only if configured
+    if cfg["filter"].get("english_sources_only", False):
+        sources = filter_english_sources(sources)
+    
     work = root / "build"
     stage = root / "stage"
     if stage.exists():
@@ -76,12 +161,15 @@ async def run(config_path: str) -> dict:
                     checked_at=fixture_checked_at,
                     error=f"comparison fixture HTTP {status}",
                 )
+    # Provider preference (DNA) - higher = more trusted
+    provider_preference = cfg.get("dedupe", {}).get("provider_preference", {})
     selected, dedupe_stats = select_streams(
         channels,
         validations,
         cfg["dedupe"]["backups_per_channel"],
         cfg["filter"]["countries"]["prefer"],
         cfg["dedupe"].get("backups_per_source"),
+        provider_preference,
     )
     epg_names = set()
     for channel in selected:
@@ -100,6 +188,15 @@ async def run(config_path: str) -> dict:
         stale_cache_dir=work / "epg-cache",
     )
     epg_stats = match_channels(selected, epg, cfg["epg"]["fuzzy_threshold"])
+    # Copy EPG confidence to validations
+    for channel in selected:
+        val = validations.get(channel.url)
+        if val:
+            val.epg_confidence = channel.attrs.get("epg_confidence", "none")
+            val.epg_match_method = channel.attrs.get("epg_match_method", "")
+    # EPG programme window trimming (reduce XMLTV size)
+    epg_window_back = cfg["epg"].get("window_hours_back", 6)
+    epg_window_forward = cfg["epg"].get("window_hours_forward", 72)
     source_status = {source["id"]: status for source, _, status in fetched}
     validation_counts = Counter("passed" if value.ok else "failed" for value in validations.values())
     stats = {
@@ -131,12 +228,20 @@ async def run(config_path: str) -> dict:
         "final_non_us_english_channels": sum(c.role == "primary" and c.language == "en" and c.country.upper() != "US" for c in selected),
     }
     stats["duplicates_detected"] = stats["prevalidation_candidates_removed"] + stats["exact_url_duplicates_removed"] + stats["identity_duplicates_removed"]
-    matched = stats["epg_exact_id"] + stats["epg_normalized_id"] + stats["epg_exact_name"] + stats["epg_fuzzy"]
+    matched = stats["epg_exact_id"] + stats["epg_normalized_id"] + stats["epg_url_provider_id"] + stats["epg_exact_name"] + stats["epg_alias"] + stats["epg_fuzzy"]
     stats["epg_matched"] = matched
     stats["epg_matched_logical_channels"] = sum(c.role == "primary" and c.tvg_id in epg.channels for c in selected)
     stats["epg_coverage_percent"] = round(100 * stats["epg_matched_logical_channels"] / max(stats["final_logical_channels"], 1), 2)
+    # EPG confidence breakdown
+    stats["epg_confidence_exact_id"] = stats.get("epg_exact_id", 0)
+    stats["epg_confidence_normalized_id"] = stats.get("epg_normalized_id", 0)
+    stats["epg_confidence_url_provider_id"] = stats.get("epg_url_provider_id", 0)
+    stats["epg_confidence_exact_name"] = stats.get("epg_exact_name", 0)
+    stats["epg_confidence_alias"] = stats.get("epg_alias", 0)
+    stats["epg_confidence_fuzzy"] = stats.get("epg_fuzzy", 0)
+    stats["epg_confidence_none"] = stats.get("epg_unmatched", 0)
     stage.joinpath("playlist.m3u").write_text(m3u_text(selected, cfg["publish"]["epg_url"], validations), encoding="utf-8")
-    stage.joinpath("epg.xml").write_bytes(xmltv_bytes(selected, epg))
+    stage.joinpath("epg.xml").write_bytes(xmltv_bytes(selected, epg, epg_window_back, epg_window_forward))
     stage.joinpath("stats.json").write_text(json.dumps(stats, indent=2, sort_keys=True), encoding="utf-8")
     stage.joinpath("unmatched_channels.json").write_text(json.dumps(_unmatched_channels(selected, epg), indent=2), encoding="utf-8")
     stage.joinpath("report.md").write_text(_report(stats), encoding="utf-8")

@@ -1,0 +1,108 @@
+name: Health Check
+
+on:
+  schedule:
+    - cron: "30 */12 * * *"
+  workflow_dispatch:
+    inputs:
+      shard_count:
+        description: Number of parallel shards
+        required: false
+        type: string
+        default: "6"
+      shard_index:
+        description: Shard index to run (0-based), or "all" for matrix
+        required: false
+        type: string
+        default: "all"
+
+concurrency:
+  group: health-check
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ${{ fromJson(format('[{0}]', github.event.inputs.shard_count)) }}
+        region: [ubuntu-latest, ubuntu-latest]  # Can expand to macos-latest, windows-latest for multi-region
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install media probes and project
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          pip install -e '.[test]'
+      - name: Download validation cache
+        uses: actions/download-artifact@v4
+        with:
+          name: validation-cache
+          path: build/
+      - name: Download EPG cache
+        uses: actions/download-artifact@v4
+        with:
+          name: epg-cache
+          path: build/epg-cache/
+      - name: Run health check shard
+        env:
+          SHARD_INDEX: ${{ matrix.shard }}
+          SHARD_COUNT: ${{ github.event.inputs.shard_count }}
+          VALIDATION_CACHE: build/validation-cache.json
+        run: |
+          python -m tools.health_check \
+            --config config/pipeline.yml \
+            --shard-index ${{ matrix.shard }} \
+            --shard-count ${{ github.event.inputs.shard_count }} \
+            --cache ${{ VALIDATION_CACHE }} \
+            --output build/health-${{ matrix.shard }}.json
+      - name: Upload health results
+        uses: actions/upload-artifact@v4
+        with:
+          name: health-results-${{ matrix.shard }}
+          path: build/health-${{ matrix.shard }}.json
+          retention-days: 30
+
+  merge-health:
+    needs: health
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Download all health results
+        uses: actions/download-artifact@v4
+        with:
+          pattern: health-results-*
+          path: build/health/
+      - name: Merge health results and update validation cache
+        run: |
+          python -m tools.merge_health \
+            --input-dir build/health \
+            --cache build/validation-cache.json \
+            --output build/validation-cache.json
+      - name: Upload updated validation cache
+        uses: actions/upload-artifact@v4
+        with:
+          name: validation-cache
+          path: build/validation-cache.json
+          retention-days: 30
+      - name: Upload health summary
+        uses: actions/upload-artifact@v4
+        with:
+          name: health-summary
+          path: build/health-summary.json
+          retention-days: 90

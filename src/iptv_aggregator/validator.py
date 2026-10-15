@@ -59,14 +59,49 @@ class Validator:
         deep = await asyncio.gather(*(self._media_probe(c, v) for c, v in viable[: self.deep_limit]))
         deep_map = {c.url: v for (c, _), v in zip(viable[: self.deep_limit], deep)}
         for channel, value in zip(pending, probed):
+            cached = self.cache.get(channel.url)
             if channel.url in soft_urls and not value.ok and not self._soft_probe_confirms_dead(value):
                 # Soft policy: keep a blocked/uncertain link; definitive death
                 # remains failed and is removed by select_streams.
                 value = Validation(ok=True, latency_ms=value.latency_ms, checked_at=now.isoformat(), error=f"soft-kept (probe said: {value.error})")
+            # Update reliability metrics
+            value = self._update_reliability(value, cached)
             results[channel.url] = deep_map.get(channel.url, value)
         self.cache_path.parent.mkdir(parents=True, exist_ok=True)
         self.cache_path.write_text(json.dumps({url: value.to_dict() for url, value in results.items()}, indent=2), encoding="utf-8")
         return results
+
+    def _update_reliability(self, new: Validation, old: dict | None) -> Validation:
+        """Update rolling reliability metrics (7-day window)."""
+        if not old:
+            new.check_count = 1
+            new.success_count = 1 if new.ok else 0
+            new.reliability = self._calc_reliability(new)
+            return new
+
+        new.check_count = old.get("check_count", 0) + 1
+        new.success_count = old.get("success_count", 0) + (1 if new.ok else 0)
+        new.reliability = self._calc_reliability(new, old)
+        return new
+
+    def _calc_reliability(self, val: Validation, old: dict | None = None) -> float:
+        """Calculate composite reliability: 60% uptime, 25% resolution, 15% FPS."""
+        uptime_weight = 0.60
+        res_weight = 0.25
+        fps_weight = 0.15
+
+        # Uptime component
+        checks = val.check_count
+        successes = val.success_count
+        uptime = (successes / checks * 100) if checks > 0 else 0
+
+        # Resolution component (normalized to 1080p = 100)
+        res_score = min((val.height or 0) / 1080 * 100, 100)
+
+        # FPS component (60fps = 100)
+        fps_score = min((val.fps or 0) / 60 * 100, 100)
+
+        return round(uptime_weight * uptime + res_weight * res_score + fps_weight * fps_score, 1)
 
     def _soft_probe_confirms_dead(self, value: Validation) -> bool:
         marker = (value.error or "").lower()

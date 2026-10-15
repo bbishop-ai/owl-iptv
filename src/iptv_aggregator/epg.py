@@ -184,19 +184,45 @@ def match_channels(channels: list[Channel], epg: EPGData, fuzzy_threshold: int =
     the same name for an unrelated channel (global-ambiguity matching would
     block these joins, and did: coverage fell 27.5% -> 18% when the guides were
     pooled globally).
+
+    Confidence tiers:
+    - exact_id: 100% - tvg_id matches XMLTV channel id exactly
+    - normalized_id: 95% - normalized tvg_id matches
+    - url_provider_id: 95% - URL-embedded provider id (Pluto, Plex, etc.)
+    - exact_name: 90% - exact name match (unique in guide)
+    - alias: 85% - alias/alt-name match (unique)
+    - fuzzy: 70-89% - fuzzy match (unique best in guide)
+    - none: 0% - no match
     """
-    stats = {"epg_exact_id": 0, "epg_normalized_id": 0, "epg_exact_name": 0, "epg_fuzzy": 0, "epg_url_id": 0, "epg_unmatched": 0}
+    stats = {
+        "epg_exact_id": 0,
+        "epg_normalized_id": 0,
+        "epg_url_provider_id": 0,
+        "epg_exact_name": 0,
+        "epg_alias": 0,
+        "epg_fuzzy": 0,
+        "epg_unmatched": 0,
+    }
+
+    # Confidence tracking per channel
+    for channel in channels:
+        channel.attrs["epg_confidence"] = "none"
+        channel.attrs["epg_match_method"] = ""
 
     # Pass 0: URL-embedded provider ids (zero ambiguity — provider's own id space).
     unassigned = []
     for channel in channels:
         if channel.tvg_id in epg.channels:
+            channel.attrs["epg_confidence"] = "exact_id"
+            channel.attrs["epg_match_method"] = "exact_id"
             stats["epg_exact_id"] += 1
             continue
         _, hex_id = _url_provider_hex(channel.url)
         if hex_id and hex_id in epg.channels:
             channel.tvg_id = hex_id
-            stats["epg_url_id"] += 1
+            channel.attrs["epg_confidence"] = "url_provider_id"
+            channel.attrs["epg_match_method"] = "url_provider_id"
+            stats["epg_url_provider_id"] += 1
             continue
         unassigned.append(channel)
 
@@ -243,6 +269,8 @@ def match_channels(channels: list[Channel], epg: EPGData, fuzzy_threshold: int =
             normalized_ids = ids.get(normalized_epg_id(channel.tvg_id), []) if channel.tvg_id else []
             if len(normalized_ids) == 1:
                 channel.tvg_id = normalized_ids[0]
+                channel.attrs["epg_confidence"] = "normalized_id"
+                channel.attrs["epg_match_method"] = "normalized_id"
                 stats["epg_normalized_id"] += 1
                 continue
             try:
@@ -259,28 +287,83 @@ def match_channels(channels: list[Channel], epg: EPGData, fuzzy_threshold: int =
                 exact_ids = {eid for eid in exact_ids if _epg_id_region(eid) in (None, want_region)}
             if len(exact_ids) == 1:
                 channel.tvg_id = exact_ids.pop()
+                channel.attrs["epg_confidence"] = "exact_name"
+                channel.attrs["epg_match_method"] = "exact_name"
                 stats["epg_exact_name"] += 1
                 continue
+            # Alias match: check alt-names for exact match
+            alias_matched = False
+            for value in [channel.tvg_name, channel.name, channel.attrs.get("metadata-name", ""), *alt_names]:
+                stripped = quality_stripped(value)
+                if stripped and stripped in names and len(names[stripped]) == 1:
+                    candidate_id = names[stripped][0]
+                    if want_region is None or _epg_id_region(candidate_id) in (None, want_region):
+                        channel.tvg_id = candidate_id
+                        channel.attrs["epg_confidence"] = "alias"
+                        channel.attrs["epg_match_method"] = "alias"
+                        stats["epg_alias"] += 1
+                        alias_matched = True
+                        break
+            if alias_matched:
+                continue
             # Fuzzy: word-order-insensitive, unique best target within this guide.
-            scored = sorted(((max((token_sort_ratio(key, candidate) for key in keys), default=0), ids) for candidate, ids in names.items()), reverse=True)
+            scored = sorted(
+                (
+                    (max((token_sort_ratio(key, candidate) for key in keys), default=0), ids)
+                    for candidate, ids in names.items()
+                ),
+                reverse=True,
+            )
             if scored and scored[0][0] >= fuzzy_threshold and len(scored[0][1]) == 1 and (len(scored) == 1 or scored[0][0] > scored[1][0]):
                 candidate_id = scored[0][1][0]
                 if want_region is None or _epg_id_region(candidate_id) in (None, want_region):
                     channel.tvg_id = candidate_id
+                    channel.attrs["epg_confidence"] = "fuzzy"
+                    channel.attrs["epg_match_method"] = f"fuzzy_{scored[0][0]}"
                     stats["epg_fuzzy"] += 1
     for channel in unassigned:
         if channel.tvg_id not in epg.channels:
+            channel.attrs["epg_confidence"] = "none"
+            channel.attrs["epg_match_method"] = "none"
             stats["epg_unmatched"] += 1
     return stats
 
 
-def xmltv_bytes(channels: list[Channel], epg: EPGData) -> bytes:
+def xmltv_bytes(channels: list[Channel], epg: EPGData, window_hours_back: int = 0, window_hours_forward: int = 0) -> bytes:
     root = ET.Element("tv", {"generator-info-name": "owl-iptv"})
     ids = {channel.tvg_id for channel in channels if channel.tvg_id}
+
+    # Optional time window filtering
+    if window_hours_back > 0 or window_hours_forward > 0:
+        import time
+        now = time.time()
+        cutoff_start = now - (window_hours_back * 3600)
+        cutoff_end = now + (window_hours_forward * 3600)
+
+        def in_window(prog: ET.Element) -> bool:
+            start = prog.get("start", "")
+            stop = prog.get("stop", "")
+            # Parse XMLTV time format: YYYYMMDDHHMMSS +ZZZZ
+            def parse_xtime(t: str) -> float | None:
+                try:
+                    return time.mktime(time.strptime(t[:14], "%Y%m%d%H%M%S"))
+                except Exception:
+                    return None
+            prog_start = parse_xtime(start)
+            prog_stop = parse_xtime(stop)
+            if prog_start is None and prog_stop is None:
+                return False
+            # Keep if programme overlaps the window
+            return (prog_stop is None or prog_stop > cutoff_start) and (prog_start is None or prog_start < cutoff_end)
+    else:
+        def in_window(_: ET.Element) -> bool:
+            return True
+
     for epg_id in sorted(ids):
         if epg_id in epg.channels:
             root.append(epg.channels[epg_id])
-        for programme in epg.programmes.get(epg_id, []):
+        filtered = [p for p in epg.programmes.get(epg_id, []) if in_window(p)]
+        for programme in filtered:
             root.append(programme)
     buffer = io.BytesIO()
     ET.ElementTree(root).write(buffer, encoding="utf-8", xml_declaration=True)

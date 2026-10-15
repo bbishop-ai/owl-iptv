@@ -8,6 +8,9 @@ filter:
     prefer: [US]
   allow_non_us_english: false
   allow_unknown: false
+  # Source-level language filtering (disable non-English sources entirely)
+  # When true, sources with known non-English provenance are disabled
+  english_sources_only: true
 metadata:
   url: https://iptv-org.github.io/api/channels.json
   timeout_seconds: 30
@@ -29,10 +32,34 @@ dedupe:
   backups_per_channel: 1
   backups_per_source:
     5dab59855cb7: 39
+  # Provider preference (DNA) - higher = more trusted source for dedupe tie-breaking
+  # Based on historical reliability, CDN quality, and geo-alignment
+  provider_preference:
+    "iptv-org": 100
+    "BuddyChewChew": 95
+    "Free-TV": 90
+    "FanMingming": 80
+    "vamoschuck": 75
+    "epgshare01": 70
+    "epg.pw": 65
+    "i.mjh.nz": 60
+    "cai23511": 55
+    "Guovin": 50
+    "MercuryZz": 45
+    "YueChan": 40
+    "Rivens7": 35
+    "YanG-1989": 30
+    "alienlu": 25
+    "asdjkl6": 20
+    "balala2oo8": 15
 epg:
   timeout_seconds: 240
   fuzzy_threshold: 93
   attempts: 3
+  # Programme window trimming (hours around "now" to keep in XMLTV)
+  # Reduces EPG file size for faster loading in Owl
+  window_hours_back: 6
+  window_hours_forward: 72
 publish:
   directory: public
   minimum_channels: 500
