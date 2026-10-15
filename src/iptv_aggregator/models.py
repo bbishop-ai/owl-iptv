@@ -31,6 +31,13 @@ class Validation:
     checked_at: str = ""
     error: str = ""
     cached: bool = False
+    # Rolling reliability metrics
+    check_count: int = 0
+    success_count: int = 0
+    reliability: float = 0.0
+    # EPG match confidence
+    epg_confidence: str = ""  # exact, normalized, alias, fuzzy, none
+    epg_match_method: str = ""
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)

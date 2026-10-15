@@ -10,7 +10,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 from .config import load_config, load_sources
-from .dedupe import preselect_candidates, select_streams
+from .dedupe import preselect_candidates, select_streams, identity_key
 from .epg import fetch_epg, match_channels, xmltv_bytes
 from .metadata import load_metadata
 from .models import Validation
@@ -76,12 +76,15 @@ async def run(config_path: str) -> dict:
                     checked_at=fixture_checked_at,
                     error=f"comparison fixture HTTP {status}",
                 )
+    # Provider preference (DNA) - higher = more trusted
+    provider_preference = cfg.get("dedupe", {}).get("provider_preference", {})
     selected, dedupe_stats = select_streams(
         channels,
         validations,
         cfg["dedupe"]["backups_per_channel"],
         cfg["filter"]["countries"]["prefer"],
         cfg["dedupe"].get("backups_per_source"),
+        provider_preference,
     )
     epg_names = set()
     for channel in selected:
@@ -100,6 +103,12 @@ async def run(config_path: str) -> dict:
         stale_cache_dir=work / "epg-cache",
     )
     epg_stats = match_channels(selected, epg, cfg["epg"]["fuzzy_threshold"])
+    # Copy EPG confidence to validations
+    for channel in selected:
+        val = validations.get(channel.url)
+        if val:
+            val.epg_confidence = channel.attrs.get("epg_confidence", "none")
+            val.epg_match_method = channel.attrs.get("epg_match_method", "")
     source_status = {source["id"]: status for source, _, status in fetched}
     validation_counts = Counter("passed" if value.ok else "failed" for value in validations.values())
     stats = {
@@ -131,10 +140,18 @@ async def run(config_path: str) -> dict:
         "final_non_us_english_channels": sum(c.role == "primary" and c.language == "en" and c.country.upper() != "US" for c in selected),
     }
     stats["duplicates_detected"] = stats["prevalidation_candidates_removed"] + stats["exact_url_duplicates_removed"] + stats["identity_duplicates_removed"]
-    matched = stats["epg_exact_id"] + stats["epg_normalized_id"] + stats["epg_exact_name"] + stats["epg_fuzzy"]
+    matched = stats["epg_exact_id"] + stats["epg_normalized_id"] + stats["epg_url_provider_id"] + stats["epg_exact_name"] + stats["epg_alias"] + stats["epg_fuzzy"]
     stats["epg_matched"] = matched
     stats["epg_matched_logical_channels"] = sum(c.role == "primary" and c.tvg_id in epg.channels for c in selected)
     stats["epg_coverage_percent"] = round(100 * stats["epg_matched_logical_channels"] / max(stats["final_logical_channels"], 1), 2)
+    # EPG confidence breakdown
+    stats["epg_confidence_exact_id"] = stats.get("epg_exact_id", 0)
+    stats["epg_confidence_normalized_id"] = stats.get("epg_normalized_id", 0)
+    stats["epg_confidence_url_provider_id"] = stats.get("epg_url_provider_id", 0)
+    stats["epg_confidence_exact_name"] = stats.get("epg_exact_name", 0)
+    stats["epg_confidence_alias"] = stats.get("epg_alias", 0)
+    stats["epg_confidence_fuzzy"] = stats.get("epg_fuzzy", 0)
+    stats["epg_confidence_none"] = stats.get("epg_unmatched", 0)
     stage.joinpath("playlist.m3u").write_text(m3u_text(selected, cfg["publish"]["epg_url"], validations), encoding="utf-8")
     stage.joinpath("epg.xml").write_bytes(xmltv_bytes(selected, epg))
     stage.joinpath("stats.json").write_text(json.dumps(stats, indent=2, sort_keys=True), encoding="utf-8")

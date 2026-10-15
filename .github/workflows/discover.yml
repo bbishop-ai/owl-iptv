@@ -1,0 +1,64 @@
+name: Source Discovery
+
+on:
+  schedule:
+    - cron: "0 2 * * 0"
+  workflow_dispatch:
+
+concurrency:
+  group: source-discovery
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install media probes and project
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          pip install -e '.[test]'
+      - name: Run source discovery
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python -m tools.discover_sources \
+            --config config/pipeline.yml \
+            --output-dir build/discovery \
+            --max-new 20 \
+            --min-yield 5
+      - name: Create PR for new sources
+        if: ${{ hashFiles('build/discovery/new_sources.json') != '' }}
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: discovery/new-sources-${{ github.run_id }}
+          title: "discovery: add new sources from upstream scan"
+          body: |
+            Automated discovery from upstream repositories.
+            
+            New sources found and validated with minimum yield threshold.
+            Review the changes in `config/sources.json` before merging.
+          labels: discovery, automated
+          commit-message: "discovery: add new sources from upstream scan"
+          add-paths: |
+            config/sources.json
+      - name: Upload discovery artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: discovery-results
+          path: build/discovery/
+          retention-days: 30

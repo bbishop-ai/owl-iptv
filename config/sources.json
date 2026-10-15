@@ -68,7 +68,7 @@
     },
     {
       "id": "6cf028497f0d",
-      "url": "http://rihou.cc:88/荷城茶秀",
+      "url": "http://rihou.cc:88/\u8377\u57ce\u8336\u79c0",
       "kind": "discovery",
       "enabled": false,
       "cloud_compatible": false,
@@ -76,12 +76,12 @@
         "walke2019/iptv-api-two"
       ],
       "declared_urls": [
-        "http://rihou.cc:88/荷城茶秀"
+        "http://rihou.cc:88/\u8377\u57ce\u8336\u79c0"
       ]
     },
     {
       "id": "35e6447b895a",
-      "url": "http://tv.rihou.cc/天天开心",
+      "url": "http://tv.rihou.cc/\u5929\u5929\u5f00\u5fc3",
       "kind": "discovery",
       "enabled": false,
       "cloud_compatible": false,
@@ -89,7 +89,7 @@
         "walke2019/iptv-api-two"
       ],
       "declared_urls": [
-        "http://tv.rihou.cc/天天开心"
+        "http://tv.rihou.cc/\u5929\u5929\u5f00\u5fc3"
       ]
     },
     {
@@ -133,7 +133,7 @@
     },
     {
       "id": "a522cbf6826e",
-      "url": "http://www.饭太硬.com/tv",
+      "url": "http://www.\u996d\u592a\u786c.com/tv",
       "kind": "discovery",
       "enabled": false,
       "cloud_compatible": false,
@@ -141,12 +141,12 @@
         "walke2019/iptv-api-two"
       ],
       "declared_urls": [
-        "http://www.饭太硬.com/tv"
+        "http://www.\u996d\u592a\u786c.com/tv"
       ]
     },
     {
       "id": "a0338194ae48",
-      "url": "http://xhww.fun/小米/DEMO.json",
+      "url": "http://xhww.fun/\u5c0f\u7c73/DEMO.json",
       "kind": "discovery",
       "enabled": false,
       "cloud_compatible": false,
@@ -154,12 +154,12 @@
         "walke2019/iptv-api-two"
       ],
       "declared_urls": [
-        "http://xhww.fun/小米/DEMO.json"
+        "http://xhww.fun/\u5c0f\u7c73/DEMO.json"
       ]
     },
     {
       "id": "54020d487294",
-      "url": "http://肥猫.live",
+      "url": "http://\u80a5\u732b.live",
       "kind": "discovery",
       "enabled": false,
       "cloud_compatible": false,
@@ -167,7 +167,7 @@
         "walke2019/iptv-api-two"
       ],
       "declared_urls": [
-        "http://肥猫.live"
+        "http://\u80a5\u732b.live"
       ]
     },
     {
@@ -198,7 +198,7 @@
     },
     {
       "id": "7a67c34de581",
-      "url": "https://agit.ai/hu/hcr/raw/branch/master/短剧.json",
+      "url": "https://agit.ai/hu/hcr/raw/branch/master/\u77ed\u5267.json",
       "kind": "discovery",
       "enabled": false,
       "cloud_compatible": false,
@@ -206,7 +206,7 @@
         "walke2019/iptv-api-two"
       ],
       "declared_urls": [
-        "https://agit.ai/hu/hcr/raw/branch/master/短剧.json"
+        "https://agit.ai/hu/hcr/raw/branch/master/\u77ed\u5267.json"
       ]
     },
     {
@@ -2194,7 +2194,7 @@
     },
     {
       "id": "34010cb6af51",
-      "url": "https://raw.githubusercontent.com/asdjkl6/tv/tv/.m3u/整套直播源/测试/整套直播源/kk.txt",
+      "url": "https://raw.githubusercontent.com/asdjkl6/tv/tv/.m3u/\u6574\u5957\u76f4\u64ad\u6e90/\u6d4b\u8bd5/\u6574\u5957\u76f4\u64ad\u6e90/kk.txt",
       "kind": "playlist",
       "enabled": true,
       "cloud_compatible": true,
@@ -2202,12 +2202,12 @@
         "walke2019/iptv-api-two"
       ],
       "declared_urls": [
-        "https://ghproxy.cc/https://raw.githubusercontent.com/asdjkl6/tv/tv/.m3u/整套直播源/测试/整套直播源/kk.txt"
+        "https://ghproxy.cc/https://raw.githubusercontent.com/asdjkl6/tv/tv/.m3u/\u6574\u5957\u76f4\u64ad\u6e90/\u6d4b\u8bd5/\u6574\u5957\u76f4\u64ad\u6e90/kk.txt"
       ]
     },
     {
       "id": "e3078ae62a6b",
-      "url": "https://raw.githubusercontent.com/asdjkl6/tv/tv/.m3u/整套直播源/测试/整套直播源/l.txt",
+      "url": "https://raw.githubusercontent.com/asdjkl6/tv/tv/.m3u/\u6574\u5957\u76f4\u64ad\u6e90/\u6d4b\u8bd5/\u6574\u5957\u76f4\u64ad\u6e90/l.txt",
       "kind": "playlist",
       "enabled": true,
       "cloud_compatible": true,
@@ -2215,7 +2215,7 @@
         "walke2019/iptv-api-two"
       ],
       "declared_urls": [
-        "https://ghproxy.cc/https://raw.githubusercontent.com/asdjkl6/tv/tv/.m3u/整套直播源/测试/整套直播源/l.txt"
+        "https://ghproxy.cc/https://raw.githubusercontent.com/asdjkl6/tv/tv/.m3u/\u6574\u5957\u76f4\u64ad\u6e90/\u6d4b\u8bd5/\u6574\u5957\u76f4\u64ad\u6e90/l.txt"
       ]
     },
     {
@@ -3380,6 +3380,240 @@
       ],
       "declared_urls": [
         "https://github.com/BuddyChewChew/multi-epg-light/raw/refs/heads/main/epgs/light-epg.xml.gz"
+      ]
+    },
+    {
+      "id": "iptv-org-us",
+      "url": "https://iptv-org.github.io/iptv/countries/us.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/us.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-gb",
+      "url": "https://iptv-org.github.io/iptv/countries/gb.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/gb.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-ca",
+      "url": "https://iptv-org.github.io/iptv/countries/ca.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/ca.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-au",
+      "url": "https://iptv-org.github.io/iptv/countries/au.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/countries/au.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-news",
+      "url": "https://iptv-org.github.io/iptv/categories/news.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/categories/news.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-sports",
+      "url": "https://iptv-org.github.io/iptv/categories/sports.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/categories/sports.m3u"
+      ]
+    },
+    {
+      "id": "iptv-org-movies",
+      "url": "https://iptv-org.github.io/iptv/categories/movies.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "iptv-org/iptv"
+      ],
+      "declared_urls": [
+        "https://iptv-org.github.io/iptv/categories/movies.m3u"
+      ]
+    },
+    {
+      "id": "buddy-pluto-us",
+      "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plutotv_us.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "BuddyChewChew/app-m3u-generator"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plutotv_us.m3u"
+      ]
+    },
+    {
+      "id": "buddy-pluto-all",
+      "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plutotv_all.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "BuddyChewChew/app-m3u-generator"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plutotv_all.m3u"
+      ]
+    },
+    {
+      "id": "buddy-samsung-us",
+      "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/samsungtvplus_us.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "BuddyChewChew/app-m3u-generator"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/samsungtvplus_us.m3u"
+      ]
+    },
+    {
+      "id": "buddy-samsung-all",
+      "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/samsungtvplus_all.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "BuddyChewChew/app-m3u-generator"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/samsungtvplus_all.m3u"
+      ]
+    },
+    {
+      "id": "buddy-plex-us",
+      "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plex_us.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "BuddyChewChew/app-m3u-generator"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plex_us.m3u"
+      ]
+    },
+    {
+      "id": "buddy-plex-all",
+      "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plex_all.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "BuddyChewChew/app-m3u-generator"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/plex_all.m3u"
+      ]
+    },
+    {
+      "id": "buddy-tubi",
+      "url": "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/tubi_all.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "BuddyChewChew/app-m3u-generator"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/BuddyChewChew/app-m3u-generator/main/playlists/tubi_all.m3u"
+      ]
+    },
+    {
+      "id": "free-tv",
+      "url": "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "Free-TV/IPTV"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8"
+      ]
+    },
+    {
+      "id": "epg-tubi",
+      "url": "https://raw.githubusercontent.com/BuddyChewChew/tubi-scraper/main/tubi_epg.xml",
+      "kind": "epg",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "BuddyChewChew/tubi-scraper"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/BuddyChewChew/tubi-scraper/main/tubi_epg.xml"
+      ]
+    },
+    {
+      "id": "epg-xumo",
+      "url": "https://raw.githubusercontent.com/BuddyChewChew/xumo-playlist-generator/main/playlist.xml",
+      "kind": "epg",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "BuddyChewChew/xumo-playlist-generator"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/BuddyChewChew/xumo-playlist-generator/main/playlist.xml"
+      ]
+    },
+    {
+      "id": "epg-buddy-multi-light",
+      "url": "https://github.com/BuddyChewChew/multi-epg-light/raw/refs/heads/main/epgs/light-guide.xml.gz",
+      "kind": "epg",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "BuddyChewChew/multi-epg-light"
+      ],
+      "declared_urls": [
+        "https://github.com/BuddyChewChew/multi-epg-light/raw/refs/heads/main/epgs/light-guide.xml.gz"
       ]
     }
   ]

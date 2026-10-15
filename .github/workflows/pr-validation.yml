@@ -1,0 +1,80 @@
+name: PR Validation
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+concurrency:
+  group: pr-validation-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install dependencies
+        run: |
+          pip install -e '.[test]'
+          pip install ruff mypy
+      - name: Lint with ruff
+        run: ruff check src/ tools/ --output-format=github
+      - name: Type check with mypy
+        run: mypy src/ --ignore-missing-imports
+      - name: Unit tests
+        run: pytest -q
+
+  pipeline-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install media probes and project
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          pip install -e '.[test]'
+      - name: Run pipeline smoke test (dry-run, no deploy)
+        run: |
+          python -m iptv_aggregator.pipeline --config config/pipeline.yml --dry-run
+      - name: Verify pipeline config is valid
+        run: |
+          python -c "
+          import yaml
+          with open('config/pipeline.yml') as f:
+              cfg = yaml.safe_load(f)
+          required = ['sources_file', 'filter', 'fetch', 'validation', 'dedupe', 'epg', 'publish']
+          for key in required:
+              assert key in cfg, f'Missing required config: {key}'
+          print('Pipeline config validation passed')
+          "
+
+  act-simulation:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install act
+        run: |
+          curl -s https://raw.githubusercontent.com/nektos/act/master/install.sh | sudo bash
+      - name: Run act simulation (sync workflow)
+        run: |
+          act pull_request -W .github/workflows/sync.yml --secret GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} --container-architecture linux/amd64 -j build --dryrun
+      - name: Run act simulation (health workflow)
+        run: |
+          act pull_request -W .github/workflows/health.yml --secret GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} --container-architecture linux/amd64 -j health --dryrun

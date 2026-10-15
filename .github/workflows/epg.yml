@@ -1,0 +1,90 @@
+name: EPG Refresh
+
+on:
+  schedule:
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: epg-refresh
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  epg:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install media probes and project
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          pip install -e '.[test]'
+      - name: Download EPG cache
+        uses: actions/download-artifact@v4
+        with:
+          name: epg-cache
+          path: build/epg-cache/
+      - name: Run EPG refresh
+        env:
+          EPG_CACHE_DIR: build/epg-cache
+        run: |
+          python -m tools.epg_refresh \
+            --config config/pipeline.yml \
+            --cache-dir ${{ EPG_CACHE_DIR }} \
+            --output build/epg.xml
+      - name: Validate EPG
+        run: |
+          python -c "
+          import xml.etree.ElementTree as ET
+          tree = ET.parse('build/epg.xml')
+          root = tree.getroot()
+          channels = len(root.findall('.//channel'))
+          programmes = len(root.findall('.//programme'))
+          print(f'EPG validation: {channels} channels, {programmes} programmes')
+          if channels == 0:
+              raise SystemExit('No channels in EPG')
+          "
+      - name: Upload updated EPG cache
+        uses: actions/upload-artifact@v4
+        with:
+          name: epg-cache
+          path: build/epg-cache/
+          retention-days: 30
+      - name: Deploy EPG to Pages (if changed)
+        run: |
+          if [ -f public/epg.xml ]; then
+            if ! cmp -s build/epg.xml public/epg.xml; then
+              cp build/epg.xml public/epg.xml
+              echo "EPG updated"
+            else
+              echo "EPG unchanged"
+            fi
+          else
+            cp build/epg.xml public/epg.xml
+            echo "EPG deployed"
+          fi
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: epg
+    steps:
+      - name: Atomic Pages deployment
+        id: deployment
+        uses: actions/deploy-pages@v4

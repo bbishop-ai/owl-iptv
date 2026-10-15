@@ -1,0 +1,3 @@
+[console_scripts]
+owl-audit-sources = tools.audit_upstreams:main
+owl-iptv = iptv_aggregator.pipeline:main

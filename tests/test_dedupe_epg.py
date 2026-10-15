@@ -184,7 +184,7 @@ def test_epg_url_id_join():
     channel = Channel("Red Bull TV US (1080p)", "https://jmp2.uk/plu-0b73ace69ebb45eaa249bb87837cb958", "x", tvg_id="RedBullTV.at@US")
     stats = match_channels([channel], epg)
     assert channel.tvg_id == "0b73ace69ebb45eaa249bb87837cb958"
-    assert stats["epg_url_id"] == 1
+    assert stats["epg_url_provider_id"] == 1
 
 
 def test_soft_validation_removes_provably_dead_and_keeps_blocked():
