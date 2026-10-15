@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import asyncio
 import json
+import re
 import shutil
 from collections import Counter
 from datetime import UTC, datetime
@@ -20,10 +21,90 @@ from .sources import SourceFetcher
 from .validator import Validator
 
 
+# Known non-English provenance keywords (source IDs/provenance that are primarily non-English)
+NON_ENGLISH_PROVENANCE = {
+    # Chinese sources
+    "cs3306", "HerbertHe", "walke2019", "taksssss", "chinaiptv", "rihou", "fan.xxooo",
+    "foodieguide", "ipv6proxy", "fan.xxooo", "饭太硬", "xhww", "肥猫", "100km", "agit.ai",
+    "hu", "cymz6", "AutoIPTV-Hotel", "lalifeier", "IPTV", "yuanzl77", "zbefine", "zwc456baby",
+    "cai23511", "yex", "cairong", "iptv-yuan", "mlzlzj", "hnyuan", "qwerttvv", "Beijing-IPTV",
+    "skddyj", "suxuang", "myIPTV", "vbskycn", "iptv", "wwb521", "live", "ybskycn", "cmys",
+    "weishi", "alienlu", "iptv", "asdjkl6", "tv", "balala2oo8", "cymz6", "AutoIPTV-Hotel",
+    "fenxp", "iptv", "iceyheart", "IPTV", "jisoypub", "iptv", "joevess", "IPTV", "kimwang1978",
+    "collect-tv-txt", "mlzlzj", "hnyuan", "qwerttvv", "Beijing-IPTV", "skddyj", "iptv",
+    "suxuang", "myIPTV", "vbskycn", "iptv", "wwb521", "live", "yuanzl77", "IPTV",
+    "zbefine", "iptv", "zwc456baby", "iptv_alive",
+    # Russian sources
+    "m3u4u", "ru", "russia",
+    # Arabic/Persian sources
+    "arabic", "persian", "farsi",
+    # Other non-English specific
+    "german", "deutsch", "france", "french", "espanol", "spanish", "italiano", "italian",
+    "portugues", "portuguese", "japanese", "korean", "hindi", "thai", "vietnamese",
+}
+
+
+def filter_english_sources(sources: list[dict]) -> list[dict]:
+    """Filter out sources with known non-English provenance."""
+    english_provenance_keywords = {
+        "iptv-org", "BuddyChewChew", "Free-TV", "FanMingming", "vamoschuck",
+        "epgshare01", "epg.pw", "i.mjh.nz", "acidjesuz", "EPGTalk",
+        "vcicio", "US-EPG", "apsattv", "Guovin", "MercuryZz", "IPTVN",
+        "Rivens7", "Livelist", "YanG-1989", "m3u", "YueChan", "Live",
+        "IPTV-URL", "Ftindy", "IPTV-URL", "BigBigGrandG", "IPTV-URL",
+        "cai23511", "yex", "cairong", "iptv-yuan", "cymz6", "AutoIPTV-Hotel",
+        "fenxp", "iptv", "iceyheart", "IPTV", "jisoypub", "iptv", "joevess",
+        "IPTV", "kimwang1978", "collect-tv-txt", "mlzlzj", "hnyuan",
+        "qwerttvv", "Beijing-IPTV", "skddyj", "iptv", "suxuang", "myIPTV",
+        "vbskycn", "iptv", "wwb521", "live", "yuanzl77", "IPTV",
+        "zbefine", "iptv", "zwc456baby", "iptv_alive",
+    }
+    
+    filtered = []
+    for source in sources:
+        if not source.get("enabled", True):
+            filtered.append(source)
+            continue
+            
+        provenance = source.get("provenance", [])
+        source_id = source.get("id", "").lower()
+        
+        # Check if any provenance matches English keywords
+        is_english = any(
+            any(kw.lower() in prov.lower() for kw in english_provenance_keywords)
+            for prov in provenance
+        )
+        
+        # Also check source_id for English indicators
+        if not is_english:
+            is_english = any(kw.lower() in source_id for kw in english_provenance_keywords)
+        
+        # Check for explicit non-English indicators
+        is_non_english = any(
+            any(kw.lower() in prov.lower() for kw in NON_ENGLISH_PROVENANCE)
+            for prov in provenance
+        ) or any(kw.lower() in source_id for kw in NON_ENGLISH_PROVENANCE)
+        
+        if is_non_english and not is_english:
+            # Disable this source
+            source["enabled"] = False
+            source["english_filtered"] = True
+            print(f"  Filtered non-English source: {source['id']} (provenance: {provenance})")
+        
+        filtered.append(source)
+    
+    return filtered
+
+
 async def run(config_path: str) -> dict:
     cfg = load_config(config_path)
     root = Path(cfg["_root"])
     sources = load_sources(root / cfg["sources_file"])
+    
+    # Filter sources to English-only if configured
+    if cfg["filter"].get("english_sources_only", False):
+        sources = filter_english_sources(sources)
+    
     work = root / "build"
     stage = root / "stage"
     if stage.exists():

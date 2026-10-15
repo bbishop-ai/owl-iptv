@@ -8,6 +8,9 @@ filter:
     prefer: [US]
   allow_non_us_english: false
   allow_unknown: false
+  # Source-level language filtering (disable non-English sources entirely)
+  # When true, sources with known non-English provenance are disabled
+  english_sources_only: true
 metadata:
   url: https://iptv-org.github.io/api/channels.json
   timeout_seconds: 30
