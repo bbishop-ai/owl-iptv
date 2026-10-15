@@ -12,11 +12,10 @@ from pathlib import Path
 from typing import Any
 
 import aiohttp
-from rapidfuzz.fuzz import ratio, token_sort_ratio
+from rapidfuzz.fuzz import token_sort_ratio
 
 from .models import Channel
 from .normalize import normalized_name
-
 
 JUNK_WORDS = re.compile(r"\b(?:360p|480p|576p|216p|uhd|fhd|hd|sd|4k|8k|backup|mirror|not 24 7)\b")
 
@@ -85,12 +84,10 @@ async def fetch_epg(sources: list[dict[str, Any]], timeout_seconds: int = 45, pr
                 body_path = None
             statuses_seen = []
             for attempt in range(max(1, attempts)):
-                truncated = False
                 try:
                     async with session.get(source["url"], allow_redirects=True) as response:
                         response.raise_for_status()
                         raw = await response.read()
-                    stream = gzip.GzipFile(fileobj=io.BytesIO(raw)) if raw[:2] == b"\x1f\x8b" else io.BytesIO(raw)
                     # A gzip member truncated mid-download usually parses "fine"
                     # as XML (no trailer check) but ends mid-programme. Reject
                     # truncated streams unless gzip confirms completeness.
@@ -102,8 +99,7 @@ async def fetch_epg(sources: list[dict[str, Any]], timeout_seconds: int = 45, pr
                     if body_path is not None:
                         body_path.write_bytes(raw)
                     return source, parsed, "succeeded"
-                except (gzip.BadGzipFile, EOFError, aiohttp.ClientPayloadError, asyncio.TimeoutError, Exception) as exc:
-                    truncated = isinstance(exc, (gzip.BadGzipFile, EOFError, aiohttp.ClientPayloadError))
+                except (TimeoutError, gzip.BadGzipFile, EOFError, aiohttp.ClientPayloadError, Exception) as exc:
                     statuses_seen.append(f"attempt {attempt + 1}: {exc}")
                     if attempt + 1 < max(1, attempts):
                         await asyncio.sleep(2 * (attempt + 1))
@@ -356,7 +352,7 @@ def xmltv_bytes(channels: list[Channel], epg: EPGData, window_hours_back: int = 
             # Keep if programme overlaps the window
             return (prog_stop is None or prog_stop > cutoff_start) and (prog_start is None or prog_start < cutoff_end)
     else:
-        def in_window(_: ET.Element) -> bool:
+        def in_window(prog: ET.Element) -> bool:
             return True
 
     for epg_id in sorted(ids):

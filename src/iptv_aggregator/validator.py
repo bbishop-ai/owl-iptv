@@ -5,6 +5,7 @@ import json
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from time import monotonic
+from typing import Any, ClassVar
 from urllib.parse import urlsplit
 
 import aiohttp
@@ -28,7 +29,7 @@ class Validator:
     # servers) is treated as alive — datacenter probes are blocked by many
     # community hosts, and a blocked probe is not evidence a stream is down
     # for a real player.
-    DEAD_HTTP_STATUS = {400, 404, 410, 451}
+    DEAD_HTTP_STATUS: ClassVar[set[int]] = {400, 404, 410, 451}
     DEAD_ERROR_MARKERS = ("no address associated", "name or service not known", "name resolution", "connection refused", "connection reset", "network is unreachable", "certificate verify failed")
 
     async def validate(self, channels: list[Channel], skip_urls: set[str] | None = None, soft_urls: set[str] | None = None) -> dict[str, Validation]:
@@ -131,7 +132,7 @@ class Validator:
                 base.error = stderr.decode(errors="replace")[-200:]
                 return base
             streams = json.loads(stdout).get("streams", [])
-            video = next((s for s in streams if s.get("codec_type") == "video"), {})
+            video: dict[str, Any] = next((s for s in streams if s.get("codec_type") == "video"), {})
             base.width, base.height = video.get("width"), video.get("height")
             rate = video.get("avg_frame_rate", "0/1").split("/")
             base.fps = round(float(rate[0]) / max(float(rate[1]), 1), 2)

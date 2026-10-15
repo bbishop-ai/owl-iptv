@@ -6,7 +6,7 @@ from collections.abc import Iterable
 from .models import Channel
 
 ATTR_RE = re.compile(r'([\w-]+)="([^"]*)"')
-URL_RE = re.compile(r"^(?:https?|rtmp|rtsp|udp|rtp)://", re.I)
+URL_RE = re.compile(r"^(?:https?|rtmp|rtsp|udp|rtp)://", re.IGNORECASE)
 
 
 def parse_playlist(text: str, source_id: str) -> list[Channel]:

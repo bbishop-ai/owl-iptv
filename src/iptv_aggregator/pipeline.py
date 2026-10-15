@@ -3,7 +3,6 @@ from __future__ import annotations
 import argparse
 import asyncio
 import json
-import re
 import shutil
 from collections import Counter
 from datetime import UTC, datetime
@@ -11,29 +10,30 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 from .config import load_config, load_sources
-from .dedupe import preselect_candidates, select_streams, identity_key
+from .dedupe import preselect_candidates, select_streams
 from .epg import fetch_epg, match_channels, xmltv_bytes
 from .metadata import load_metadata
 from .models import Validation
-from .normalize import language_allowed, normalize_channel, normalized_name, rewrite_pluto_url
+from .normalize import (
+    language_allowed,
+    normalize_channel,
+    normalized_name,
+    rewrite_pluto_url,
+)
 from .publish import atomic_publish, m3u_text, sanity_check
 from .sources import SourceFetcher
 from .validator import Validator
-
 
 # Known non-English provenance keywords (source IDs/provenance that are primarily non-English)
 NON_ENGLISH_PROVENANCE = {
     # Chinese sources
     "cs3306", "HerbertHe", "walke2019", "taksssss", "chinaiptv", "rihou", "fan.xxooo",
-    "foodieguide", "ipv6proxy", "fan.xxooo", "饭太硬", "xhww", "肥猫", "100km", "agit.ai",
+    "foodieguide", "ipv6proxy", "饭太硬", "xhww", "肥猫", "100km", "agit.ai",
     "hu", "cymz6", "AutoIPTV-Hotel", "lalifeier", "IPTV", "yuanzl77", "zbefine", "zwc456baby",
     "cai23511", "yex", "cairong", "iptv-yuan", "mlzlzj", "hnyuan", "qwerttvv", "Beijing-IPTV",
     "skddyj", "suxuang", "myIPTV", "vbskycn", "iptv", "wwb521", "live", "ybskycn", "cmys",
-    "weishi", "alienlu", "iptv", "asdjkl6", "tv", "balala2oo8", "cymz6", "AutoIPTV-Hotel",
-    "fenxp", "iptv", "iceyheart", "IPTV", "jisoypub", "iptv", "joevess", "IPTV", "kimwang1978",
-    "collect-tv-txt", "mlzlzj", "hnyuan", "qwerttvv", "Beijing-IPTV", "skddyj", "iptv",
-    "suxuang", "myIPTV", "vbskycn", "iptv", "wwb521", "live", "yuanzl77", "IPTV",
-    "zbefine", "iptv", "zwc456baby", "iptv_alive",
+    "weishi", "alienlu", "asdjkl6", "tv", "balala2oo8", "fenxp", "iceyheart", "jisoypub", "joevess", "kimwang1978",
+    "collect-tv-txt", "iptv_alive",
     # Russian sources
     "m3u4u", "ru", "russia",
     # Arabic/Persian sources
@@ -61,7 +61,7 @@ def filter_english_sources(sources: list[dict]) -> list[dict]:
         # English/US specific sources and services
         "Matt Huisman", "MattHuisman", "Pluto TV", "PlutoTV", "Samsung TV Plus", "SamsungTVPlus",
         "Plex", "Roku", "PBS", "Tubi", "Xumo", "Stirr", "Redbox", "Roku TV",
-        "US", "United States", "America", "English", "FAST", "Free-TV",
+        "US", "United States", "America", "English", "FAST",
     }
     
     filtered = []
@@ -171,7 +171,7 @@ async def run(config_path: str) -> dict:
         cfg["dedupe"].get("backups_per_source"),
         provider_preference,
     )
-    epg_names = set()
+    epg_names: set[str] = set()
     for channel in selected:
         values = [channel.name, channel.tvg_name, channel.attrs.get("metadata-name", "")]
         try:
