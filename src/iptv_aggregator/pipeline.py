@@ -58,6 +58,10 @@ def filter_english_sources(sources: list[dict]) -> list[dict]:
         "qwerttvv", "Beijing-IPTV", "skddyj", "iptv", "suxuang", "myIPTV",
         "vbskycn", "iptv", "wwb521", "live", "yuanzl77", "IPTV",
         "zbefine", "iptv", "zwc456baby", "iptv_alive",
+        # English/US specific sources and services
+        "Matt Huisman", "MattHuisman", "Pluto TV", "PlutoTV", "Samsung TV Plus", "SamsungTVPlus",
+        "Plex", "Roku", "PBS", "Tubi", "Xumo", "Stirr", "Redbox", "Roku TV",
+        "US", "United States", "America", "English", "FAST", "Free-TV",
     }
     
     filtered = []
