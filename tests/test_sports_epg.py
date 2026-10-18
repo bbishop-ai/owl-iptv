@@ -735,6 +735,35 @@ def test_fox_broadcast_does_not_match_fox_news_channel():
     assert stats["sports_epg_skip_unmapped"] == 1
 
 
+def test_fs1_broadcast_maps_to_fox_sports_1_uniquely():
+    """Broadcast 'FS1' resolves via alias to 'fox sports 1' → injects uniquely to FoxSports1.us."""
+    ch = _channel("Fox Sports 1 (720p)", "FoxSports1.us")
+    xmltv = _minimal_xmltv([ch])
+    event = _event(broadcasts=("FS1",), league="NFL")
+
+    result_bytes, stats = inject_sports_epg(xmltv, [event], [ch])
+
+    root = ET.fromstring(result_bytes)
+    progs = root.findall("programme")
+    assert len(progs) == 1
+    assert progs[0].get("channel") == "FoxSports1.us"
+    assert stats["sports_epg_programmes_added"] == 1
+
+
+def test_fox_broadcast_does_not_map_via_fs1_alias():
+    """Broadcast 'Fox' must not match 'Fox Sports 1' via the FS1 alias (different normalized key)."""
+    ch = _channel("Fox Sports 1 (720p)", "FoxSports1.us")
+    xmltv = _minimal_xmltv([ch])
+    event = _event(broadcasts=("Fox",), league="NFL")
+
+    result_bytes, stats = inject_sports_epg(xmltv, [event], [ch])
+
+    root = ET.fromstring(result_bytes)
+    assert root.findall("programme") == []
+    assert stats["sports_epg_skip_unmapped"] == 1
+    assert stats["sports_epg_programmes_added"] == 0
+
+
 def test_abc_unique_match_does_not_pollute_cbs_channel():
     """Unique ABC match injects only to ABC.us, not to any CBS channel."""
     ch_abc = _channel("ABC", "ABC.us")

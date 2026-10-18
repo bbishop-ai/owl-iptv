@@ -76,6 +76,8 @@ _BROADCAST_ALIASES: dict[str, str] = {
     "espnu": "espn u",
     # ESPN often emits "ESPNews"; playlist channels may be named "ESPN News"
     "espnews": "espn news",
+    # ESPN schedules may label Fox Sports 1 as "FS1"; playlist channel is "Fox Sports 1 (720p)"
+    "fs1": "fox sports 1",
 }
 
 
