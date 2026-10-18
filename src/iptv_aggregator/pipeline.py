@@ -22,6 +22,7 @@ from .normalize import (
 )
 from .publish import atomic_publish, m3u_text, sanity_check
 from .sources import SourceFetcher
+from .sports_epg import inject_sports_epg
 from .sports_guide import fetch_events, write_sports_guide
 from .validator import Validator
 
@@ -243,7 +244,10 @@ async def run(config_path: str) -> dict:
     stats["epg_confidence_none"] = stats.get("epg_unmatched", 0)
     sports_events, sports_status = await fetch_events()
     stage.joinpath("playlist.m3u").write_text(m3u_text(selected, cfg["publish"]["epg_url"], validations), encoding="utf-8")
-    stage.joinpath("epg.xml").write_bytes(xmltv_bytes(selected, epg, epg_window_back, epg_window_forward))
+    upstream_epg_bytes = xmltv_bytes(selected, epg, epg_window_back, epg_window_forward)
+    enriched_epg_bytes, sports_epg_stats = inject_sports_epg(upstream_epg_bytes, sports_events, selected)
+    stage.joinpath("epg.xml").write_bytes(enriched_epg_bytes)
+    stats.update(sports_epg_stats)
     stage.joinpath("stats.json").write_text(json.dumps(stats, indent=2, sort_keys=True), encoding="utf-8")
     write_sports_guide(stage, sports_events, sports_status, generated_at=datetime.now(UTC), playlist_names=[channel.name for channel in selected])
     stage.joinpath("unmatched_channels.json").write_text(json.dumps(_unmatched_channels(selected, epg), indent=2), encoding="utf-8")
