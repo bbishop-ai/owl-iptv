@@ -74,7 +74,12 @@ def test_event_payload_sorts_and_reports_exact_playlist_presence():
     assert payload["events"][0]["available_in_playlist"] == ["Fox"]
     assert payload["events"][1]["available_in_playlist"] == []
     assert payload["source_status"] == {"nfl": "ok"}
-    assert "site.api.espn.com" in render_html(payload)
+    rendered = render_html(payload)
+    assert "Schedule last refreshed at build time" in rendered
+    assert "site.api.espn.com" not in rendered
+    assert "fetch(" not in rendered
+    assert "Loading live schedule" not in rendered
+    assert "Live schedule unavailable" not in rendered
 
 
 def test_write_sports_guide_writes_json_and_html_without_playlist_changes(tmp_path: Path):
@@ -92,7 +97,12 @@ def test_write_sports_guide_writes_json_and_html_without_playlist_changes(tmp_pa
 
     payload = __import__("json").loads(tmp_path.joinpath("sports-guide.json").read_text(encoding="utf-8"))
     assert payload["events"][0]["available_in_playlist"] == ["Fox"]
-    assert "Schedule information only" in tmp_path.joinpath("sports-guide.html").read_text(encoding="utf-8")
+    html_text = tmp_path.joinpath("sports-guide.html").read_text(encoding="utf-8")
+    assert "Schedule information only" in html_text
+    assert "Schedule last refreshed at build time" in html_text
+    assert "2026-10-18T16:00:00+00:00" in html_text
+    assert "fetch(" not in html_text
+    assert "site.api.espn.com" not in html_text
     assert playlist.read_text(encoding="utf-8") == "#EXTM3U\n#EXTINF:-1,FOX\nhttps://example.test/fox\n"
 
 

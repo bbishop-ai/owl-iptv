@@ -168,47 +168,19 @@ def render_html(payload: dict[str, Any]) -> str:
             )
         sections.append(f"<section><h2>{html.escape(sport)}</h2><ul>{''.join(rows) or '<li>No scheduled events in the current window.</li>'}</ul></section>")
     status = html.escape(json.dumps(payload.get("source_status", {}), sort_keys=True))
-    script = """
-<script>
-const owlLeagues = [['College Football','football/college-football'],['NFL','football/nfl'],['MLB','baseball/mlb'],['NBA','basketball/nba'],['NHL','hockey/nhl']];
-const owlDates = Array.from({length: 4}, (_, offset) => { const date = new Date(); date.setUTCDate(date.getUTCDate() + offset); return date.toISOString().slice(0, 10).replaceAll('-', ''); });
-function owlBroadcasts(event) { return [...new Set((event.competitions?.[0]?.broadcasts || []).flatMap(item => item.names || []))]; }
-async function owlLoadLive() {
-  const target = document.getElementById('live-events');
-  try {
-    const responses = await Promise.all(owlLeagues.flatMap(([league, path]) => owlDates.map(async date => {
-      const response = await fetch(`https://site.api.espn.com/apis/site/v2/sports/${path}/scoreboard?dates=${date}&limit=100`);
-      if (!response.ok) throw new Error(`${league}: HTTP ${response.status}`);
-      return [league, (await response.json()).events || []];
-    })));
-    const groups = new Map(owlLeagues.map(([league]) => [league, []]));
-    for (const [league, events] of responses) for (const event of events) {
-      const line = document.createElement('li');
-      const when = new Date(event.date).toLocaleString();
-      const broadcasts = owlBroadcasts(event).join(', ') || 'Broadcast pending';
-      line.textContent = `${when} — ${event.name || 'Event'} · ${broadcasts}`;
-      groups.get(league).push(line);
-    }
-    target.replaceChildren(...[...groups].map(([league, rows]) => { const section = document.createElement('section'); const heading = document.createElement('h2'); heading.textContent = league; const list = document.createElement('ul'); list.append(...(rows.length ? rows : [Object.assign(document.createElement('li'), {textContent: 'No scheduled events in the next 72 hours.'})])); section.append(heading, list); return section; }));
-    document.getElementById('live-status').textContent = `Live schedule refreshed in your browser at ${new Date().toLocaleTimeString()}.`;
-  } catch (error) { document.getElementById('live-status').textContent = `Live schedule unavailable; showing the last published guide. ${error}`; }
-}
-owlLoadLive();
-</script>
-"""
+    generated_at = html.escape(payload["generated_at"])
     return (
         "<!doctype html><meta charset=utf-8><title>Owl Game Finder</title><h1>Owl Game Finder</h1>"
         "<p>Schedule information only. A network listed here is not a promise that a stream is playable.</p>"
-        "<p id=live-status>Loading live schedule…</p><div id=live-events><p>Generated: <time datetime=\""
-        + html.escape(payload["generated_at"])
+        "<p>Schedule last refreshed at build time: <time datetime=\""
+        + generated_at
         + "\">"
-        + html.escape(payload["generated_at"])
+        + generated_at
         + "</time></p>"
         + "".join(sections)
-        + "</div><h2>Last published source status</h2><pre>"
+        + "<h2>Last published source status</h2><pre>"
         + status
         + "</pre>"
-        + script
     )
 
 
