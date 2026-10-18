@@ -14,6 +14,28 @@ COUNTRY_LANGUAGES = {
     "it": "it", "pt": "pt", "br": "pt", "tr": "tr", "in": "hi",
 }
 
+# Sports-first brand/token matcher with word boundaries.
+# \bespn has no trailing boundary to match ESPNews/ESPNU/ESPN2.
+# Bare fishing/hunting omitted; covered by brand patterns (outdoor\s*channel etc.).
+_SPORTS = re.compile(
+    r"\bsports?\b"
+    r"|\bespn"
+    r"|\bnfl\b|\bnba\b|\bmlb\b|\bnhl\b"
+    r"|\bgolf\b|\btennis\b|\bsoccer\b|\bfootball\b"
+    r"|\bbasketball\b|\bbaseball\b|\bhockey\b"
+    r"|\bracing\b|\bnascar\b"
+    r"|\bformula\s*1\b|\bf1\b"
+    r"|\bmotogp\b"
+    r"|\bwrestling\b|\bboxing\b|\bufc\b|\bmma\b"
+    r"|\bbellator\b|\bpfl\b"
+    r"|\bmonster\s*jam\b|\bworld\s*poker\s*tour\b|\bpoker\b"
+    r"|\bbig\s*ten\b|\bbtn\b"
+    r"|\bsec\s*network\b|\bacc\s*network\b"
+    r"|\boutdoor\s*channel\b|\boutdoor\s*america\b"
+    r"|\bduck\s*hunting\b|\bsportsman\b",
+    re.IGNORECASE,
+)
+
 
 def normalized_name(value: str) -> str:
     value = unicodedata.normalize("NFKD", value).encode("ascii", "ignore").decode().lower()
@@ -60,13 +82,19 @@ def classify_language(channel: Channel) -> str:
 
 
 def simple_category(channel: Channel) -> str:
-    """Collapse provider group labels into one stable, player-friendly category."""
-    text = " ".join((channel.group, channel.name, channel.attrs.get("metadata-name", ""))).casefold()
+    """Collapse provider labels into one stable, player-friendly category.
+
+    Sports is deliberately evaluated first: a sports-first service can be tagged
+    by an upstream as News, Outdoor, Auto, or General, but it belongs in the
+    single sports browse bucket. General networks that merely air occasional
+    games are not listed in the matcher and retain their ordinary category.
+    """
+    text = " ".join((channel.group, channel.name, channel.tvg_id, channel.attrs.get("metadata-name", ""))).casefold()
     groups = {part.strip().casefold() for part in re.split(r"[;,|]", channel.group) if part.strip()}
+    if "sports" in groups or _SPORTS.search(text):
+        return "Sports"
     if groups & {"news", "weather", "legislative", "current affairs"} or re.search(r"\bnews\b|weather|c-span|cspan|congress|senate|house of representatives", text):
         return "News"
-    if "sports" in groups or re.search(r"sports?|espn|nfl|nba|mlb|nhl|golf|tennis|soccer|football|basketball|baseball|hockey|racing|wrestling|boxing|ufc", text):
-        return "Sports"
     if "movies" in groups or re.search(r"movies?|films?|cinema", text):
         return "Movies"
     if "kids" in groups or "family" in groups or re.search(r"\bkids?\b|children|cartoon|nickelodeon|disney junior", text):

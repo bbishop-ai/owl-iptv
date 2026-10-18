@@ -22,6 +22,25 @@ def test_simple_categories_collapse_provider_labels():
     assert simple_category(channel("Unclassified", "")) == "Other"
 
 
+def test_sports_capable_channels_win_over_generic_source_groups():
+    assert simple_category(channel("SEC Network", "")) == "Sports"
+    assert simple_category(channel("Big Ten Network", "")) == "Sports"
+    assert simple_category(channel("PFL MMA", "")) == "Sports"
+    assert simple_category(channel("NASCAR Channel", "Lifestyle")) == "Sports"
+    assert simple_category(channel("Outdoor Channel", "Lifestyle")) == "Sports"
+    assert simple_category(channel("ESPNews", "News;Sports")) == "Sports"
+    assert simple_category(channel("CNN", "News;General")) == "News"
+    assert simple_category(channel("USA Network", "Comedy;Movies;Series")) == "Movies"
+    assert simple_category(channel("TBS", "Entertainment")) == "Entertainment"
+
+
+def test_word_boundary_safety_no_false_sports():
+    """Tokens use word boundaries: TF1/SF1 are not Formula 1; unboxing is not boxing."""
+    assert simple_category(channel("TF1", "Entertainment")) == "Entertainment"
+    assert simple_category(channel("SF1", "Entertainment")) == "Entertainment"
+    assert simple_category(channel("Unboxing Central", "Entertainment")) == "Entertainment"
+
+
 def test_published_m3u_uses_one_simple_group_title():
     c = channel("Comedy Central", "Comedy;Series;Entertainment")
     output = m3u_text([c], "https://example.test/epg.xml", {c.url: Validation(ok=True)})

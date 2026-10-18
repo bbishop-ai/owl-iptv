@@ -43,6 +43,12 @@ def sanity_check(stage: Path, minimum_channels: int) -> None:
     stats = json.loads(stage.joinpath("stats.json").read_text(encoding="utf-8"))
     if stats.get("published_streams") != count:
         raise ValueError("stats/playlist count mismatch")
+    guide = json.loads(stage.joinpath("sports-guide.json").read_text(encoding="utf-8"))
+    if not isinstance(guide.get("events"), list) or not isinstance(guide.get("source_status"), dict) or not guide.get("generated_at"):
+        raise ValueError("sports guide schema invalid")
+    for event in guide["events"]:
+        if not all(event.get(key) for key in ("sport", "league", "title", "start_utc")):
+            raise ValueError("sports guide event invalid")
 
 
 def atomic_publish(stage: Path, destination: Path) -> None:
