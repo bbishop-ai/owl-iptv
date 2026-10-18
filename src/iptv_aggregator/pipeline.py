@@ -22,6 +22,7 @@ from .normalize import (
 )
 from .publish import atomic_publish, m3u_text, sanity_check
 from .sources import SourceFetcher
+from .sports_guide import fetch_events, write_sports_guide
 from .validator import Validator
 
 # Known non-English provenance keywords (source IDs/provenance that are primarily non-English)
@@ -240,9 +241,11 @@ async def run(config_path: str) -> dict:
     stats["epg_confidence_alias"] = stats.get("epg_alias", 0)
     stats["epg_confidence_fuzzy"] = stats.get("epg_fuzzy", 0)
     stats["epg_confidence_none"] = stats.get("epg_unmatched", 0)
+    sports_events, sports_status = await fetch_events()
     stage.joinpath("playlist.m3u").write_text(m3u_text(selected, cfg["publish"]["epg_url"], validations), encoding="utf-8")
     stage.joinpath("epg.xml").write_bytes(xmltv_bytes(selected, epg, epg_window_back, epg_window_forward))
     stage.joinpath("stats.json").write_text(json.dumps(stats, indent=2, sort_keys=True), encoding="utf-8")
+    write_sports_guide(stage, sports_events, sports_status, generated_at=datetime.now(UTC), playlist_names=[channel.name for channel in selected])
     stage.joinpath("unmatched_channels.json").write_text(json.dumps(_unmatched_channels(selected, epg), indent=2), encoding="utf-8")
     stage.joinpath("report.md").write_text(_report(stats), encoding="utf-8")
     stage.joinpath("index.html").write_text(_index(stats), encoding="utf-8")
@@ -278,7 +281,7 @@ def _unmatched_channels(selected: list, epg) -> dict:
 
 
 def _index(stats: dict) -> str:
-    return "<!doctype html><meta charset=utf-8><title>Owl IPTV</title><h1>Owl IPTV</h1><ul><li><a href=playlist.m3u>Playlist</a></li><li><a href=epg.xml>EPG</a></li><li><a href=stats.json>Build stats</a></li><li><a href=unmatched_channels.json>Unmatched channels</a></li><li><a href=report.md>Build report</a></li></ul><pre>" + json.dumps(stats, indent=2) + "</pre>"
+    return "<!doctype html><meta charset=utf-8><title>Owl IPTV</title><h1>Owl IPTV</h1><ul><li><a href=playlist.m3u>Playlist</a></li><li><a href=epg.xml>EPG</a></li><li><a href=sports-guide.html>Game Finder</a></li><li><a href=sports-guide.json>Game Finder data</a></li><li><a href=stats.json>Build stats</a></li><li><a href=unmatched_channels.json>Unmatched channels</a></li><li><a href=report.md>Build report</a></li></ul><pre>" + json.dumps(stats, indent=2) + "</pre>"
 
 
 def _report(stats: dict) -> str:
