@@ -36,6 +36,21 @@ _SPORTS = re.compile(
     re.IGNORECASE,
 )
 
+# FAST-platform hosts observed in the live playlist (Pluto direct, owl Pluto relay
+# worker, jmp2.uk Pluto/Samsung short links, Plex, Tubi). Bare show-title pop-up
+# channels from these platforms carry no genre words; the platform is the honest
+# remaining signal, and Pluto's own taxonomy files them under general entertainment.
+_FAST_PLATFORM = re.compile(
+    r"https?://(?:"
+    r"(?:[^/?#]*\.)?pluto\.tv"
+    r"|(?:[^/?#]*\.)?plex\.tv"
+    r"|(?:[^/?#]*\.)?tubi\.io"
+    r"|jmp2\.uk"
+    r"|(?:[^/?#]*\.)?owl-pluto-relay\.[^/?#]*"
+    r")/",
+    re.IGNORECASE,
+)
+
 
 def normalized_name(value: str) -> str:
     value = unicodedata.normalize("NFKD", value).encode("ascii", "ignore").decode().lower()
@@ -107,9 +122,15 @@ def simple_category(channel: Channel) -> str:
         return "Education"
     if "local" in groups or re.search(r"\blocal\b|community", text):
         return "Local"
-    if groups & {"lifestyle", "cooking", "outdoor", "travel", "auto", "business", "shop"} or re.search(r"lifestyle|cooking|food|travel|outdoor|fishing|auto|cars?|business|finance|shopping", text):
+    if groups & {"lifestyle", "cooking", "outdoor", "travel", "auto", "business", "shop"} or re.search(r"lifestyle|cooking|food|travel|outdoor|fishing|auto|cars?|business|finance|shopping|qvc|hsn", text):
         return "Lifestyle"
     if groups & {"series", "entertainment", "comedy", "animation", "classic", "documentary", "culture", "general", "undefined"} or re.search(r"series|entertainment|comedy|animation|classic|documentary|culture", text):
+        return "Entertainment"
+    if _FAST_PLATFORM.match(channel.url or ""):
+        # Bare-title pop-up channels (Baywatch, Naruto, ...) carry no genre words;
+        # a FAST-platform URL (Pluto/Samsung/Plex/Tubi) is the honest remaining
+        # signal, and those platforms' own taxonomies file them under general
+        # entertainment feeds.
         return "Entertainment"
     return "Other"
 
