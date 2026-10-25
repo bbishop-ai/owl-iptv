@@ -820,3 +820,5 @@ http://31.148.48.15/Futbol_HD/index.m3u8
 #EXTINF:-1 tvg-id="JiangsuSportsLeisureChannel.cn@SD" tvg-logo="https://www.tvchinese.net/uploads/tv/jsty.jpg" group-title="Sports",江苏体育 (576p)
 http://183.207.248.71/gitv/live1/G_JSTY/G_JSTY
 
+#EXTINF:-1 tvg-id="ESPN.us@HD" tvg-logo="https://imgx.fubo.tv/station_logos/espn-hd_c.png" group-title="Sports",ESPN (United States) HD (720p)
+http://stream.bottledesk.net/6500/index.m3u8
