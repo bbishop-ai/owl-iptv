@@ -68,7 +68,8 @@ _RESIDUAL_CATEGORY_BY_NAME = {
     # Narrow destination channels.
     "metv toons": "Kids", "bet jams": "Music", "bet soul": "Music",
     "vevo pop": "Music", "byu tv": "Religion", "nasa tv media": "Education",
-    "better life nature channel": "Education", "better life nature channel 480p 480p": "Education",
+    "better life nature channel": "Education", "better life nature channel 480p": "Education",
+    "better life nature channel 480p 480p": "Education",
     "rev n": "Lifestyle",
     "the pet collective": "Lifestyle",
     # General series/entertainment networks and show-title feeds.

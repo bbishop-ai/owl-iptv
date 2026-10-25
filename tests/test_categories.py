@@ -80,6 +80,7 @@ def test_audited_residual_brands_land_in_browse_categories():
     assert simple_category(residual("Univisión [backup]")) == "Entertainment"
     assert simple_category(residual("CNBC Ⓨ")) == "News"
     assert simple_category(residual("Better Life Nature Channel (480p) [480p]")) == "Education"
+    assert simple_category(residual("Better Life Nature Channel (480p)")) == "Education"
     assert simple_category(residual("MS NOW [backup]")) == "News"
 
 
