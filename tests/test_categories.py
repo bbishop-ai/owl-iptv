@@ -41,6 +41,28 @@ def test_word_boundary_safety_no_false_sports():
     assert simple_category(channel("Unboxing Central", "Entertainment")) == "Entertainment"
 
 
+def test_fast_platform_urls_fall_back_to_entertainment():
+    """Bare show-title FAST channels have no genre words; the platform URL is the signal."""
+    def fast(name: str, url: str) -> Channel:
+        return Channel(name=name, url=url, source_id="t", group="")
+
+    assert simple_category(fast("Baywatch", "https://owl-pluto-relay.bradsai818.workers.dev/plu/abc123.m3u8")) == "Entertainment"
+    assert simple_category(fast("Nash Bridges", "https://ipv4.pluto.tv/api/tn/video/playout/v2/stitch/hls/channel/xyz/master.m3u8")) == "Entertainment"
+    assert simple_category(fast("Hey Arnold!", "https://jmp2.uk/stvp-CAFEE123.m3u8")) == "Entertainment"
+    assert simple_category(fast("Plex Fast Feed", "https://epg.provider.plex.tv/live/abc/index.m3u8")) == "Entertainment"
+    assert simple_category(fast("Tubi Feed", "https://live-manifest.production-public.tubi.io/x/y.m3u8")) == "Entertainment"
+
+
+def test_unknown_hosts_stay_other():
+    c = Channel(name="Mystery Feed", url="http://198.51.100.7:8080/stream/index.m3u8", source_id="t", group="")
+    assert simple_category(c) == "Other"
+
+
+def test_qvc_is_lifestyle():
+    assert simple_category(channel("QVC", "")) == "Lifestyle"
+    assert simple_category(channel("HSN", "")) == "Lifestyle"
+
+
 def test_published_m3u_uses_one_simple_group_title():
     c = channel("Comedy Central", "Comedy;Series;Entertainment")
     output = m3u_text([c], "https://example.test/epg.xml", {c.url: Validation(ok=True)})
