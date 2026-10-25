@@ -145,9 +145,6 @@ def simple_category(channel: Channel) -> str:
     groups = {part.strip().casefold() for part in re.split(r"[;,|]", channel.group) if part.strip()}
     if "sports" in groups or _SPORTS.search(text):
         return "Sports"
-    residual_category = _RESIDUAL_CATEGORY_BY_NAME.get(normalized_name(channel.name)) if groups == {"other"} else None
-    if residual_category:
-        return residual_category
     if groups & {"news", "weather", "legislative", "current affairs"} or re.search(r"\bnews\b|weather|c-span|cspan|congress|senate|house of representatives", text):
         return "News"
     if "movies" in groups or re.search(r"movies?|films?|cinema", text):
@@ -166,6 +163,9 @@ def simple_category(channel: Channel) -> str:
         return "Lifestyle"
     if groups & {"series", "entertainment", "comedy", "animation", "classic", "documentary", "culture", "general", "undefined"} or re.search(r"series|entertainment|comedy|animation|classic|documentary|culture", text):
         return "Entertainment"
+    residual_category = _RESIDUAL_CATEGORY_BY_NAME.get(normalized_name(channel.name))
+    if residual_category:
+        return residual_category
     if _FAST_PLATFORM.match(channel.url or ""):
         # Bare-title pop-up channels (Baywatch, Naruto, ...) carry no genre words;
         # a FAST-platform URL (Pluto/Samsung/Plex/Tubi) is the honest remaining
