@@ -63,6 +63,26 @@ def test_qvc_is_lifestyle():
     assert simple_category(channel("HSN", "")) == "Lifestyle"
 
 
+def test_audited_residual_brands_land_in_browse_categories():
+    """The live residual Other audit uses exact normalized brand names, incl. backups/quality."""
+    def residual(name: str) -> Channel:
+        return channel(name, "Other")
+
+    assert simple_category(residual("Bloomberg TV")) == "News"
+    assert simple_category(residual("FanDuel TV")) == "Sports"
+    assert simple_category(residual("HBO Drama")) == "Movies"
+    assert simple_category(residual("MeTV Toons")) == "Kids"
+    assert simple_category(residual("BET Soul")) == "Music"
+    assert simple_category(residual("BYU TV [backup]")) == "Religion"
+    assert simple_category(residual("NASA TV Media")) == "Education"
+    assert simple_category(residual("The Pet Collective [backup]")) == "Lifestyle"
+    assert simple_category(residual("Heartland [backup]")) == "Entertainment"
+    assert simple_category(residual("Univisión [backup]")) == "Entertainment"
+    assert simple_category(residual("CNBC Ⓨ")) == "News"
+    assert simple_category(residual("Better Life Nature Channel (480p) [480p]")) == "Education"
+    assert simple_category(residual("MS NOW [backup]")) == "News"
+
+
 def test_published_m3u_uses_one_simple_group_title():
     c = channel("Comedy Central", "Comedy;Series;Entertainment")
     output = m3u_text([c], "https://example.test/epg.xml", {c.url: Validation(ok=True)})

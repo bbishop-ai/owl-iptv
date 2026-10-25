@@ -51,6 +51,43 @@ _FAST_PLATFORM = re.compile(
     re.IGNORECASE,
 )
 
+# Exact normalized display names from the audited live residual ``Other`` set.
+# A channel's URL is not a genre signal outside the audited FAST-platform fallback
+# above; these names are deliberately narrow to avoid moving unknown future feeds.
+_RESIDUAL_CATEGORY_BY_NAME = {
+    # News and current-affairs brands.
+    "bloomberg": "News", "bloomberg tv": "News", "cnbc": "News", "cnbc y": "News",
+    "america s voice": "News", "hln": "News", "newsmax 2": "News",
+    "court tv": "News", "ms now": "News",
+    # Dedicated sports brands.
+    "fanduel tv": "Sports", "sportsnet new york": "Sports",
+    # Dedicated movie/premium-film brands.
+    "fxm": "Movies", "hbo drama": "Movies", "hbo hits": "Movies",
+    "hbo latino": "Movies", "mgm drive in": "Movies", "mgm hits": "Movies",
+    "starz": "Movies", "screen dreams": "Movies",
+    # Narrow destination channels.
+    "metv toons": "Kids", "bet jams": "Music", "bet soul": "Music",
+    "vevo pop": "Music", "byu tv": "Religion", "nasa tv media": "Education",
+    "better life nature channel": "Education", "better life nature channel 480p 480p": "Education",
+    "rev n": "Lifestyle",
+    "the pet collective": "Lifestyle",
+    # General series/entertainment networks and show-title feeds.
+    "estrella tv": "Entertainment", "america teve": "Entertainment",
+    "heartland": "Entertainment", "retro tv": "Entertainment", "stryk tv": "Entertainment",
+    "afn family": "Entertainment", "afn prime pacific": "Entertainment",
+    "afn spectrum": "Entertainment", "antenna tv": "Entertainment", "aspire": "Entertainment",
+    "bbc america": "Entertainment", "bet her": "Entertainment", "charge": "Entertainment",
+    "cleo tv": "Entertainment", "comet": "Entertainment", "cozi tv": "Entertainment",
+    "discovery familia": "Entertainment", "game show network": "Entertainment",
+    "great american family": "Entertainment", "grit": "Entertainment",
+    "hallmark mystery": "Entertainment", "insp": "Entertainment",
+    "ion mystery": "Entertainment", "ion plus": "Entertainment",
+    "outlaw": "Entertainment", "story television": "Entertainment", "tv land": "Entertainment",
+    "telexitos": "Entertainment", "telemundo": "Entertainment", "the nest": "Entertainment",
+    "true crime network": "Entertainment", "unimas": "Entertainment", "univision": "Entertainment",
+    "failarmy": "Entertainment", "people are awesome": "Entertainment",
+}
+
 
 def normalized_name(value: str) -> str:
     value = unicodedata.normalize("NFKD", value).encode("ascii", "ignore").decode().lower()
@@ -108,6 +145,9 @@ def simple_category(channel: Channel) -> str:
     groups = {part.strip().casefold() for part in re.split(r"[;,|]", channel.group) if part.strip()}
     if "sports" in groups or _SPORTS.search(text):
         return "Sports"
+    residual_category = _RESIDUAL_CATEGORY_BY_NAME.get(normalized_name(channel.name)) if groups == {"other"} else None
+    if residual_category:
+        return residual_category
     if groups & {"news", "weather", "legislative", "current affairs"} or re.search(r"\bnews\b|weather|c-span|cspan|congress|senate|house of representatives", text):
         return "News"
     if "movies" in groups or re.search(r"movies?|films?|cinema", text):
