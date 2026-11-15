@@ -25,6 +25,7 @@ validation:
   candidates_per_identity: 4
   candidates_per_identity_by_source:
     5dab59855cb7: 39
+    grey-sports: 1
   total_candidate_limit: 5000
   responsive_fixture: config/fixtures/aria-missing-responsive.json
   responsive_fixture_source_id: 5dab59855cb7
@@ -32,6 +33,7 @@ dedupe:
   backups_per_channel: 1
   backups_per_source:
     5dab59855cb7: 39
+    grey-sports: 0
   # Provider preference (DNA) - higher = more trusted source for dedupe tie-breaking
   # Based on historical reliability, CDN quality, and geo-alignment
   provider_preference:

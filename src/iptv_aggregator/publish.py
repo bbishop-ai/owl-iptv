@@ -14,11 +14,13 @@ def m3u_text(channels: list[Channel], epg_url: str, validations: dict[str, Valid
     escaped_epg = html.escape(epg_url, quote=True)
     lines = [f'#EXTM3U url-tvg="{escaped_epg}" x-tvg-url="{escaped_epg}"']
     for channel in sorted(channels, key=lambda c: (c.group, c.name, c.role)):
+        prefix = channel.attrs.get("owl-group-prefix", "")
+        category = simple_category(channel)
         attrs = {
             "tvg-id": channel.tvg_id,
             "tvg-name": channel.tvg_name or channel.name,
             "tvg-logo": channel.logo,
-            "group-title": simple_category(channel),
+            "group-title": f"{prefix} / {category}" if prefix else category,
             "tvg-language": channel.language,
             "owl-role": channel.role,
         }
@@ -36,8 +38,9 @@ def sanity_check(stage: Path, minimum_channels: int) -> None:
     if not playlist.startswith("#EXTM3U"):
         raise ValueError("playlist header missing")
     count = playlist.count("#EXTINF:")
-    if count < minimum_channels:
-        raise ValueError(f"sanity floor failed: {count} < {minimum_channels}")
+    licensed = sum(1 for line in playlist.splitlines() if line.startswith("#EXTINF:") and 'group-title="Grey' not in line)
+    if licensed < minimum_channels:
+        raise ValueError(f"sanity floor failed: {licensed} licensed < {minimum_channels} ({count} total)")
     import xml.etree.ElementTree as ET
     ET.parse(stage / "epg.xml")
     stats = json.loads(stage.joinpath("stats.json").read_text(encoding="utf-8"))

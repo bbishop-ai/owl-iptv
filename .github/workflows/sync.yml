@@ -43,6 +43,11 @@ jobs:
       - name: Verify source inventory is reproducible
         if: ${{ inputs.refresh_audit == true }}
         run: python -m tools.audit_upstreams --output .
+      - name: Build grey-market sports overlay
+        continue-on-error: true
+        env:
+          GREY_RELAY: ${{ vars.GREY_RELAY }}
+        run: python -m tools.build_grey --out build/generated/grey.m3u
       - name: Unit tests
         run: pytest -q
       - name: Build fresh candidate and run sanity checks

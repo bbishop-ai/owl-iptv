@@ -53,22 +53,40 @@ def preselect_candidates(
     per_identity: int,
     total_limit: int,
     per_source: dict[str, int] | None = None,
+    unbudgeted_sources: set[str] | None = None,
 ) -> tuple[list[Channel], int]:
-    """Remove exact URLs and bound validation while retaining source diversity per identity."""
+    """Remove exact URLs and bound validation while retaining source diversity per identity.
+
+    Channels from ``unbudgeted_sources`` (additive backup overlays) are still
+    capped per identity but do not consume ``total_limit``, so a full validation
+    budget cannot crowd them out.
+    """
+    budgeted = 0
     seen_urls: set[str] = set()
     counts: dict[str, int] = defaultdict(int)
+    source_counts: dict[tuple[str, str], int] = defaultdict(int)
     selected: list[Channel] = []
     removed = 0
     # Prefer HTTPS and entries with EPG/logo metadata before media quality is known.
     ordered = sorted(channels, key=lambda c: (bool(c.tvg_id), bool(c.logo), c.url.startswith("https://")), reverse=True)
     for channel in ordered:
         key = canonical_url(channel.url)
+        identity = identity_key(channel)
         source_limit = (per_source or {}).get(channel.source_id, per_identity)
-        if key in seen_urls or counts[identity_key(channel)] >= source_limit or len(selected) >= total_limit:
+        if source_limit > per_identity:
+            # Expansion (e.g. a dense provider): bounded by the shared identity count.
+            over = counts[identity] >= source_limit
+        else:
+            # Cap (e.g. the grey overlay): bounded by this source's own count per identity.
+            over = counts[identity] >= per_identity or source_counts[(channel.source_id, identity)] >= source_limit
+        counts_budget = channel.source_id not in (unbudgeted_sources or set())
+        if key in seen_urls or over or (counts_budget and budgeted >= total_limit):
             removed += 1
             continue
+        budgeted += counts_budget
         seen_urls.add(key)
-        counts[identity_key(channel)] += 1
+        counts[identity] += 1
+        source_counts[(channel.source_id, identity)] += 1
         selected.append(channel)
     return selected, removed
 

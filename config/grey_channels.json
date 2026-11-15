@@ -1,0 +1,23 @@
+{
+  "_comment": "Grey-market sports overlay. Each key must probe as a live HLS master. Team-keyed feeds rotate with the season; prune dead keys rather than letting them rot.",
+  "_candidates": [
+    "nfl-network",
+    "redzone",
+    "espn2",
+    "cbssports",
+    "big-ten-network",
+    "nbatv"
+  ],
+  "channels": {
+    "cardinals": {
+      "name": "Grey: Cardinals",
+      "tvg_id": "grey.cardinals",
+      "group": "Sports"
+    },
+    "redzone": {
+      "name": "Grey: NFL RedZone",
+      "tvg_id": "NFLRedZone.us",
+      "group": "Sports"
+    }
+  }
+}
