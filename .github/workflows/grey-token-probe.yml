@@ -24,7 +24,6 @@ jobs:
         run: sleep ${{ inputs.delay_minutes }}m
       - name: Fetch playlist and test ALL indianservers URLs
         run: |
-          set -e
           PLAYLIST="${{ inputs.url }}"
           echo "Fetching playlist: $PLAYLIST"
           PLAYLIST_CONTENT=$(curl -s "$PLAYLIST")
@@ -44,11 +43,11 @@ jobs:
             if [ "$CODE" = "200" ]; then
               head -c 80 /tmp/body.txt || true
               echo " ✓ PASS"
-              ((PASS++))
+              PASS=$((PASS + 1))
             else
               head -c 120 /tmp/body.txt || true
               echo " ✗ FAIL"
-              ((FAIL++))
+              FAIL=$((FAIL + 1))
             fi
           done
           
