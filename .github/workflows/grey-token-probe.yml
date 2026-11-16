@@ -22,16 +22,41 @@ jobs:
       - name: Sleep for the requested offset
         if: ${{ inputs.delay_minutes != '0' }}
         run: sleep ${{ inputs.delay_minutes }}m
-      - name: Resolve URL and fetch
+      - name: Fetch playlist and test ALL indianservers URLs
         run: |
           set -e
-          URL="${{ inputs.url }}"
-          if [[ "$URL" == *.m3u ]]; then
-            URL=$(curl -s "$URL" | grep -oE 'https://(netanyahu|vishnu|bharat)\.indianservers\.st/secure/[^ ]+' | head -1)
-            echo "resolved: ${URL:0:90}"
+          PLAYLIST="${{ inputs.url }}"
+          echo "Fetching playlist: $PLAYLIST"
+          PLAYLIST_CONTENT=$(curl -s "$PLAYLIST")
+          
+          # Extract all indianservers master URLs
+          mapfile -t URLS < <(echo "$PLAYLIST_CONTENT" | grep -oE 'https://(netanyahu|vishnu|bharat)\.indianservers\.st/secure/[^ ]+' | sort -u)
+          
+          echo "Found ${#URLS[@]} unique indianservers URLs"
+          
+          PASS=0
+          FAIL=0
+          for URL in "${URLS[@]}"; do
+            echo "---"
+            echo "Testing: ${URL:0:120}"
+            CODE=$(curl -s -o /tmp/body.txt -w '%{http_code}' -A 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0 Safari/537.36' "$URL" --max-time 15)
+            echo "HTTP $CODE"
+            if [ "$CODE" = "200" ]; then
+              head -c 80 /tmp/body.txt || true
+              echo " ✓ PASS"
+              ((PASS++))
+            else
+              head -c 120 /tmp/body.txt || true
+              echo " ✗ FAIL"
+              ((FAIL++))
+            fi
+          done
+          
+          echo "=== SUMMARY ==="
+          echo "PASS: $PASS"
+          echo "FAIL: $FAIL"
+          
+          if [ "$PASS" -eq 0 ]; then
+            echo "::error::No working tokens found"
+            exit 1
           fi
-          echo "fetching: ${URL:0:100}"
-          CODE=$(curl -s -o /tmp/body.txt -w '%{http_code}' -A 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0 Safari/537.36' "$URL")
-          echo "HTTP $CODE"
-          head -c 200 /tmp/body.txt || true
-          test "$CODE" = "200"
