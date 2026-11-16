@@ -7277,6 +7277,19 @@
         "grey-market"
       ],
       "max_bytes": 500000
+    },
+    {
+      "id": "grey-tvapp",
+      "url": "bundled://grey/thetvapp-overlay",
+      "kind": "playlist",
+      "path": "build/generated/thetvapp.m3u",
+      "enabled": true,
+      "role": "backup",
+      "skip_validation": true,
+      "provenance": [
+        "grey-market"
+      ],
+      "max_bytes": 1000000
     }
   ]
 }

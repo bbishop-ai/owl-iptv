@@ -35,6 +35,8 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends ffmpeg
           pip install -e '.[test]'
+          pip install playwright
+          python -m playwright install --with-deps chromium
       - uses: actions/cache@v4
         with:
           path: build
@@ -48,6 +50,14 @@ jobs:
         env:
           GREY_RELAY: ${{ vars.GREY_RELAY }}
         run: python -m tools.build_grey --out build/generated/grey.m3u
+      - name: Refresh thetvapp channel map from live APIs
+        continue-on-error: true
+        run: python -m tools.refresh_thetvapp
+      - name: Resolve thetvapp channels (headless browser)
+        continue-on-error: true
+        env:
+          GREY_RELAY: ${{ vars.GREY_RELAY }}
+        run: python -m tools.build_thetvapp --out build/generated/thetvapp.m3u
       - name: Unit tests
         run: pytest -q
       - name: Build fresh candidate and run sanity checks
