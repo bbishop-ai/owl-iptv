@@ -7264,6 +7264,19 @@
         "https://i.mjh.nz/SamsungTVPlus/it.xml.gz"
       ],
       "disabled_reason": "dead/non-XMLTV at probe 2026-10-14 (200 gzip-broken)"
+    },
+    {
+      "id": "grey-sports",
+      "url": "bundled://grey/sports-overlay",
+      "kind": "playlist",
+      "path": "build/generated/grey.m3u",
+      "enabled": true,
+      "role": "backup",
+      "skip_validation": true,
+      "provenance": [
+        "grey-market"
+      ],
+      "max_bytes": 500000
     }
   ]
 }

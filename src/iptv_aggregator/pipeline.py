@@ -126,6 +126,15 @@ async def run(config_path: str) -> dict:
     pluto_relay = (cfg.get("rewrite") or {}).get("pluto_relay")
     for channel in channels:
         channel.url = rewrite_pluto_url(channel.url, pluto_relay)
+    backup_sources = {source["id"] for source in sources if source.get("role") == "backup"}
+    for channel in channels:
+        if channel.source_id in backup_sources:
+            # Grey-market overlay: unlicensed feeds carry no reliable metadata, and
+            # both filters below would otherwise drop them. The group prefix is
+            # applied at publish time.
+            channel.attrs["owl-group-prefix"] = "Grey"
+            channel.language = "en"
+            channel.country = "US"
     fixture_path = Path(cfg["_root"]) / cfg["validation"].get("responsive_fixture", "")
     fixture = json.loads(fixture_path.read_text(encoding="utf-8")) if fixture_path.is_file() else {}
     fixture_urls = set(fixture.get("statuses", {})) | set(fixture.get("preserve_urls", []))
@@ -144,6 +153,7 @@ async def run(config_path: str) -> dict:
         cfg["validation"]["candidates_per_identity"],
         cfg["validation"]["total_candidate_limit"],
         cfg["validation"].get("candidates_per_identity_by_source"),
+        backup_sources,
     )
     validator = Validator(work / "validation-cache.json", cfg["validation"]["timeout_seconds"], cfg["validation"]["concurrency"], cfg["validation"]["cache_ttl_hours"], cfg["validation"]["deep_probe_limit"])
     skip_sources = {source["id"] for source in sources if source.get("skip_validation")}
@@ -225,6 +235,8 @@ async def run(config_path: str) -> dict:
         "published_streams": len(selected),
         "published_primary": sum(c.role == "primary" for c in selected),
         "published_backups": sum(c.role == "backup" for c in selected),
+        "published_licensed": sum(c.role == "primary" and "owl-group-prefix" not in c.attrs for c in selected),
+        "published_grey": sum(c.role == "primary" and "owl-group-prefix" in c.attrs for c in selected),
         "final_logical_channels": sum(c.role == "primary" for c in selected),
         "final_us_channels": sum(c.role == "primary" and c.country.upper() == "US" for c in selected),
         "final_non_us_english_channels": sum(c.role == "primary" and c.language == "en" and c.country.upper() != "US" for c in selected),
@@ -289,7 +301,7 @@ def _index(stats: dict) -> str:
 
 
 def _report(stats: dict) -> str:
-    keys = ["upstreams_attempted", "upstreams_succeeded", "raw_channels", "streams_parsed", "confirmed_english", "confirmed_non_english", "unknown_language", "unknown_language_excluded", "final_us_channels", "final_non_us_english_channels", "validation_passed", "validation_failed", "duplicates_detected", "final_logical_channels", "published_backups", "epg_exact_id", "epg_normalized_id", "epg_exact_name", "epg_fuzzy", "epg_unmatched", "epg_coverage_percent"]
+    keys = ["upstreams_attempted", "upstreams_succeeded", "raw_channels", "streams_parsed", "confirmed_english", "confirmed_non_english", "unknown_language", "unknown_language_excluded", "final_us_channels", "final_non_us_english_channels", "validation_passed", "validation_failed", "duplicates_detected", "final_logical_channels", "published_backups", "epg_exact_id", "epg_normalized_id", "epg_exact_name", "epg_fuzzy", "epg_unmatched", "epg_coverage_percent", "published_licensed", "published_grey"]
     lines = ["# Latest Owl IPTV build", "", f"Generated: {stats['generated_at']}", "", "| Metric | Value |", "|---|---:|"]
     lines += [f"| {key.replace('_', ' ')} | {stats[key]} |" for key in keys]
     return "\n".join(lines) + "\n"
