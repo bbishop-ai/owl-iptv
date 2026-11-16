@@ -8,6 +8,7 @@ const BOOT = "https://boot.pluto.tv/v4/start";
 const GREY_HOSTS = new Set([
   "dynamic.bakgethwa.com", "topstreamer.site", "trendy48.site",
   "o300801.mp.lura.live", "o300801-mp-lura-live.akamaized.net",
+  "rally-tv-live.akamaized.net",
 ]);
 const GREY_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0 Safari/537.36";
 

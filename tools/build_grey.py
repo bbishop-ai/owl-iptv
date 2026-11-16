@@ -23,8 +23,11 @@ REFERER = "https://topstreamer.site/"
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0 Safari/537.36"
 
 
-def probe(url: str, timeout: int) -> bool:
-    request = urllib.request.Request(url, headers={"User-Agent": UA, "Referer": REFERER, "Accept": "*/*"})
+def probe(url: str, timeout: int, referer: str | None = None) -> bool:
+    headers = {"User-Agent": UA, "Accept": "*/*"}
+    if referer:
+        headers["Referer"] = referer
+    request = urllib.request.Request(url, headers=headers)
     try:
         with urllib.request.urlopen(request, timeout=timeout) as response:
             head = response.read(2048).decode("utf-8", "replace")
@@ -52,8 +55,9 @@ def main() -> int:
     lines = ["#EXTM3U"]
     kept = 0
     for key, meta in sorted(channels.items()):
-        upstream = UPSTREAM.format(key=key)
-        if not probe(upstream, args.timeout):
+        direct = meta.get("url")  # stable public master: bypass the upstream template
+        upstream = direct or UPSTREAM.format(key=key)
+        if not probe(upstream, args.timeout, None if direct else REFERER):
             continue
         attrs = {
             "tvg-id": meta.get("tvg_id", ""),
