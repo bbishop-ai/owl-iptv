@@ -16,4 +16,4 @@ jobs:
           set -e
           pip install -q playwright
           python -m playwright install --with-deps chromium
-          uv run python scripts/ttl_probe.py
+          python3 scripts/ttl_probe.py
