@@ -1,0 +1,29 @@
+name: Grey token cross-IP probe
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: Token URL to fetch (from the live playlist)
+        required: true
+        default: "https://bbishop-ai.github.io/owl-iptv/playlist.m3u"
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Resolve URL and fetch
+        run: |
+          set -e
+          URL="${{ inputs.url }}"
+          if [[ "$URL" == *.m3u ]]; then
+            URL=$(curl -s "$URL" | grep -oE 'https://(netanyahu|vishnu|bharat)\.indianservers\.st/secure/[^ ]+' | head -1)
+            echo "resolved: ${URL:0:90}"
+          fi
+          echo "fetching: ${URL:0:100}"
+          CODE=$(curl -s -o /tmp/body.txt -w '%{http_code}' -A 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0 Safari/537.36' "$URL")
+          echo "HTTP $CODE"
+          head -c 200 /tmp/body.txt || true
+          test "$CODE" = "200"
