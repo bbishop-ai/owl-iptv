@@ -8,16 +8,48 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
+    timeout-minutes: 50
     steps:
       - uses: actions/checkout@v4
-      - name: Fetch one live tvapp token and report status
+      - name: Mint a fresh token, probe TTL at 0/10/25/35 min
         run: |
           set -e
-          URL=$(grep -A1 'Grey: NFL Network' <(curl -s https://bbishop-ai.github.io/owl-iptv/playlist.m3u) | grep -o 'https://netanyahu[^ ]*\|https://vishnu[^ ]*' | head -1)
-          echo "checking: $URL"
-          BUILD_AT=$(curl -s https://bbishop-ai.github.io/owl-iptv/stats.json | python3 -c "import json,sys;print(json.load(sys.stdin)['generated_at'])")
-          echo "build generated_at: $BUILD_AT"
-          CODE=$(curl -s -o /tmp/body.txt -w '%{http_code}' -A 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0 Safari/537.36' "$URL")
-          echo "HTTP $CODE"
-          head -c 120 /tmp/body.txt || true
-          test "$CODE" = "200"
+          pip install -q playwright
+          python -m playwright install --with-deps chromium
+          python3 - <<'PY'
+          import time
+          from playwright.sync_api import sync_playwright
+          UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0 Safari/537.36"
+
+          DELAYS = [0, 600, 1500, 2100]  # 0, 10, 25, 35 min
+          with sync_playwright() as pw:
+              b = pw.chromium.launch(headless=True, channel="chromium", args=["--no-sandbox", "--disable-blink-features=AutomationControlled"])
+              ctx = b.new_context(user_agent=UA)
+              ctx.add_init_script("Object.defineProperty(navigator,'webdriver',{get:()=>undefined});")
+              pg = ctx.new_page()
+              pg.goto("https://taifood-blog.asia/embed/nfl-network", wait_until="domcontentloaded", timeout=30000)
+              master = ""
+              for _ in range(6):
+                  pg.wait_for_timeout(4000)
+                  master = pg.evaluate("(() => { try { const p = window.jwplayer('player'); return (p && p.getPlaylist && p.getPlaylist().length) ? p.getPlaylist()[0].file : ''; } catch(e) { return ''; } })()") or ""
+                  if master:
+                      break
+              t0 = time.time()
+              print(f"minted at t0: {master[:80]}", flush=True)
+              for delay in DELAYS:
+                  wait = delay - (time.time() - t0)
+                  if wait > 0:
+                      time.sleep(wait)
+                  in_session = pg.evaluate("(url) => fetch(url, {mode:'cors'}).then(r => String(r.status)).catch(e => 'ERR:' + String(e).slice(0,40))", master)
+                  with sync_playwright() as pw2:
+                      b2 = pw2.chromium.launch(headless=True, channel="chromium", args=["--no-sandbox", "--disable-blink-features=AutomationControlled"])
+                      pg2 = b2.new_context(user_agent=UA).new_page()
+                      try:
+                          resp = pg2.goto(master, timeout=20000)
+                          fresh = str(resp.status) if resp else "?"
+                      except Exception as exc:
+                          fresh = "ERR:" + str(exc)[:40]
+                      b2.close()
+                  print(f"TTL t+{delay//60}min: in-session={in_session} fresh-browser={fresh}", flush=True)
+              b.close()
+          PY
