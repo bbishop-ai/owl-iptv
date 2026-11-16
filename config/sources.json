@@ -7279,7 +7279,7 @@
       "max_bytes": 500000
     },
     {
-      "id": "grey-tvapp",
+      "id": "grey-games",
       "url": "bundled://grey/thetvapp-overlay",
       "kind": "playlist",
       "path": "build/generated/thetvapp.m3u",
