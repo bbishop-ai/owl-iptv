@@ -15,7 +15,7 @@ from playwright.sync_api import Error as PWError
 from playwright.sync_api import sync_playwright
 
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0 Safari/537.36"
-DELAYS = [0, 600, 1500, 2100, 3600, 5400, 7200]  # 0, 10, 25, 35, 60, 90, 120 min
+DELAYS = [0, 600, 1200, 1800, 2400, 3600, 5400]  # 0, 10, 20, 30, 40, 60, 90 min
 EMBED = "https://taifood-blog.asia/embed/nfl-network"
 
 FRESH_PROBE = """
