@@ -154,6 +154,7 @@ async def run(config_path: str) -> dict:
         cfg["validation"]["total_candidate_limit"],
         cfg["validation"].get("candidates_per_identity_by_source"),
         backup_sources,
+        set(cfg["validation"].get("priority_tvg_ids") or []),
     )
     validator = Validator(work / "validation-cache.json", cfg["validation"]["timeout_seconds"], cfg["validation"]["concurrency"], cfg["validation"]["cache_ttl_hours"], cfg["validation"]["deep_probe_limit"])
     skip_sources = {source["id"] for source in sources if source.get("skip_validation")}

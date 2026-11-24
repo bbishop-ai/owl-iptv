@@ -54,12 +54,17 @@ def preselect_candidates(
     total_limit: int,
     per_source: dict[str, int] | None = None,
     unbudgeted_sources: set[str] | None = None,
+    priority_tvg_ids: set[str] | None = None,
 ) -> tuple[list[Channel], int]:
     """Remove exact URLs and bound validation while retaining source diversity per identity.
 
     Channels from ``unbudgeted_sources`` (additive backup overlays) are still
     capped per identity but do not consume ``total_limit``, so a full validation
     budget cannot crowd them out.
+
+    Channels whose ``tvg_id`` is in ``priority_tvg_ids`` are ordered first, so
+    marquee channels that only exist as plain-http feeds (e.g. ESPN) are probed
+    before the HTTPS-first ordering fills the budget.
     """
     budgeted = 0
     seen_urls: set[str] = set()
@@ -68,7 +73,12 @@ def preselect_candidates(
     selected: list[Channel] = []
     removed = 0
     # Prefer HTTPS and entries with EPG/logo metadata before media quality is known.
-    ordered = sorted(channels, key=lambda c: (bool(c.tvg_id), bool(c.logo), c.url.startswith("https://")), reverse=True)
+    priority = priority_tvg_ids or set()
+    ordered = sorted(
+        channels,
+        key=lambda c: (c.tvg_id in priority, bool(c.tvg_id), bool(c.logo), c.url.startswith("https://")),
+        reverse=True,
+    )
     for channel in ordered:
         key = canonical_url(channel.url)
         identity = identity_key(channel)

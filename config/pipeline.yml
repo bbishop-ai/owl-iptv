@@ -27,6 +27,13 @@ validation:
     5dab59855cb7: 39
     grey-sports: 1
   total_candidate_limit: 5000
+  # Probed before the HTTPS-first ordering fills total_candidate_limit; these
+  # only exist as plain-http feeds and were starved out of validation.
+  priority_tvg_ids:
+    - ESPN.us
+    - ESPN2.us
+    - ESPNU.us
+    - ESPNews.us
   responsive_fixture: config/fixtures/aria-missing-responsive.json
   responsive_fixture_source_id: 5dab59855cb7
 dedupe:
