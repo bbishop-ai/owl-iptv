@@ -7277,6 +7277,21 @@
         "grey-market"
       ],
       "max_bytes": 500000
+    },
+    {
+      "id": "english-sports-extras",
+      "url": "bundled://user/english-sports-extras",
+      "path": "config/playlists/english-sports-extras.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "force_us_english": true,
+      "provenance": [
+        "English sports channels curated from cs3306/IPTV-Sources output (Brad 2026-11-23)"
+      ],
+      "declared_urls": [
+        "bundled://user/english-sports-extras"
+      ]
     }
   ]
 }

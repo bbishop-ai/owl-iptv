@@ -34,6 +34,20 @@ validation:
     - ESPN2.us
     - ESPNU.us
     - ESPNews.us
+    # English sports extras (config/playlists/english-sports-extras.m3u)
+    - FIFAPlus.uk
+    - FIFAPlusWomen.uk
+    - RedBullTV.at
+    - FUELTV.pt
+    - FoxSportsNews.au
+    - TraceSportStars.fr
+    - WorldofFreesports.de
+    - GamePlus.ca
+    - HorseTV.it
+    - NauticalChannel.it
+    - SkyRacing1.au
+    - MUTV.uk
+    - RealMadridTVEnglish.es
   responsive_fixture: config/fixtures/aria-missing-responsive.json
   responsive_fixture_source_id: 5dab59855cb7
 dedupe:

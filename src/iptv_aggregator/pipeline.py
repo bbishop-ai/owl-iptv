@@ -102,6 +102,20 @@ def filter_english_sources(sources: list[dict]) -> list[dict]:
     return filtered
 
 
+def apply_forced_locale(channels, sources: list[dict]) -> None:
+    """Tag channels from ``force_us_english`` sources as US/English.
+
+    Curated English feeds whose upstream metadata names another country
+    (FIFA+ UK, Fox Sports News AU) would otherwise be dropped by the US filter.
+    Runs after metadata enrichment and language classification.
+    """
+    forced = {source["id"] for source in sources if source.get("force_us_english")}
+    for channel in channels:
+        if channel.source_id in forced:
+            channel.language = "en"
+            channel.country = "US"
+
+
 async def run(config_path: str) -> dict:
     cfg = load_config(config_path)
     root = Path(cfg["_root"])
@@ -126,6 +140,7 @@ async def run(config_path: str) -> dict:
     pluto_relay = (cfg.get("rewrite") or {}).get("pluto_relay")
     for channel in channels:
         channel.url = rewrite_pluto_url(channel.url, pluto_relay)
+    apply_forced_locale(channels, sources)
     backup_sources = {source["id"] for source in sources if source.get("role") == "backup"}
     for channel in channels:
         if channel.source_id in backup_sources:
