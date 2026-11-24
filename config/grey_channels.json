@@ -1,5 +1,5 @@
 {
-  "_comment": "Grey-market sports overlay. Each key must probe as a live HLS master. Team-keyed feeds rotate with the season; prune dead keys rather than letting them rot. rally-tv is a stable public master keyed 'direct' - the generator emits its URL unwrapped-by-upstream (the relay passes it through unmodified).",
+  "_comment": "Grey-market sports overlay. Each key must probe as a live HLS master. Team-keyed feeds rotate with the season; prune dead keys rather than letting them rot.",
   "_candidates": [
     "nfl-network",
     "redzone",
@@ -15,70 +15,9 @@
       "group": "Sports"
     },
     "redzone": {
-      "name": "Grey: Redzone",
-      "tvg_id": "grey.redzone",
+      "name": "Grey: NFL RedZone",
+      "tvg_id": "NFLRedZone.us",
       "group": "Sports"
-    },
-    "bengals": {
-      "name": "Grey: Bengals",
-      "tvg_id": "grey.bengals",
-      "group": "Sports"
-    },
-    "browns": {
-      "name": "Grey: Browns",
-      "tvg_id": "grey.browns",
-      "group": "Sports"
-    },
-    "colts": {
-      "name": "Grey: Colts",
-      "tvg_id": "grey.colts",
-      "group": "Sports"
-    },
-    "cowboys": {
-      "name": "Grey: Cowboys",
-      "tvg_id": "grey.cowboys",
-      "group": "Sports"
-    },
-    "falcons": {
-      "name": "Grey: Falcons",
-      "tvg_id": "grey.falcons",
-      "group": "Sports"
-    },
-    "jets": {
-      "name": "Grey: Jets",
-      "tvg_id": "grey.jets",
-      "group": "Sports"
-    },
-    "lions": {
-      "name": "Grey: Lions",
-      "tvg_id": "grey.lions",
-      "group": "Sports"
-    },
-    "packers": {
-      "name": "Grey: Packers",
-      "tvg_id": "grey.packers",
-      "group": "Sports"
-    },
-    "raiders": {
-      "name": "Grey: Raiders",
-      "tvg_id": "grey.raiders",
-      "group": "Sports"
-    },
-    "saints": {
-      "name": "Grey: Saints",
-      "tvg_id": "grey.saints",
-      "group": "Sports"
-    },
-    "titans": {
-      "name": "Grey: Titans",
-      "tvg_id": "grey.titans",
-      "group": "Sports"
-    },
-    "rally-tv": {
-      "name": "Grey: Rally TV",
-      "tvg_id": "grey.rally-tv",
-      "group": "Sports",
-      "url": "https://rally-tv-live.akamaized.net/hls/live/2117704/RallyTV-Pri/master.m3u8"
     }
   }
 }
