@@ -68,6 +68,13 @@ class Validator:
             # Update reliability metrics
             value = self._update_reliability(value, cached)
             results[channel.url] = deep_map.get(channel.url, value)
+        # Uniform soft-policy pass over ALL results, including cached hits:
+        # a cached failure from a run without today's source policy would
+        # otherwise stay failed until TTL expiry because the loop above only
+        # sees freshly-probed channels.
+        for url, value in list(results.items()):
+            if url in soft_urls and not value.ok and not self._soft_probe_confirms_dead(value):
+                results[url] = Validation(ok=True, latency_ms=value.latency_ms, checked_at=now.isoformat(), error=f"soft-kept (cached probe said: {value.error})")
         self.cache_path.parent.mkdir(parents=True, exist_ok=True)
         self.cache_path.write_text(json.dumps({url: value.to_dict() for url, value in results.items()}, indent=2), encoding="utf-8")
         return results
