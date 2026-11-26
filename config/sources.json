@@ -7299,6 +7299,7 @@
       "kind": "playlist",
       "enabled": true,
       "cloud_compatible": true,
+      "force_us_english": true,
       "provenance": [
         "BuddyChewChew/tubi-scraper playlist",
         "Tubi linear FAST channels"
