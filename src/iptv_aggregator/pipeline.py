@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import asyncio
 import json
+import re
 import shutil
 from collections import Counter, defaultdict
 from datetime import UTC, datetime
@@ -11,7 +12,7 @@ from urllib.parse import urlsplit
 
 from .config import load_config, load_sources
 from .dedupe import preselect_candidates, select_streams
-from .epg import fetch_epg, match_channels, xmltv_bytes
+from .epg import _epg_id_region, fetch_epg, match_channels, xmltv_bytes
 from .metadata import load_metadata
 from .models import Validation
 from .normalize import (
@@ -200,6 +201,7 @@ async def run(config_path: str) -> dict:
         provider_preference,
     )
     alias_stats = apply_epg_alias_overrides(selected, cfg["epg"].get("alias_overrides", []))
+    alias_stats.update(apply_affiliate_callsign_aliases(selected))
     epg_names: set[str] = set()
     for channel in selected:
         values = [channel.name, channel.tvg_name, channel.attrs.get("metadata-name", "")]
@@ -328,6 +330,57 @@ def apply_epg_alias_overrides(channels: list, overrides: list[dict]) -> dict[str
         target.attrs["metadata-alt-names"] = json.dumps(merged)
         target.attrs["owl-alias-source"] = "config"
         stats["alias_override_applied"] += 1
+    return stats
+
+
+# US broadcast call signs (K/W + three letters, optional -DT/-LD/-TV suffix),
+# extracted from the row's OWN display name. Case-sensitive on purpose: feed
+# names print call signs uppercase; lowercase words are not station identities.
+_AFFILIATE_CALLSIGN = re.compile(r"\b([KW][A-Z]{3})(?:-(?:DT\d?|LD|TV))?\b")
+_AFFILIATE_BRAND_PREFIX = re.compile(r"^(?:cbs|nbc|fox|abc)\b", re.IGNORECASE)
+_AFFILIATE_SUBBRAND = re.compile(r"\b(?:news|sports|business|weather)\b", re.IGNORECASE)
+
+
+def apply_affiliate_callsign_aliases(channels: list) -> dict[str, int]:
+    """Give network-branded local-affiliate rows their true call-sign identity.
+
+    Affiliate feeds publish a bare network tvg-id ("CBS.us") plus a display name
+    like "CBS KBZK (1080p) [backup]" and an EMPTY runtime tvg-name, so the only
+    schedule family that covers them (epgshare01 US_LOCALS1, keyed by call sign
+    "KBZK-DT.us_locals1") cannot join by any existing matcher key. The upstream
+    station set churns between builds, so this is rule-based rather than a
+    fixed alias table: parse the call sign out of each row's own name and offer
+    "<CALL>" / "<CALL>-DT" as alt-names to the existing matcher, which still
+    enforces per-guide uniqueness and its region guard.
+
+    Eligibility is deliberately narrow: US-region tvg-id, display name starting
+    with a big-four network brand, and no sub-brand word (Fox Weather KTVU etc.
+    are excluded). Returns applied/skipped counters for stats.json.
+    """
+    stats = {"affiliate_callsign_applied": 0, "affiliate_callsign_skipped": 0}
+    for channel in channels:
+        match = _AFFILIATE_CALLSIGN.search(channel.name or "")
+        if not match:
+            continue
+        name = channel.name or ""
+        if _AFFILIATE_SUBBRAND.search(name) or not _AFFILIATE_BRAND_PREFIX.match(name):
+            continue
+        if _epg_id_region(channel.tvg_id or "") != "us":
+            stats["affiliate_callsign_skipped"] += 1
+            continue
+        callsign = match.group(1)
+        aliases = [callsign, f"{callsign}-DT"]
+        try:
+            existing = json.loads(channel.attrs.get("metadata-alt-names", "[]"))
+        except json.JSONDecodeError:
+            existing = []
+        merged: list[str] = []
+        for value in [*existing, *aliases]:
+            if value not in merged:
+                merged.append(value)
+        channel.attrs["metadata-alt-names"] = json.dumps(merged)
+        channel.attrs["owl-alias-source"] = "affiliate-callsign"
+        stats["affiliate_callsign_applied"] += 1
     return stats
 
 
