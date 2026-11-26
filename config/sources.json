@@ -7300,6 +7300,7 @@
       "enabled": true,
       "cloud_compatible": true,
       "force_us_english": true,
+      "soft_validation": true,
       "provenance": [
         "BuddyChewChew/tubi-scraper playlist",
         "Tubi linear FAST channels"
