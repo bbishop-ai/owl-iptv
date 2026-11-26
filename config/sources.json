@@ -7292,6 +7292,20 @@
       "declared_urls": [
         "bundled://user/english-sports-extras"
       ]
+    },
+    {
+      "id": "f30873f60166",
+      "url": "https://raw.githubusercontent.com/BuddyChewChew/tubi-scraper/refs/heads/main/tubi_playlist.m3u",
+      "kind": "playlist",
+      "enabled": true,
+      "cloud_compatible": true,
+      "provenance": [
+        "BuddyChewChew/tubi-scraper playlist",
+        "Tubi linear FAST channels"
+      ],
+      "declared_urls": [
+        "https://raw.githubusercontent.com/BuddyChewChew/tubi-scraper/refs/heads/main/tubi_playlist.m3u"
+      ]
     }
   ]
 }
