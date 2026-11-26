@@ -83,6 +83,25 @@ epg:
   # Reduces EPG file size for faster loading in Owl
   window_hours_back: 6
   window_hours_forward: 72
+  # Call-sign aliases for network-branded local-affiliate rows. These feeds
+  # publish a bare network tvg-id (CBS.us/Fox.us/NBC.us) while the only guide
+  # family that schedules them (epgshare01 US_LOCALS1) keys channels by station
+  # call sign (KBZK-DT.us_locals1). Each entry targets ONE published row via its
+  # unique tvg-name, so two same-network rows (e.g. CBS KBZK backup / CBS KMOV
+  # primary) join their own station's schedule instead of sharing one wrong one.
+  alias_overrides:
+    - tvg_name: "CBS KBZK (1080p)"
+      alt_names: ["KBZK", "KBZK-DT"]
+    - tvg_name: "CBS KMOV (1080p) [Geo-blocked]"
+      alt_names: ["KMOV", "KMOV-DT"]
+    - tvg_name: "Fox (United States) KCPQ (1080p)"
+      alt_names: ["KCPQ", "KCPQ-DT"]
+    - tvg_name: "Fox (United States) KDFW (1080p)"
+      alt_names: ["KDFW", "KDFW-DT"]
+    - tvg_name: "NBC KOAA-TV (1080p)"
+      alt_names: ["KOAA", "KOAA-TV", "KOAA-DT"]
+    - tvg_name: "NBC KRIS-TV (1080p)"
+      alt_names: ["KRIS", "KRIS-TV", "KRIS-DT"]
 publish:
   directory: public
   minimum_channels: 500
