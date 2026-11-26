@@ -4,7 +4,7 @@ import argparse
 import asyncio
 import json
 import shutil
-from collections import Counter
+from collections import Counter, defaultdict
 from datetime import UTC, datetime
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -199,6 +199,7 @@ async def run(config_path: str) -> dict:
         cfg["dedupe"].get("backups_per_source"),
         provider_preference,
     )
+    alias_stats = apply_epg_alias_overrides(selected, cfg["epg"].get("alias_overrides", []))
     epg_names: set[str] = set()
     for channel in selected:
         values = [channel.name, channel.tvg_name, channel.attrs.get("metadata-name", "")]
@@ -258,6 +259,7 @@ async def run(config_path: str) -> dict:
         "final_non_us_english_channels": sum(c.role == "primary" and c.language == "en" and c.country.upper() != "US" for c in selected),
     }
     stats["duplicates_detected"] = stats["prevalidation_candidates_removed"] + stats["exact_url_duplicates_removed"] + stats["identity_duplicates_removed"]
+    stats.update(alias_stats)
     matched = stats["epg_exact_id"] + stats["epg_normalized_id"] + stats["epg_url_provider_id"] + stats["epg_exact_name"] + stats["epg_alias"] + stats["epg_fuzzy"]
     stats["epg_matched"] = matched
     stats["epg_matched_logical_channels"] = sum(c.role == "primary" and c.tvg_id in epg.channels for c in selected)
@@ -284,6 +286,48 @@ async def run(config_path: str) -> dict:
     stage.joinpath(".nojekyll").write_text("", encoding="utf-8")
     sanity_check(stage, cfg["publish"]["minimum_channels"])
     atomic_publish(stage, root / cfg["publish"]["directory"])
+    return stats
+
+
+def apply_epg_alias_overrides(channels: list, overrides: list[dict]) -> dict[str, int]:
+    """Append audited call-sign aliases to selected rows before EPG matching.
+
+    Network-branded local-affiliate rows carry a bare network tvg-id (``CBS.us``)
+    while the only guide family that schedules those feeds keys them by station
+    call sign (``KBZK-DT.us_locals1``). No name or fuzzy variant can honestly
+    bridge ``CBS KBZK`` to ``KBZK-DT``; a blanket network-id bridge would feed
+    one market's schedule to every same-network row. Each override is therefore
+    keyed on the unique normalized ``tvg-name`` of one published row and injects
+    that row's true station identity as alt-names for the existing matcher.
+
+    Rows with an ambiguous (non-unique) tvg-name are skipped untouched.
+    """
+    stats = {"alias_override_applied": 0, "alias_override_skipped_ambiguous": 0}
+    by_name: dict[str, list] = defaultdict(list)
+    for channel in channels:
+        if channel.tvg_name:
+            by_name[normalized_name(channel.tvg_name)].append(channel)
+    for entry in overrides or []:
+        names = [str(value) for value in (entry.get("alt_names") or []) if str(value).strip()]
+        key = normalized_name(str(entry.get("tvg_name", "")))
+        if not names:
+            continue
+        targets = by_name.get(key, []) if key else []
+        if len(targets) != 1:
+            stats["alias_override_skipped_ambiguous"] += len(targets) if targets else 1
+            continue
+        target = targets[0]
+        try:
+            existing = json.loads(target.attrs.get("metadata-alt-names", "[]"))
+        except json.JSONDecodeError:
+            existing = []
+        merged: list[str] = []
+        for value in [*existing, *names]:
+            if value not in merged:
+                merged.append(value)
+        target.attrs["metadata-alt-names"] = json.dumps(merged)
+        target.attrs["owl-alias-source"] = "config"
+        stats["alias_override_applied"] += 1
     return stats
 
 
