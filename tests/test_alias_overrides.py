@@ -84,9 +84,83 @@ def test_unknown_tvg_name_is_a_harmless_noop():
     assert stats == {"alias_override_applied": 0, "alias_override_skipped_ambiguous": 1}
 
 
-def test_shipped_config_carries_six_affiliate_entries():
-    from iptv_aggregator.config import load_config
-    cfg = load_config(r"config/pipeline.yml")
-    overrides = cfg["epg"]["alias_overrides"]
-    assert len(overrides) == 6
-    assert {entry["tvg_name"].split()[0] for entry in overrides} == {"CBS", "Fox", "NBC"}
+# ---------------------------------------------------------------------------
+# Generic affiliate call-sign rule (apply_affiliate_callsign_aliases)
+# ---------------------------------------------------------------------------
+
+from iptv_aggregator.pipeline import (  # noqa: E402
+    _AFFILIATE_CALLSIGN,
+    _AFFILIATE_BRAND_PREFIX,
+    _AFFILIATE_SUBBRAND,
+    apply_affiliate_callsign_aliases,
+)
+
+
+AFFILIATE_ROWS = [
+    "CBS KBZK (1080p) [backup]",
+    "CBS KMOV (1080p) [Geo-blocked]",
+    "Fox (United States) KBSI (720p) [Not 24/7]",
+    "Fox (United States) KCPQ (1080p)",
+    "NBC KJRH-TV (1080p) [backup]",
+    "NBC KRIS-TV (1080p)",
+    "ABC KAAL (1080p) [240p]",
+]
+
+
+def _call_channel(name: str, tvg_id: str = "CBS.us") -> Channel:
+    channel = Channel(name=name, url=f"https://x.test/{abs(hash(name))}", source_id="owl")
+    channel.tvg_id = tvg_id
+    return channel
+
+
+def test_rule_extracts_call_signs_from_big_four_network_rows():
+    channels = [_call_channel(name, f"Net{i}.us") for i, name in enumerate(AFFILIATE_ROWS)]
+    stats = apply_affiliate_callsign_aliases(channels)
+    assert stats == {"affiliate_callsign_applied": 7, "affiliate_callsign_skipped": 0}
+    assert '"KBZK", "KBZK-DT"' in channels[0].attrs["metadata-alt-names"]
+    assert '"KBSI", "KBSI-DT"' in channels[2].attrs["metadata-alt-names"]
+    assert channels[3].attrs["owl-alias-source"] == "affiliate-callsign"
+
+
+def test_rule_joins_the_rows_through_the_existing_matcher():
+    guide = _guide(
+        ("KBZK-DT.us_locals1", ["KBZK-DT"], [("20261126180000 +0000", "Live: NFL Football")]),
+        ("KAAL-DT.us_locals1", ["KAAL-DT"], [("20261126190000 +0000", "Local Programming")]),
+    )
+    channels = [_call_channel("CBS KBZK (1080p) [backup]", "CBS.us"),
+                _call_channel("ABC KAAL (1080p) [240p]", "ABC.us")]
+    channels[0].tvg_name = ""   # runtime reality: enriched rows lose tvg-name
+    channels[1].tvg_name = ""
+    apply_affiliate_callsign_aliases(channels)
+    stats = match_channels(channels, guide)
+    assert stats["epg_exact_name"] == 2
+    assert channels[0].tvg_id == "KBZK-DT.us_locals1"
+    assert channels[1].tvg_id == "KAAL-DT.us_locals1"
+
+
+def test_rule_skips_sub_brands_and_non_network_prefixes():
+    channels = [
+        _call_channel("Fox Weather KTVU (1080p) [backup]", "Fox.us"),   # sub-brand word
+        _call_channel("MovieSphere Gold WFXT (1080p)", "WFXT.us"),      # no network prefix
+        _call_channel("MNT KCTV (1080p)", "MNT.us"),                    # non big-four brand
+    ]
+    stats = apply_affiliate_callsign_aliases(channels)
+    assert stats["affiliate_callsign_applied"] == 0
+    assert all("owl-alias-source" not in c.attrs for c in channels)
+
+
+def test_rule_requires_us_region_on_the_row():
+    channel = _call_channel("Fox KDFW (1080p) [backup]", "Fox.br")
+    stats = apply_affiliate_callsign_aliases([channel])
+    assert stats == {"affiliate_callsign_applied": 0, "affiliate_callsign_skipped": 1}
+    assert "owl-alias-source" not in channel.attrs
+
+
+def test_call_sign_regex_stays_conservative():
+    assert _AFFILIATE_CALLSIGN.search("CBS KBZK (1080p)").group(1) == "KBZK"
+    assert _AFFILIATE_CALLSIGN.search("NBC KOAA-TV (1080p)").group(1) == "KOAA"
+    assert _AFFILIATE_CALLSIGN.search("Fox (United States) KCPQ-LD (720p)").group(1) == "KCPQ"
+    assert not _AFFILIATE_CALLSIGN.search("News Nation Now")      # lowercase words
+    assert not _AFFILIATE_CALLSIGN.search("CBS News Texas")
+    assert _AFFILIATE_BRAND_PREFIX.match("fox (united states) kbsi (720p)")
+    assert _AFFILIATE_SUBBRAND.search("Fox Weather WFLD (1080p)")
